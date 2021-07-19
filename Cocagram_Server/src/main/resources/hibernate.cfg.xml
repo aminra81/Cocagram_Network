@@ -12,6 +12,5 @@
         <mapping class="ir.sharif.aminra.models.ChatState"/>
         <mapping class="ir.sharif.aminra.models.media.Tweet"/>
         <mapping class="ir.sharif.aminra.models.media.Message"/>
-
     </session-factory>
 </hibernate-configuration>

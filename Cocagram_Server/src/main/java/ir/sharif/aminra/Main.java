@@ -1,14 +1,22 @@
 package ir.sharif.aminra;
 
 import ir.sharif.aminra.database.Connector;
+import ir.sharif.aminra.exceptions.DatabaseDisconnectException;
 import ir.sharif.aminra.models.Chat;
 import ir.sharif.aminra.models.ChatState;
 import ir.sharif.aminra.models.User;
 import ir.sharif.aminra.models.media.Tweet;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Main {
-    public static void main(String[] args) {
+
+    static private final Logger logger = LogManager.getLogger(Main.class);
+
+    public static void main(String[] args) throws DatabaseDisconnectException {
+        logger.info("program started");
         Connector connector = new Connector();
+
         User user = new User("a", "a", "a", "a", null, "a", "p",
                 "p", true, "online", null);
         connector.save(user);

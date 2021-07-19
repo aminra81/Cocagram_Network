@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id 'war'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
 }
 
 group 'org.example'
@@ -35,3 +37,10 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+javafx {
+    version = "16"
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.swing', 'javafx.base']
+}
+
+mainClassName = 'ir.sharif.aminra.Main'
