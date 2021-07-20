@@ -2,7 +2,6 @@ package ir.sharif.aminra.controller.network;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import ir.sharif.aminra.Main;
 import ir.sharif.aminra.exceptions.ClientDisconnectException;
 import ir.sharif.aminra.gson.Deserializer;
 import ir.sharif.aminra.gson.Serializer;

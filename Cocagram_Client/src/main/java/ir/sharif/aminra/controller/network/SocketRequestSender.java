@@ -7,6 +7,8 @@ import ir.sharif.aminra.gson.Deserializer;
 import ir.sharif.aminra.gson.Serializer;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.response.Response;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -14,6 +16,8 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class SocketRequestSender implements RequestSender {
+    static private final Logger logger = LogManager.getLogger(RequestSender.class);
+
     private final Serializer serializer;
     private final Deserializer deserializer;
     String token;
@@ -51,6 +55,7 @@ public class SocketRequestSender implements RequestSender {
             }*/
             return response;
         } catch (Throwable throwable) {
+            logger.warn("client disconnected from server");
             throw new ClientDisconnectException(throwable);
         }
     }

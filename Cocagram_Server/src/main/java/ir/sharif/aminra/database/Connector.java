@@ -16,8 +16,15 @@ import java.util.List;
 public class Connector {
     private final static Object lock = new Object();
     static private final Logger logger = LogManager.getLogger(Connector.class);
+    private static Connector connector;
 
     private final SessionFactory sessionFactory;
+
+    public static Connector getInstance() throws DatabaseDisconnectException {
+        if(connector == null)
+            connector = new Connector();
+        return connector;
+    }
 
 
     public Connector() throws DatabaseDisconnectException {
@@ -27,8 +34,8 @@ public class Connector {
     private SessionFactory buildSessionFactory() throws DatabaseDisconnectException {
         try {
             ServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-            logger.info("connected to database");
             SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+            logger.info("connected to database");
             return sessionFactory;
         } catch (Throwable throwable) {
             logger.error("can't connect to database");
