@@ -30,8 +30,8 @@ public class ViewManager {
             System.exit(0);
         });
 
-        /*curPage = new Page("enterPage");
-        setPage(curPage);*/
+        curPage = new Page("enterPage");
+        setPage(curPage);
 
         stage.setTitle(Config.getConfig("main").getProperty("projectName"));
         stage.setResizable(false);
@@ -40,6 +40,12 @@ public class ViewManager {
 
     public void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setHeaderText(message);
+        alert.showAndWait();
+    }
+
+    public void showInformation(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(message);
         alert.showAndWait();
     }
@@ -54,4 +60,13 @@ public class ViewManager {
         stack.pop();
         stage.setScene(stack.peek().getScene());
     }
+
+    public void goToMainPage() {
+        Page mainPage = new Page("mainPage");
+        //TODO completing main page
+        //MainFXController mainFXController = (MainFXController) mainPage.getFxController();
+        ViewManager.getInstance().setPage(mainPage);
+    }
+
+    public Page getCurPage() { return curPage; }
 }

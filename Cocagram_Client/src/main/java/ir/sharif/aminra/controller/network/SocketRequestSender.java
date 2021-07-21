@@ -5,8 +5,10 @@ import com.google.gson.GsonBuilder;
 import ir.sharif.aminra.exceptions.ClientDisconnectException;
 import ir.sharif.aminra.gson.Deserializer;
 import ir.sharif.aminra.gson.Serializer;
+import ir.sharif.aminra.request.LogoutRequest;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.response.Response;
+import ir.sharif.aminra.response.enterPage.EnterResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -45,14 +47,14 @@ public class SocketRequestSender implements RequestSender {
             printStream.println(requestString);
             String responseString = scanner.nextLine();
             Response response = gson.fromJson(responseString, Response.class);
-            /*if (response instanceof EnterResponse && ((EnterResponse) response).getSuccess()) {
+            if (response instanceof EnterResponse && ((EnterResponse) response).getSuccess()) {
                 token = deserializer.getToken();
                 serializer.setToken(token);
             }
             if (request instanceof LogoutRequest) {
                 token = null;
                 serializer.setToken(null);
-            }*/
+            }
             return response;
         } catch (Throwable throwable) {
             logger.warn("client disconnected from server");

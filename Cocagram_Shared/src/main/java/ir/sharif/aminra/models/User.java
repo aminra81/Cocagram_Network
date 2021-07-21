@@ -88,8 +88,6 @@ public class User implements SaveAble {
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Integer> chatStates;
 
-    //TODO adding saved message and avatar to it
-
     public User(String username, String firstname, String lastname, String bio, LocalDate birthDate, String email, String phoneNumber, String password, boolean publicData, String lastSeenType, Integer avatarID) {
         //get from user.
         this.username = username;

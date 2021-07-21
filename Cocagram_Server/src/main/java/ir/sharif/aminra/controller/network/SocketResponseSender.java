@@ -6,7 +6,9 @@ import ir.sharif.aminra.exceptions.ClientDisconnectException;
 import ir.sharif.aminra.gson.Deserializer;
 import ir.sharif.aminra.gson.Serializer;
 import ir.sharif.aminra.request.Request;
+import ir.sharif.aminra.response.LogoutResponse;
 import ir.sharif.aminra.response.Response;
+import ir.sharif.aminra.response.enterPage.EnterResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -60,14 +62,14 @@ public class SocketResponseSender implements ResponseSender {
     @Override
     public void sendResponse(Response response) throws ClientDisconnectException {
         try {
-            /*if (response instanceof EnterResponse && ((EnterResponse) response).getSuccess()) {
+            if (response instanceof EnterResponse && ((EnterResponse) response).getSuccess()) {
                 token = TokenGenerator.getInstance().generateNewToken();
                 serializer.setToken(token);
             }
             if (response instanceof LogoutResponse) {
                 token = null;
                 serializer.setToken(null);
-            }*/
+            }
             printStream.println(gson.toJson(response, Response.class));
         } catch (Throwable throwable) {
             logger.warn(String.format("socket %s is disconnected", socket));

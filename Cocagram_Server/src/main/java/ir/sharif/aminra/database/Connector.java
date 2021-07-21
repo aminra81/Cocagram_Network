@@ -2,6 +2,7 @@ package ir.sharif.aminra.database;
 
 import ir.sharif.aminra.exceptions.DatabaseDisconnectException;
 import ir.sharif.aminra.models.SaveAble;
+import ir.sharif.aminra.models.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
@@ -119,5 +120,29 @@ public class Connector {
                 throw new DatabaseDisconnectException(throwable);
             }
         }
+    }
+
+    public User getUserByUsername(String username) throws DatabaseDisconnectException {
+        List<User> users = fetchAll(User.class);
+        for (User user : users)
+            if(user.getUsername().equals(username))
+                return user;
+        return null;
+    }
+
+    public User getUserByEmail(String email) throws DatabaseDisconnectException {
+        List<User> users = fetchAll(User.class);
+        for (User user : users)
+            if(user.getEmail().equals(email))
+                return user;
+        return null;
+    }
+
+    public User getUserByPhoneNumber(String phoneNumber) throws DatabaseDisconnectException {
+        List<User> users = fetchAll(User.class);
+        for (User user : users)
+            if(user.getPhoneNumber().equals(phoneNumber))
+                return user;
+        return null;
     }
 }

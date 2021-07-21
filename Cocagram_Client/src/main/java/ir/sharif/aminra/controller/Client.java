@@ -1,13 +1,17 @@
 package ir.sharif.aminra.controller;
 
+import ir.sharif.aminra.controller.enterPage.EnterController;
 import ir.sharif.aminra.controller.network.RequestSender;
 import ir.sharif.aminra.exceptions.ClientDisconnectException;
 import ir.sharif.aminra.request.Request;
+import ir.sharif.aminra.request.UpdatePageRequest;
 import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ResponseVisitor;
 import ir.sharif.aminra.util.Config;
 import ir.sharif.aminra.util.Loop;
+import ir.sharif.aminra.view.Page;
 import ir.sharif.aminra.view.ViewManager;
+import javafx.application.Platform;
 import javafx.stage.Stage;
 import lombok.Getter;
 
@@ -20,6 +24,7 @@ public class Client implements ResponseVisitor {
     private final RequestSender requestSender;
     private final List<Request> requestsList;
     private final Loop loop, updater;
+    private final EnterController enterController;
 
     public Client(RequestSender requestSender) {
         this.requestSender = requestSender;
@@ -27,6 +32,8 @@ public class Client implements ResponseVisitor {
         this.loop = new Loop(10, this::sendRequests);
         this.updater = new Loop(1, this::updatePage);
         client = this;
+
+        enterController = new EnterController();
     }
 
     public void start(Stage stage) {
@@ -36,7 +43,7 @@ public class Client implements ResponseVisitor {
     }
 
 
-    private void addRequest(Request request) {
+    public void addRequest(Request request) {
         synchronized (requestsList) {
             requestsList.add(request);
         }
@@ -52,7 +59,8 @@ public class Client implements ResponseVisitor {
             for (Request request : tmpRequestsList) {
                 Response response;
                 response = requestSender.sendRequest(request);
-                response.visit(this);
+                if(response != null)
+                    response.visit(this);
             }
         } catch (ClientDisconnectException e) {
             ViewManager.getInstance().showError(Config.getConfig("client").getProperty("disconnectError"));
@@ -60,6 +68,37 @@ public class Client implements ResponseVisitor {
     }
 
     private void updatePage() {
+        if(ViewManager.getInstance().getCurPage() == null)
+            return;
+        addRequest(new UpdatePageRequest(ViewManager.getInstance().getCurPage().getFxController().getClass().getSimpleName()));
+    }
 
+    @Override
+    public void goTo(String pageName, String message) {
+        Platform.runLater(() -> {
+            ViewManager.getInstance().setPage(new Page(pageName));
+            if (message.length() > 0)
+                ViewManager.getInstance().showInformation(message);
+        });
+    }
+
+    @Override
+    public void showError(String message) {
+        Platform.runLater(() -> ViewManager.getInstance().showError(message));
+    }
+
+    @Override
+    public void updatePage(String pageName, Object... args) {
+
+    }
+
+    @Override
+    public void enter(boolean success, String message) {
+        enterController.enter(success, message);
+    }
+
+    @Override
+    public void logout() {
+        goTo("enterPage", "");
     }
 }
