@@ -1,0 +1,48 @@
+2021-07-28 05:05:32.831 [main] INFO  ir.sharif.aminra.Main - server program started
+2021-07-28 05:05:34.287 [main] DEBUG org.hibernate.SQL - drop table if exists Chat
+2021-07-28 05:05:34.290 [main] DEBUG org.hibernate.SQL - drop table if exists Chat_messages
+2021-07-28 05:05:34.290 [main] DEBUG org.hibernate.SQL - drop table if exists Chat_users
+2021-07-28 05:05:34.290 [main] DEBUG org.hibernate.SQL - drop table if exists ChatState
+2021-07-28 05:05:34.290 [main] DEBUG org.hibernate.SQL - drop table if exists Division
+2021-07-28 05:05:34.291 [main] DEBUG org.hibernate.SQL - drop table if exists Division_users
+2021-07-28 05:05:34.291 [main] DEBUG org.hibernate.SQL - drop table if exists Message
+2021-07-28 05:05:34.291 [main] DEBUG org.hibernate.SQL - drop table if exists Tweet
+2021-07-28 05:05:34.291 [main] DEBUG org.hibernate.SQL - drop table if exists Tweet_comments
+2021-07-28 05:05:34.292 [main] DEBUG org.hibernate.SQL - drop table if exists Tweet_likes
+2021-07-28 05:05:34.292 [main] DEBUG org.hibernate.SQL - drop table if exists User
+2021-07-28 05:05:34.292 [main] DEBUG org.hibernate.SQL - drop table if exists User_blockList
+2021-07-28 05:05:34.292 [main] DEBUG org.hibernate.SQL - drop table if exists User_chatStates
+2021-07-28 05:05:34.292 [main] DEBUG org.hibernate.SQL - drop table if exists User_followers
+2021-07-28 05:05:34.293 [main] DEBUG org.hibernate.SQL - drop table if exists User_followings
+2021-07-28 05:05:34.293 [main] DEBUG org.hibernate.SQL - drop table if exists User_groups
+2021-07-28 05:05:34.293 [main] DEBUG org.hibernate.SQL - drop table if exists User_likedTweets
+2021-07-28 05:05:34.293 [main] DEBUG org.hibernate.SQL - drop table if exists User_mutedUsers
+2021-07-28 05:05:34.293 [main] DEBUG org.hibernate.SQL - drop table if exists User_notifications
+2021-07-28 05:05:34.294 [main] DEBUG org.hibernate.SQL - drop table if exists User_reportedSpamTweets
+2021-07-28 05:05:34.294 [main] DEBUG org.hibernate.SQL - drop table if exists User_requestNotifications
+2021-07-28 05:05:34.294 [main] DEBUG org.hibernate.SQL - drop table if exists User_requests
+2021-07-28 05:05:34.294 [main] DEBUG org.hibernate.SQL - drop table if exists User_tweets
+2021-07-28 05:05:34.298 [main] DEBUG org.hibernate.SQL - create table Chat (id  integer, chatName varchar(255), isGroup boolean not null, primary key (id))
+2021-07-28 05:05:34.441 [main] DEBUG org.hibernate.SQL - create table Chat_messages (Chat_id integer not null, messages integer)
+2021-07-28 05:05:35.918 [main] DEBUG org.hibernate.SQL - create table Chat_users (Chat_id integer not null, users integer)
+2021-07-28 05:05:36.099 [main] DEBUG org.hibernate.SQL - create table ChatState (id  integer, chat integer, lastCheck datetime, primary key (id))
+2021-07-28 05:05:36.302 [main] DEBUG org.hibernate.SQL - create table Division (id  integer, groupName varchar(255), primary key (id))
+2021-07-28 05:05:36.530 [main] DEBUG org.hibernate.SQL - create table Division_users (Division_id integer not null, users integer)
+2021-07-28 05:05:37.108 [main] DEBUG org.hibernate.SQL - create table Message (id  integer, content varchar(255), datetime datetime, image integer, writer integer, isDeleted boolean not null, isForwardedTweet boolean not null, mainMedia integer, primary key (id))
+2021-07-28 05:05:37.312 [main] DEBUG org.hibernate.SQL - create table Tweet (id  integer, content varchar(255), datetime datetime, image integer, writer integer, spamReports integer not null, upPost integer, primary key (id))
+2021-07-28 05:05:37.503 [main] DEBUG org.hibernate.SQL - create table Tweet_comments (Tweet_id integer not null, comments integer)
+2021-07-28 05:05:37.674 [main] DEBUG org.hibernate.SQL - create table Tweet_likes (Tweet_id integer not null, likes integer)
+2021-07-28 05:05:37.823 [main] DEBUG org.hibernate.SQL - create table User (id  integer, avatar integer, bio varchar(255), birthDate date, email varchar(255), firstname varchar(255), isActive boolean not null, isPrivate boolean not null, lastSeen datetime, lastSeenType varchar(255), lastname varchar(255), password varchar(255), phoneNumber varchar(255), publicData boolean not null, username varchar(255), primary key (id))
+2021-07-28 05:05:37.989 [main] DEBUG org.hibernate.SQL - create table User_blockList (User_id integer not null, blockList integer)
+2021-07-28 05:05:38.184 [main] DEBUG org.hibernate.SQL - create table User_chatStates (User_id integer not null, chatStates integer)
+2021-07-28 05:05:38.378 [main] DEBUG org.hibernate.SQL - create table User_followers (User_id integer not null, followers integer)
+2021-07-28 05:05:38.661 [main] DEBUG org.hibernate.SQL - create table User_followings (User_id integer not null, followings integer)
+2021-07-28 05:05:38.850 [main] DEBUG org.hibernate.SQL - create table User_groups (User_id integer not null, groups integer)
+2021-07-28 05:05:39.023 [main] DEBUG org.hibernate.SQL - create table User_likedTweets (User_id integer not null, likedTweets integer)
+2021-07-28 05:05:39.196 [main] DEBUG org.hibernate.SQL - create table User_mutedUsers (User_id integer not null, mutedUsers integer)
+2021-07-28 05:05:39.774 [main] DEBUG org.hibernate.SQL - create table User_notifications (User_id integer not null, notifications varchar(255))
+2021-07-28 05:05:39.947 [main] DEBUG org.hibernate.SQL - create table User_reportedSpamTweets (User_id integer not null, reportedSpamTweets integer)
+2021-07-28 05:05:40.120 [main] DEBUG org.hibernate.SQL - create table User_requestNotifications (User_id integer not null, requestNotifications varchar(255))
+2021-07-28 05:05:40.328 [main] DEBUG org.hibernate.SQL - create table User_requests (User_id integer not null, requests integer)
+2021-07-28 05:05:40.536 [main] DEBUG org.hibernate.SQL - create table User_tweets (User_id integer not null, tweets integer)
+2021-07-28 05:05:40.777 [main] INFO  ir.sharif.aminra.database.Connector - connected to database

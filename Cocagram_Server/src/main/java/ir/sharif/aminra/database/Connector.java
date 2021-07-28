@@ -39,6 +39,7 @@ public class Connector {
             logger.info("connected to database");
             return sessionFactory;
         } catch (Throwable throwable) {
+            throwable.printStackTrace();
             logger.error("can't connect to database");
             throw new DatabaseDisconnectException(throwable);
         }
