@@ -4,7 +4,7 @@
         <property name="dialect">org.hibernate.dialect.SQLiteDialect</property>
         <property name="connection.driver_class">org.sqlite.JDBC</property>
         <property name="connection.url">jdbc:sqlite:./src/main/resources/database/serverDB.db</property>
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
 
         <mapping class="ir.sharif.aminra.models.User"/>
         <mapping class="ir.sharif.aminra.models.Group"/>
