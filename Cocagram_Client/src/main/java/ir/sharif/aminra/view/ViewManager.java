@@ -58,13 +58,12 @@ public class ViewManager {
 
     public void back() {
         stack.pop();
+        curPage = stack.peek();
         stage.setScene(stack.peek().getScene());
     }
 
     public void goToMainPage() {
         Page mainPage = new Page("mainPage");
-        //TODO completing main page
-        //MainFXController mainFXController = (MainFXController) mainPage.getFxController();
         ViewManager.getInstance().setPage(mainPage);
     }
 

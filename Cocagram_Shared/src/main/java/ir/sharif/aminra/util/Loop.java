@@ -3,17 +3,17 @@ package ir.sharif.aminra.util;
 import lombok.SneakyThrows;
 
 public class Loop {
-    private final int fps;
+    private final double fps;
     private volatile boolean running = false;
     protected Thread thread;
     private final Runnable runnable;
 
 
-    public Loop(int fps) {
+    public Loop(double fps) {
         this(fps,null);
     }
 
-    public Loop(int fps, Runnable runnable) {
+    public Loop(double fps, Runnable runnable) {
         this.fps = fps;
         this.runnable = runnable;
         thread = new Thread(this::run);
@@ -27,7 +27,7 @@ public class Loop {
 
     private void run() {
         long lastTime = System.nanoTime();
-        int ns_per_update = 1000000000 / fps;
+        double ns_per_update = 1000000000 / fps;
         double delta = 0;
         while (running) {
             long now = System.nanoTime();

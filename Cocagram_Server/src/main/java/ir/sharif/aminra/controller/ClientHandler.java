@@ -3,11 +3,27 @@ package ir.sharif.aminra.controller;
 import ir.sharif.aminra.controller.enterPage.SignInController;
 import ir.sharif.aminra.controller.enterPage.SignUpController;
 import ir.sharif.aminra.controller.network.ResponseSender;
+import ir.sharif.aminra.controller.personalPage.MyPageController;
+import ir.sharif.aminra.controller.personalPage.editPage.EditPageController;
+import ir.sharif.aminra.controller.personalPage.listsPage.GroupPageController;
+import ir.sharif.aminra.controller.personalPage.listsPage.ListsPageController;
+import ir.sharif.aminra.controller.personalPage.listsPage.NewGroupController;
+import ir.sharif.aminra.controller.personalPage.notificationsPage.NotificationsPageController;
+import ir.sharif.aminra.controller.personalPage.notificationsPage.RequestController;
+import ir.sharif.aminra.controller.profileView.ProfileViewController;
+import ir.sharif.aminra.database.Connector;
 import ir.sharif.aminra.exceptions.ClientDisconnectException;
+import ir.sharif.aminra.exceptions.DatabaseDisconnectException;
 import ir.sharif.aminra.models.User;
+import ir.sharif.aminra.models.events.GroupPageEventType;
+import ir.sharif.aminra.models.events.ProfilePageEventType;
+import ir.sharif.aminra.models.events.RequestAnswerType;
+import ir.sharif.aminra.models.events.SwitchToProfileType;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.RequestVisitor;
 import ir.sharif.aminra.response.Response;
+import ir.sharif.aminra.response.ShowErrorResponse;
+import ir.sharif.aminra.util.Config;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,15 +35,34 @@ public class ClientHandler extends Thread implements RequestVisitor {
     @Getter
     private final ResponseSender responseSender;
     private volatile boolean running;
+    @Getter
     @Setter
     private User user;
 
     private final SignUpController signUpController;
     private final SignInController signInController;
+    private final MyPageController myPageController;
+    private final EditPageController editPageController;
+    private final NotificationsPageController notificationsPageController;
+    private final RequestController requestController;
+    private final ListsPageController listsPageController;
+    private final GroupPageController groupPageController;
+    private final NewGroupController newGroupController;
+    private final ProfileViewController profileViewController;
+
     public ClientHandler(ResponseSender responseSender) throws IOException {
         this.responseSender = responseSender;
+
         signUpController = new SignUpController(this);
         signInController = new SignInController(this);
+        myPageController = new MyPageController(this);
+        editPageController = new EditPageController(this);
+        notificationsPageController = new NotificationsPageController(this);
+        requestController = new RequestController(this);
+        listsPageController = new ListsPageController(this);
+        groupPageController = new GroupPageController(this);
+        newGroupController = new NewGroupController(this);
+        profileViewController = new ProfileViewController(this);
     }
 
     @Override
@@ -40,9 +75,17 @@ public class ClientHandler extends Thread implements RequestVisitor {
     public void run() {
         while (running) {
             try {
-                Request request = responseSender.getRequest();
-                Response response = request.visit(this);
-                responseSender.sendResponse(response);
+                try {
+                    //updating user
+                    if(user != null)
+                        user  = Connector.getInstance().fetch(User.class, user.getId());
+                    Request request = responseSender.getRequest();
+                    Response response = request.visit(this);
+                    responseSender.sendResponse(response);
+                } catch (DatabaseDisconnectException e) {
+                    responseSender.sendResponse(new ShowErrorResponse(Config.getConfig("server").
+                            getProperty("databaseDisconnectError")));
+                }
             } catch (ClientDisconnectException e) {
                 running = false;
             }
@@ -52,7 +95,16 @@ public class ClientHandler extends Thread implements RequestVisitor {
 
     @Override
     public Response updatePage(String pageName) {
-        return null;
+        switch (pageName) {
+            case "MyFXController":
+                return myPageController.getUpdate();
+            case "NotificationsFXController":
+                return notificationsPageController.getUpdate();
+            case "ListsFXController":
+                return listsPageController.getUpdate();
+            default:
+                return null;
+        }
     }
 
     @Override
@@ -70,5 +122,51 @@ public class ClientHandler extends Thread implements RequestVisitor {
     @Override
     public Response logout() {
         return null;
+    }
+
+    @Override
+    public Response edit(String firstname, String lastname, String bio, LocalDate birthdate, String email,
+                         String phoneNumber, byte[] avatarArray) {
+        return editPageController.edit(firstname, lastname, bio, birthdate, email, phoneNumber, avatarArray);
+    }
+
+    @Override
+    public Response switchToEditPage() {
+        return editPageController.getInfoToSwitch();
+    }
+
+    @Override
+    public Response followRequestHandle(RequestAnswerType requestAnswerType, Integer requesterID) {
+        return requestController.handle(requestAnswerType, requesterID);
+    }
+
+    @Override
+    public Response updateGroupPage(Integer groupId) {
+        return groupPageController.getUpdate(groupId);
+    }
+
+    @Override
+    public Response createGroup(String groupName) {
+        return newGroupController.createGroup(groupName);
+    }
+
+    @Override
+    public Response editGroup(GroupPageEventType groupPageEventType, Integer group, String username) {
+        return groupPageController.getEditResponse(groupPageEventType, group, username);
+    }
+
+    @Override
+    public Response profileHandle(ProfilePageEventType profilePageEventType, Integer userToBeVisited) {
+        return profileViewController.profileHandle(profilePageEventType, userToBeVisited);
+    }
+
+    @Override
+    public Response switchToProfilePage(SwitchToProfileType switchToProfileType, Integer userToBeVisited, String username) {
+        return profileViewController.getInfoToSwitch(switchToProfileType, userToBeVisited, username);
+    }
+
+    @Override
+    public Response updateProfilePage(Integer userToBeVisited) {
+        return profileViewController.getUpdate(userToBeVisited);
     }
 }

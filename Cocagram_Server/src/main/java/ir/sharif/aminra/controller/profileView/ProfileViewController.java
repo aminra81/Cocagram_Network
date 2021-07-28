@@ -1,0 +1,229 @@
+package ir.sharif.aminra.controller.profileView;
+
+import ir.sharif.aminra.controller.ClientHandler;
+import ir.sharif.aminra.database.Connector;
+import ir.sharif.aminra.database.ImageLoader;
+import ir.sharif.aminra.exceptions.DatabaseDisconnectException;
+import ir.sharif.aminra.models.User;
+import ir.sharif.aminra.models.events.ProfilePageEventType;
+import ir.sharif.aminra.models.events.SwitchToProfileType;
+import ir.sharif.aminra.response.Response;
+import ir.sharif.aminra.response.ShowErrorResponse;
+import ir.sharif.aminra.response.profileView.SwitchToProfilePageResponse;
+import ir.sharif.aminra.response.profileView.UpdateProfilePageResponse;
+import ir.sharif.aminra.util.Config;
+import ir.sharif.aminra.util.ImageUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.time.format.DateTimeFormatter;
+
+public class ProfileViewController {
+    static private final Logger logger = LogManager.getLogger(ProfileViewController.class);
+
+    private final ClientHandler clientHandler;
+
+    public ProfileViewController(ClientHandler clientHandler) {
+        this.clientHandler = clientHandler;
+    }
+
+    public Response getInfoToSwitch(SwitchToProfileType switchToProfileType, Integer userToBeVisitedId, String username) {
+        switch (switchToProfileType) {
+            case USER:
+                return getInfoToSwitchByUserId(userToBeVisitedId);
+        }
+        return null;
+    }
+
+    private Response getInfoToSwitchByUserId(Integer userToBeVisitedId) {
+        try {
+            User userToBeVisited = Connector.getInstance().fetch(User.class, userToBeVisitedId);
+            User user = clientHandler.getUser();
+            System.out.println(userToBeVisited);
+            if (!userToBeVisited.isActive()) {
+                logger.info(String.format("user %s wants to check the profile of a user which doesn't exist.",
+                        user.getUsername()));
+                return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
+                        false, false, "", userToBeVisitedId);
+            }
+            if (user.equals(userToBeVisited))
+                return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
+                        true, true, "", userToBeVisitedId);
+
+            return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
+                    true, false, "", userToBeVisitedId);
+        } catch (DatabaseDisconnectException e) {
+            return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
+        }
+    }
+
+    public Response getUpdate(Integer userToBeVisitedId) {
+        try {
+            User userToBeVisited = Connector.getInstance().fetch(User.class, userToBeVisitedId);
+            User user = clientHandler.getUser();
+
+            ImageLoader imageLoader = new ImageLoader();
+            BufferedImage bufferedImage = imageLoader.getByID(userToBeVisited.getAvatar());
+            ImageUtils imageUtils = new ImageUtils();
+            byte[] avatarArray = null;
+            try {
+                avatarArray = imageUtils.toByteArray(bufferedImage, "png");
+            } catch (IOException e) {
+                logger.warn("can't convert buffered image to byte array");
+                e.printStackTrace();
+            }
+
+            String username = userToBeVisited.getUsername();
+            String firstname = userToBeVisited.getFirstname();
+            String lastname = userToBeVisited.getLastname();
+            String lastSeen = getLastSeen(user, userToBeVisited);
+            String bio = userToBeVisited.getBio();
+            String birthdate = null;
+            String email;
+            String phoneNumber;
+            if (userToBeVisited.isPublicData()) {
+                if (userToBeVisited.getBirthDate() != null)
+                    birthdate = userToBeVisited.getBirthDate().toString();
+                email = userToBeVisited.getEmail();
+                phoneNumber = userToBeVisited.getPhoneNumber();
+            } else {
+                birthdate = Config.getConfig("profilePage").getProperty(String.class, "private");
+                email = Config.getConfig("profilePage").getProperty(String.class, "private");
+                phoneNumber = Config.getConfig("profilePage").getProperty(String.class, "private");
+            }
+            String blockString;
+            if (user.getBlockList().contains(userToBeVisited.getId()))
+                blockString = Config.getConfig("profilePage").getProperty(String.class, "unblockButtonText");
+            else
+                blockString = Config.getConfig("profilePage").getProperty(String.class, "blockButtonText");
+
+            String muteString;
+            if (user.getMutedUsers().contains(userToBeVisited.getId()))
+                muteString = Config.getConfig("profilePage").getProperty(String.class, "unmuteButtonText");
+            else
+                muteString = Config.getConfig("profilePage").getProperty(String.class, "muteButtonText");
+
+            String followString;
+            if (user.getFollowings().contains(userToBeVisited.getId()))
+                followString = Config.getConfig("profilePage").
+                        getProperty(String.class, "unfollowButtonText");
+            else if (userToBeVisited.getRequests().contains(user.getId()))
+                followString = Config.getConfig("profilePage").
+                        getProperty(String.class, "requestedButtonText");
+            else
+                followString = Config.getConfig("profilePage").
+                        getProperty(String.class, "followButtonText");
+            return new UpdateProfilePageResponse(username, avatarArray, firstname, lastname, lastSeen, bio, birthdate
+            , email, phoneNumber, blockString, muteString, followString);
+        } catch (DatabaseDisconnectException e) {
+            return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
+        }
+    }
+
+    private String getLastSeen(User user, User userToBeVisited) {
+
+        if (userToBeVisited.getLastSeenType().equals(Config.getConfig("profilePage").
+                getProperty(String.class, "nobodyLastSeen")))
+            return Config.getConfig("profilePage").getProperty(String.class, "recently");
+
+        if (userToBeVisited.getLastSeenType().equals(Config.getConfig("profilePage").
+                getProperty(String.class, "followingsLastSeen")) &&
+                !userToBeVisited.getFollowings().contains(user.getId()))
+            return Config.getConfig("profilePage").getProperty(String.class, "recently");
+
+        if (userToBeVisited.getLastSeen() == null)
+            return Config.getConfig("profilePage").getProperty(String.class, "online");
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        return userToBeVisited.getLastSeen().format(formatter);
+    }
+
+    public Response profileHandle(ProfilePageEventType profilePageEventType, Integer userToBeVisited) {
+        switch (profilePageEventType) {
+            case MUTE:
+                return muteHandling(userToBeVisited);
+            case BLOCK:
+                return blockHandling(userToBeVisited);
+            case FOLLOW:
+                return followHandling(userToBeVisited);
+        }
+        return null;
+    }
+
+    public Response muteHandling(Integer userToBeVisitedID) {
+        try {
+            User user = clientHandler.getUser();
+            User userToBeVisited = Connector.getInstance().fetch(User.class, userToBeVisitedID);
+
+            if (user.getMutedUsers().contains(userToBeVisited.getId())) {
+                user.removeFromMutedUsers(userToBeVisited.getId());
+                Connector.getInstance().save(user);
+                logger.info(String.format("user %s unmuted user %s.", user.getUsername(), userToBeVisited.getUsername()));
+            } else {
+                user.addToMutedUsers(userToBeVisited.getId());
+                Connector.getInstance().save(user);
+                logger.info(String.format("user %s muted user %s.", user.getUsername(), userToBeVisited.getUsername()));
+            }
+            return null;
+        } catch (DatabaseDisconnectException e) {
+            return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
+        }
+    }
+
+    public Response blockHandling(Integer userToBeVisitedID) {
+        try {
+            User user = clientHandler.getUser();
+            User userToBeVisited = Connector.getInstance().fetch(User.class, userToBeVisitedID);
+
+            if (user.getBlockList().contains(userToBeVisited.getId())) {
+                user.removeFromBlocklist(userToBeVisited.getId());
+                Connector.getInstance().save(user);
+                logger.info(String.format("user %s unblocked user %s.", user.getUsername(), userToBeVisited.getUsername()));
+            } else {
+                user.addToBlocklist(userToBeVisited.getId());
+                Connector.getInstance().save(user);
+                logger.info(String.format("user %s blocked user %s.", user.getUsername(), userToBeVisited.getUsername()));
+            }
+            return null;
+        } catch (DatabaseDisconnectException e) {
+            return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
+        }
+    }
+
+    public Response followHandling(Integer userToBeVisitedID) {
+        try {
+            User user = clientHandler.getUser();
+            User userToBeVisited = Connector.getInstance().fetch(User.class, userToBeVisitedID);
+
+            if (user.getFollowings().contains(userToBeVisited.getId())) {
+                user.removeFromFollowings(userToBeVisited.getId());
+                userToBeVisited.removeFromFollowers(user.getId());
+                userToBeVisited.addToNotifications(String.format("user %s unfollowed you!", user.getUsername()));
+                Connector.getInstance().save(user);
+                Connector.getInstance().save(userToBeVisited);
+                logger.info(String.format("user %s unfollowed user %s.", user.getUsername(), userToBeVisited.getUsername()));
+            } else if (userToBeVisited.getRequests().contains(user.getId())) {
+                logger.info(String.format("user %s removed the request to user %s.", user.getUsername(),
+                        userToBeVisited.getUsername()));
+                userToBeVisited.removeFromRequests(user.getId());
+                Connector.getInstance().save(userToBeVisited);
+            } else if (userToBeVisited.isPrivate()) {
+                userToBeVisited.addToRequests(user.getId());
+                Connector.getInstance().save(userToBeVisited);
+                logger.info(String.format("user %s requested user %s.", user.getUsername(), userToBeVisited.getUsername()));
+            } else {
+                user.addToFollowings(userToBeVisited.getId());
+                userToBeVisited.addToFollowers(user.getId());
+                userToBeVisited.addToNotifications(String.format("user %s followed you!", user.getUsername()));
+                Connector.getInstance().save(user);
+                Connector.getInstance().save(userToBeVisited);
+                logger.info(String.format("user %s followed user %s.", user.getUsername(), userToBeVisited.getUsername()));
+            }
+            return null;
+        } catch (DatabaseDisconnectException e) {
+            return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
+        }
+    }
+}

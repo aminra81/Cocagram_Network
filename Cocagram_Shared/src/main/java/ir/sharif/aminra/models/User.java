@@ -270,7 +270,7 @@ public class User implements SaveAble {
         requests.add(requester);
     }
 
-    public void removeFromRequests(User requester) {
+    public void removeFromRequests(Integer requester) {
         requests.remove(requester);
     }
 

@@ -125,7 +125,7 @@ public class Connector {
     public User getUserByUsername(String username) throws DatabaseDisconnectException {
         List<User> users = fetchAll(User.class);
         for (User user : users)
-            if(user.getUsername().equals(username))
+            if (user.getUsername().equals(username))
                 return user;
         return null;
     }

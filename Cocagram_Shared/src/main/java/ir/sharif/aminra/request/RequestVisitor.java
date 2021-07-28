@@ -1,5 +1,9 @@
 package ir.sharif.aminra.request;
 
+import ir.sharif.aminra.models.events.GroupPageEventType;
+import ir.sharif.aminra.models.events.ProfilePageEventType;
+import ir.sharif.aminra.models.events.RequestAnswerType;
+import ir.sharif.aminra.models.events.SwitchToProfileType;
 import ir.sharif.aminra.response.Response;
 
 import java.time.LocalDate;
@@ -10,4 +14,13 @@ public interface RequestVisitor {
     Response register(String username, String firstname, String lastname, String bio, LocalDate birthDate,
                       String email, String phoneNumber, String password, boolean publicData, String lastSeenType);
     Response logout();
+    Response edit(String firstname, String lastname, String bio, LocalDate birthdate, String email, String phoneNumber, byte[] avatarArray);
+    Response switchToEditPage();
+    Response followRequestHandle(RequestAnswerType requestAnswerType, Integer requesterID);
+    Response updateGroupPage(Integer groupId);
+    Response createGroup(String groupName);
+    Response editGroup(GroupPageEventType groupPageEventType, Integer group, String username);
+    Response profileHandle(ProfilePageEventType profilePageEventType, Integer userToBeVisited);
+    Response switchToProfilePage(SwitchToProfileType switchToProfileType, Integer id, String username);
+    Response updateProfilePage(Integer userToBeVisited);
 }
