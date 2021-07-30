@@ -5,6 +5,7 @@ import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.personalPage.editPage.SwitchToEditPageRequest;
 import ir.sharif.aminra.view.Page;
 import ir.sharif.aminra.view.ViewManager;
+import ir.sharif.aminra.view.tweets.NewTweetFXController;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,6 +16,10 @@ public class MyPageListener {
     public void stringEventOccurred(String event) {
         switch (event) {
             case "newTweet":
+                Page newTweetPage = new Page("newTweetPage");
+                ViewManager.getInstance().setPage(newTweetPage);
+                NewTweetFXController newTweetFXController = (NewTweetFXController) newTweetPage.getFxController();
+                newTweetFXController.setUpPost(null);
                 break;
             case "edit":
                 Request request = new SwitchToEditPageRequest();

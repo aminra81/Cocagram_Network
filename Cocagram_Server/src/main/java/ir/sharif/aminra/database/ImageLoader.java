@@ -31,6 +31,8 @@ public class ImageLoader {
     }
 
     public BufferedImage getByID(Integer id) {
+        if(id == null)
+            return null;
         File data = new File(dbDirectory, id + ".png");
         BufferedImage image;
         try {

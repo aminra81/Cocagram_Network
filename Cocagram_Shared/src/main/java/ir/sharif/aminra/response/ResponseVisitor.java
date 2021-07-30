@@ -3,6 +3,7 @@ package ir.sharif.aminra.response;
 import ir.sharif.aminra.models.Group;
 import ir.sharif.aminra.models.User;
 import ir.sharif.aminra.models.events.SwitchToProfileType;
+import ir.sharif.aminra.models.viewModels.ViewTweet;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
 public interface ResponseVisitor {
     void goTo(String pageName, String message);
     void showError(String message);
-    void updatePersonalPage(byte[] bytes);
+    void updatePersonalPage(byte[] bytes, List<ViewTweet> viewTweetList);
     void enter(boolean success, String message);
     void logout();
     void switchToEditPage(String username, String firstname, String lastname, String bio, LocalDate birthdate,
@@ -26,4 +27,7 @@ public interface ResponseVisitor {
     void updateProfilePage(String username, byte[] avatarArray, String firstname, String lastname, String lastSeen,
                            String bio, String birthdate, String email, String phoneNumber, String blockString,
                            String muteString, String followString);
+    void back();
+    void updateTweetPage(String tweetContent, String tweetDate, String retweetString, byte[] tweetImage, int likeNumbers, List<ViewTweet> viewTweetList, String likeButtonText);
+    void applyTweetActionResponse(String verdict, boolean isError);
 }

@@ -1,3 +1,6 @@
-2021-07-28 06:10:51.738 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
-2021-07-28 06:10:51.747 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=46628] is client socket
-2021-07-28 06:12:14.355 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignUpFormListener - client requested RegisterRequest(username=a, firstname=a, lastname=a, bio=, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, lastSeenType=Everyone)
+2021-07-30 20:22:08.212 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
+2021-07-30 20:22:08.221 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=50578] is client socket
+2021-07-30 20:22:13.869 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=a, password=a)
+2021-07-30 20:22:45.082 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.tweets.TweetPageListener - client requested Request()
+2021-07-30 20:23:06.480 [Thread-2] WARN  ir.sharif.aminra.controller.network.RequestSender - client disconnected from server
+2021-07-30 20:23:06.481 [Thread-2] INFO  ir.sharif.aminra.response.ResponseVisitor - client program terminated

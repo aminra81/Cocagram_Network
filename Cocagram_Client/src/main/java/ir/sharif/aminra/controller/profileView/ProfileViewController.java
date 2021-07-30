@@ -5,6 +5,7 @@ import ir.sharif.aminra.util.ImageUtils;
 import ir.sharif.aminra.view.Page;
 import ir.sharif.aminra.view.ViewManager;
 import ir.sharif.aminra.view.profileView.ProfileFXController;
+import ir.sharif.aminra.view.tweets.TweetFXController;
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.paint.ImagePattern;
@@ -25,6 +26,7 @@ public class ProfileViewController {
                 switchPageByUserID(exists, mine, userToBeVisited);
                 break;
             case TWEET:
+                switchPageByTweetID(exists, mine, error, userToBeVisited);
                 break;
             case MESSAGE:
                 break;
@@ -42,6 +44,29 @@ public class ProfileViewController {
 
         if (mine)
             return;
+        Platform.runLater(() -> {
+            Page profilePage = new Page("profilePage");
+            ProfileFXController profileFXController = (ProfileFXController) profilePage.getFxController();
+            profileFXController.setUserToVeVisited(userToBeVisited);
+            ViewManager.getInstance().setPage(profilePage);
+        });
+    }
+
+    private void switchPageByTweetID(boolean exists, boolean mine, String error, Integer userToBeVisited) {
+        if (!exists) {
+            Platform.runLater(() -> {
+                Page deactivatedUserPage = new Page("deactivatedUserPage");
+                ViewManager.getInstance().setPage(deactivatedUserPage);
+            });
+            return;
+        }
+        if (mine) {
+            if(!(ViewManager.getInstance().getCurPage().getFxController() instanceof TweetFXController))
+                return;
+            TweetFXController tweetFXController = (TweetFXController) ViewManager.getInstance().getCurPage().getFxController();
+            Platform.runLater(() -> tweetFXController.setVerdictLabelText(error, true));
+            return;
+        }
         Platform.runLater(() -> {
             Page profilePage = new Page("profilePage");
             ProfileFXController profileFXController = (ProfileFXController) profilePage.getFxController();

@@ -9,16 +9,20 @@ import ir.sharif.aminra.controller.personalPage.listsPage.ListsPageController;
 import ir.sharif.aminra.controller.personalPage.listsPage.NewGroupController;
 import ir.sharif.aminra.controller.personalPage.notificationsPage.NotificationsPageController;
 import ir.sharif.aminra.controller.profileView.ProfileViewController;
+import ir.sharif.aminra.controller.tweets.TweetManager;
 import ir.sharif.aminra.exceptions.ClientDisconnectException;
 import ir.sharif.aminra.models.Group;
 import ir.sharif.aminra.models.User;
 import ir.sharif.aminra.models.events.SwitchToProfileType;
+import ir.sharif.aminra.models.viewModels.ViewTweet;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.UpdatePageRequest;
 import ir.sharif.aminra.request.personalPage.editPage.UpdateProfilePageRequest;
 import ir.sharif.aminra.request.personalPage.listsPage.UpdateGroupPageRequest;
+import ir.sharif.aminra.request.tweets.UpdateTweetPageRequest;
 import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ResponseVisitor;
+import ir.sharif.aminra.util.Config;
 import ir.sharif.aminra.util.Loop;
 import ir.sharif.aminra.view.FXController;
 import ir.sharif.aminra.view.Page;
@@ -28,6 +32,7 @@ import ir.sharif.aminra.view.personalPage.listsPage.GroupFXController;
 import ir.sharif.aminra.view.personalPage.listsPage.ListsFXController;
 import ir.sharif.aminra.view.personalPage.notificationsPage.NotificationsFXController;
 import ir.sharif.aminra.view.profileView.ProfileFXController;
+import ir.sharif.aminra.view.tweets.TweetFXController;
 import javafx.application.Platform;
 import javafx.stage.Stage;
 import lombok.Getter;
@@ -60,8 +65,10 @@ public class Client implements ResponseVisitor {
     public Client(RequestSender requestSender) {
         this.requestSender = requestSender;
         this.requestsList = new LinkedList<>();
-        this.loop = new Loop(5, this::sendRequests);
-        this.updater = new Loop(0.5, this::updatePage);
+        this.loop = new Loop(Config.getConfig("client").getProperty(Double.class, "loopFps"),
+                this::sendRequests);
+        this.updater = new Loop(Config.getConfig("client").getProperty(Double.class, "updaterFps"),
+                this::updatePage);
         client = this;
 
         enterController = new EnterController();
@@ -114,6 +121,9 @@ public class Client implements ResponseVisitor {
             addRequest(new UpdateGroupPageRequest(((GroupFXController) fxController).getGroup()));
         else if (fxController instanceof ProfileFXController)
             addRequest(new UpdateProfilePageRequest(((ProfileFXController) fxController).getUserToVeVisited()));
+        else if(fxController instanceof TweetFXController)
+            addRequest(new UpdateTweetPageRequest(((TweetFXController) fxController).getTweetID(),
+                    ((TweetFXController) fxController).isMyTweets()));
         else if (fxController instanceof MyFXController || fxController instanceof ListsFXController ||
                 fxController instanceof NotificationsFXController)
             addRequest(new UpdatePageRequest(fxController.getClass().getSimpleName()));
@@ -134,8 +144,8 @@ public class Client implements ResponseVisitor {
     }
 
     @Override
-    public void updatePersonalPage(byte[] bytes) {
-        myPageController.refresh(bytes);
+    public void updatePersonalPage(byte[] bytes, List<ViewTweet> viewTweetList) {
+        myPageController.refresh(bytes, viewTweetList);
     }
 
     @Override
@@ -199,4 +209,22 @@ public class Client implements ResponseVisitor {
         profileViewController.refresh(username, avatarArray, firstname, lastname, lastSeen, bio, birthdate, email,
                 phoneNumber, blockString, muteString, followString);
     }
+
+    @Override
+    public void back() {
+        Platform.runLater(() -> ViewManager.getInstance().back());
+    }
+
+    @Override
+    public void updateTweetPage(String tweetContent, String tweetDate, String retweetString, byte[] tweetImage,
+                                int likeNumbers, List<ViewTweet> viewTweetList, String likeButtonText) {
+        TweetManager.getInstance().refresh(tweetContent, tweetDate, retweetString, tweetImage, likeNumbers, viewTweetList,
+                likeButtonText);
+    }
+
+    @Override
+    public void applyTweetActionResponse(String verdict, boolean isError) {
+        TweetManager.getInstance().applyTweetActionResponse(verdict, isError);
+    }
+
 }

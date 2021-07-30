@@ -11,14 +11,13 @@ import ir.sharif.aminra.controller.personalPage.listsPage.NewGroupController;
 import ir.sharif.aminra.controller.personalPage.notificationsPage.NotificationsPageController;
 import ir.sharif.aminra.controller.personalPage.notificationsPage.RequestController;
 import ir.sharif.aminra.controller.profileView.ProfileViewController;
+import ir.sharif.aminra.controller.tweets.NewTweetController;
+import ir.sharif.aminra.controller.tweets.TweetManager;
 import ir.sharif.aminra.database.Connector;
 import ir.sharif.aminra.exceptions.ClientDisconnectException;
 import ir.sharif.aminra.exceptions.DatabaseDisconnectException;
 import ir.sharif.aminra.models.User;
-import ir.sharif.aminra.models.events.GroupPageEventType;
-import ir.sharif.aminra.models.events.ProfilePageEventType;
-import ir.sharif.aminra.models.events.RequestAnswerType;
-import ir.sharif.aminra.models.events.SwitchToProfileType;
+import ir.sharif.aminra.models.events.*;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.RequestVisitor;
 import ir.sharif.aminra.response.Response;
@@ -49,6 +48,7 @@ public class ClientHandler extends Thread implements RequestVisitor {
     private final GroupPageController groupPageController;
     private final NewGroupController newGroupController;
     private final ProfileViewController profileViewController;
+    private final NewTweetController newTweetController;
 
     public ClientHandler(ResponseSender responseSender) throws IOException {
         this.responseSender = responseSender;
@@ -63,6 +63,7 @@ public class ClientHandler extends Thread implements RequestVisitor {
         groupPageController = new GroupPageController(this);
         newGroupController = new NewGroupController(this);
         profileViewController = new ProfileViewController(this);
+        newTweetController = new NewTweetController(this);
     }
 
     @Override
@@ -161,12 +162,27 @@ public class ClientHandler extends Thread implements RequestVisitor {
     }
 
     @Override
-    public Response switchToProfilePage(SwitchToProfileType switchToProfileType, Integer userToBeVisited, String username) {
-        return profileViewController.getInfoToSwitch(switchToProfileType, userToBeVisited, username);
+    public Response switchToProfilePage(SwitchToProfileType switchToProfileType, Integer Id, String username) {
+        return profileViewController.getInfoToSwitch(switchToProfileType, Id, username);
     }
 
     @Override
     public Response updateProfilePage(Integer userToBeVisited) {
         return profileViewController.getUpdate(userToBeVisited);
+    }
+
+    @Override
+    public Response newTweet(String content, byte[] avatarArray, Integer upPost) {
+        return newTweetController.addTweet(content, avatarArray, upPost);
+    }
+
+    @Override
+    public Response updateTweetPage(Integer tweetId, boolean myTweets) {
+        return TweetManager.getInstance().getUpdate(tweetId, user, myTweets);
+    }
+
+    @Override
+    public Response applyTweetAction(TweetPageEventType tweetPageEventType, Integer tweetId) {
+        return TweetManager.getInstance().applyTweetAction(tweetPageEventType, user, tweetId);
     }
 }

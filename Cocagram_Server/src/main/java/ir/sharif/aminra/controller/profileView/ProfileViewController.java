@@ -7,6 +7,7 @@ import ir.sharif.aminra.exceptions.DatabaseDisconnectException;
 import ir.sharif.aminra.models.User;
 import ir.sharif.aminra.models.events.ProfilePageEventType;
 import ir.sharif.aminra.models.events.SwitchToProfileType;
+import ir.sharif.aminra.models.media.Tweet;
 import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ShowErrorResponse;
 import ir.sharif.aminra.response.profileView.SwitchToProfilePageResponse;
@@ -29,34 +30,55 @@ public class ProfileViewController {
         this.clientHandler = clientHandler;
     }
 
-    public Response getInfoToSwitch(SwitchToProfileType switchToProfileType, Integer userToBeVisitedId, String username) {
-        switch (switchToProfileType) {
-            case USER:
-                return getInfoToSwitchByUserId(userToBeVisitedId);
-        }
-        return null;
-    }
-
-    private Response getInfoToSwitchByUserId(Integer userToBeVisitedId) {
+    public Response getInfoToSwitch(SwitchToProfileType switchToProfileType, Integer Id, String username) {
         try {
-            User userToBeVisited = Connector.getInstance().fetch(User.class, userToBeVisitedId);
-            User user = clientHandler.getUser();
-            System.out.println(userToBeVisited);
-            if (!userToBeVisited.isActive()) {
-                logger.info(String.format("user %s wants to check the profile of a user which doesn't exist.",
-                        user.getUsername()));
-                return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
-                        false, false, "", userToBeVisitedId);
+            switch (switchToProfileType) {
+                case USER:
+                    return getInfoToSwitchByUserId(Id);
+                case TWEET:
+                    return getInfoToSwitchByTweetId(Id);
             }
-            if (user.equals(userToBeVisited))
-                return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
-                        true, true, "", userToBeVisitedId);
-
-            return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
-                    true, false, "", userToBeVisitedId);
+            return null;
         } catch (DatabaseDisconnectException e) {
             return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
         }
+    }
+
+    private Response getInfoToSwitchByUserId(Integer userToBeVisitedId) throws DatabaseDisconnectException {
+        User userToBeVisited = Connector.getInstance().fetch(User.class, userToBeVisitedId);
+        User user = clientHandler.getUser();
+        if (!userToBeVisited.isActive()) {
+            logger.info(String.format("user %s wants to check the profile of a user which doesn't exist.",
+                    user.getUsername()));
+            return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
+                    false, false, "", userToBeVisitedId);
+        }
+        if (user.equals(userToBeVisited))
+            return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
+                    true, true, "", userToBeVisitedId);
+
+        return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
+                true, false, "", userToBeVisitedId);
+
+    }
+
+    private Response getInfoToSwitchByTweetId(Integer tweetId) throws DatabaseDisconnectException {
+        Tweet tweet = Connector.getInstance().fetch(Tweet.class, tweetId);
+        User userToBeVisited = Connector.getInstance().fetch(User.class, tweet.getWriter());
+        User user = clientHandler.getUser();
+        if (!userToBeVisited.isActive()) {
+            logger.info(String.format("user %s wants to check the profile of a user which doesn't exist.",
+                    user.getUsername()));
+            return new SwitchToProfilePageResponse(SwitchToProfileType.TWEET,
+                    false, false, "", tweet.getWriter());
+        }
+        if (user.equals(userToBeVisited))
+            return new SwitchToProfilePageResponse(SwitchToProfileType.TWEET,
+                    true, true, Config.getConfig("tweets").getProperty(String.class,
+                    "viewSelfProfileError"), tweet.getWriter());
+
+        return new SwitchToProfilePageResponse(SwitchToProfileType.TWEET,
+                true, false, "", tweet.getWriter());
     }
 
     public Response getUpdate(Integer userToBeVisitedId) {
@@ -116,7 +138,7 @@ public class ProfileViewController {
                 followString = Config.getConfig("profilePage").
                         getProperty(String.class, "followButtonText");
             return new UpdateProfilePageResponse(username, avatarArray, firstname, lastname, lastSeen, bio, birthdate
-            , email, phoneNumber, blockString, muteString, followString);
+                    , email, phoneNumber, blockString, muteString, followString);
         } catch (DatabaseDisconnectException e) {
             return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
         }

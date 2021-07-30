@@ -1,9 +1,6 @@
 package ir.sharif.aminra.request;
 
-import ir.sharif.aminra.models.events.GroupPageEventType;
-import ir.sharif.aminra.models.events.ProfilePageEventType;
-import ir.sharif.aminra.models.events.RequestAnswerType;
-import ir.sharif.aminra.models.events.SwitchToProfileType;
+import ir.sharif.aminra.models.events.*;
 import ir.sharif.aminra.response.Response;
 
 import java.time.LocalDate;
@@ -23,4 +20,7 @@ public interface RequestVisitor {
     Response profileHandle(ProfilePageEventType profilePageEventType, Integer userToBeVisited);
     Response switchToProfilePage(SwitchToProfileType switchToProfileType, Integer id, String username);
     Response updateProfilePage(Integer userToBeVisited);
+    Response newTweet(String content, byte[] avatarArray, Integer upPost);
+    Response updateTweetPage(Integer tweetId, boolean myTweets);
+    Response applyTweetAction(TweetPageEventType tweetPageEventType, Integer tweetId);
 }

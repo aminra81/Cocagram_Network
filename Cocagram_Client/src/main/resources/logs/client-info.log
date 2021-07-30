@@ -1,14 +1,5 @@
-2021-07-28 06:12:32.288 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
-2021-07-28 06:12:32.298 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=46684] is client socket
-2021-07-28 06:14:25.874 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignUpFormListener - client requested RegisterRequest(username=b, firstname=b, lastname=b, bio=, birthDate=null, email=b@gmail.com, phoneNumber=913, password=b, publicData=false, lastSeenType=Everyone)22021-07-28 06:16:50.160 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.personalPage.listsPage.ViewPanelListener - client requested Request()
-2021-07-28 06:17:03.571 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.profileView.ProfilePageListener - client requested Request()
-2021-07-28 06:17:56.271 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.profileView.ProfilePageListener - client requested Request()
-2021-07-28 06:18:51.781 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated
-n Thread] INFO  ir.sharif.aminra.listeners.personalPage.listsPage.GroupPageListener - client requested Request()
-2021-07-28 06:17:49.445 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.personalPage.listsPage.GroupPageListener - client requested Request()
-2021-07-28 06:18:06.246 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.personalPage.listsPage.ViewPanelListener - client requested Request()
-2021-07-28 06:18:07.550 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.profileView.ProfilePageListener - client requested Request()
-2021-07-28 06:18:24.015 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.personalPage.listsPage.GroupPageListener - client requested Request()
-2021-07-28 06:18:37.479 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.personalPage.listsPage.GroupPageListener - client requested Request()
-2021-07-28 06:18:43.458 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.personalPage.listsPage.ViewPanelListener - client requested Request()
-2021-07-28 06:18:50.431 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated
+2021-07-30 20:23:15.146 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
+2021-07-30 20:23:15.155 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=50618] is client socket
+2021-07-30 20:23:20.540 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=a, password=a)
+2021-07-30 20:23:30.340 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.tweets.TweetPageListener - client requested Request()
+2021-07-30 20:23:34.032 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated
