@@ -4,7 +4,9 @@ import ir.sharif.aminra.models.events.ProfilePageEventType;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.RequestVisitor;
 import ir.sharif.aminra.response.Response;
+import lombok.ToString;
 
+@ToString
 public class ProfileRequest extends Request {
     ProfilePageEventType profilePageEventType;
     Integer userToBeVisited;

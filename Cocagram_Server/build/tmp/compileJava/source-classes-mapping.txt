@@ -8,14 +8,19 @@ ir/sharif/aminra/database/Connector.java
  ir.sharif.aminra.database.Connector
 ir/sharif/aminra/Main.java
  ir.sharif.aminra.Main
+ir/sharif/aminra/controller/tweets/TweetManager.java
+ ir.sharif.aminra.controller.tweets.TweetManager
+ ir.sharif.aminra.controller.tweets.TweetManager$1
 ir/sharif/aminra/controller/personalPage/notificationsPage/RequestController.java
  ir.sharif.aminra.controller.personalPage.notificationsPage.RequestController
  ir.sharif.aminra.controller.personalPage.notificationsPage.RequestController$1
 ir/sharif/aminra/controller/personalPage/listsPage/NewGroupController.java
  ir.sharif.aminra.controller.personalPage.listsPage.NewGroupController
-ir/sharif/aminra/controller/tweets/TweetManager.java
- ir.sharif.aminra.controller.tweets.TweetManager
- ir.sharif.aminra.controller.tweets.TweetManager$1
+ir/sharif/aminra/controller/profileView/ProfileViewController.java
+ ir.sharif.aminra.controller.profileView.ProfileViewController
+ ir.sharif.aminra.controller.profileView.ProfileViewController$1
+ir/sharif/aminra/controller/settingsPage/PrivacySettingsController.java
+ ir.sharif.aminra.controller.settingsPage.PrivacySettingsController
 ir/sharif/aminra/controller/enterPage/SignUpController.java
  ir.sharif.aminra.controller.enterPage.SignUpController
 ir/sharif/aminra/controller/enterPage/SignInController.java
@@ -41,10 +46,9 @@ ir/sharif/aminra/controller/network/SocketResponseSender.java
  ir.sharif.aminra.controller.network.SocketResponseSender
 ir/sharif/aminra/controller/tweets/NewTweetController.java
  ir.sharif.aminra.controller.tweets.NewTweetController
-ir/sharif/aminra/controller/explorerPage/ExplorerController.java
- ir.sharif.aminra.controller.explorerPage.ExplorerController
-ir/sharif/aminra/controller/profileView/ProfileViewController.java
- ir.sharif.aminra.controller.profileView.ProfileViewController
- ir.sharif.aminra.controller.profileView.ProfileViewController$1
 ir/sharif/aminra/controller/ClientHandler.java
  ir.sharif.aminra.controller.ClientHandler
+ir/sharif/aminra/controller/explorerPage/ExplorerController.java
+ ir.sharif.aminra.controller.explorerPage.ExplorerController
+ir/sharif/aminra/controller/settingsPage/SettingsController.java
+ ir.sharif.aminra.controller.settingsPage.SettingsController

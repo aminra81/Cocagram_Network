@@ -12,6 +12,8 @@ import ir.sharif.aminra.controller.personalPage.listsPage.NewGroupController;
 import ir.sharif.aminra.controller.personalPage.notificationsPage.NotificationsPageController;
 import ir.sharif.aminra.controller.personalPage.notificationsPage.RequestController;
 import ir.sharif.aminra.controller.profileView.ProfileViewController;
+import ir.sharif.aminra.controller.settingsPage.PrivacySettingsController;
+import ir.sharif.aminra.controller.settingsPage.SettingsController;
 import ir.sharif.aminra.controller.timelinePage.TimelineController;
 import ir.sharif.aminra.controller.tweets.NewTweetController;
 import ir.sharif.aminra.controller.tweets.TweetManager;
@@ -53,6 +55,8 @@ public class ClientHandler extends Thread implements RequestVisitor {
     private final NewTweetController newTweetController;
     private final TimelineController timelineController;
     private final ExplorerController explorerController;
+    private final SettingsController settingsController;
+    private final PrivacySettingsController privacySettingsController;
 
     public ClientHandler(ResponseSender responseSender) throws IOException {
         this.responseSender = responseSender;
@@ -70,6 +74,8 @@ public class ClientHandler extends Thread implements RequestVisitor {
         newTweetController = new NewTweetController(this);
         timelineController = new TimelineController(this);
         explorerController = new ExplorerController(this);
+        settingsController = new SettingsController(this);
+        privacySettingsController = new PrivacySettingsController(this);
     }
 
     @Override
@@ -132,7 +138,7 @@ public class ClientHandler extends Thread implements RequestVisitor {
 
     @Override
     public Response logout() {
-        return null;
+        return settingsController.logout();
     }
 
     @Override
@@ -195,4 +201,20 @@ public class ClientHandler extends Thread implements RequestVisitor {
     public Response applyTweetAction(TweetPageEventType tweetPageEventType, Integer tweetId) {
         return TweetManager.getInstance().applyTweetAction(tweetPageEventType, user, tweetId);
     }
+
+    @Override
+    public Response switchToPrivacySettingsPage() {
+        return privacySettingsController.getInfoToSwitch();
+    }
+
+    @Override
+    public Response deactivate() {
+        return privacySettingsController.deactivate();
+    }
+
+    @Override
+    public Response editPrivacySettings(boolean isPrivate, String lastSeenType, String password) {
+        return privacySettingsController.editPrivacySettingsResponse(isPrivate, lastSeenType, password);
+    }
+
 }

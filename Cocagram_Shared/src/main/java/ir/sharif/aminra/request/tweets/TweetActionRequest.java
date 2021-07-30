@@ -4,7 +4,9 @@ import ir.sharif.aminra.models.events.TweetPageEventType;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.RequestVisitor;
 import ir.sharif.aminra.response.Response;
+import lombok.ToString;
 
+@ToString
 public class TweetActionRequest extends Request {
     TweetPageEventType tweetPageEventType;
     Integer tweetId;

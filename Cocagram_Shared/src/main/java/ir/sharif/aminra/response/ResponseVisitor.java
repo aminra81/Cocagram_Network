@@ -32,4 +32,5 @@ public interface ResponseVisitor {
     void applyTweetActionResponse(String verdict, boolean isError);
     void updateTimelinePage(List<ViewTweet> viewTweetList);
     void updateExplorerPage(List<ViewTweet> viewTweetList);
+    void switchToSettingsPage(boolean isPrivate, String lastSeenType, String password);
 }

@@ -3,7 +3,9 @@ package ir.sharif.aminra.request.tweets;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.RequestVisitor;
 import ir.sharif.aminra.response.Response;
+import lombok.ToString;
 
+@ToString
 public class UpdateTweetPageRequest extends Request {
     Integer tweetId;
     boolean myTweets;

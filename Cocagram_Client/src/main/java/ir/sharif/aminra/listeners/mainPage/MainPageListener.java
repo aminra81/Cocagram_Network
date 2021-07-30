@@ -2,11 +2,8 @@ package ir.sharif.aminra.listeners.mainPage;
 
 import ir.sharif.aminra.view.Page;
 import ir.sharif.aminra.view.ViewManager;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class MainPageListener {
-    static private final Logger logger = LogManager.getLogger(MainPageListener.class);
 
     public void stringEventOccurred(String event) {
         switch (event) {
@@ -14,6 +11,7 @@ public class MainPageListener {
                 ViewManager.getInstance().setPage(new Page("myPage"));
                 break;
             case "settings":
+                ViewManager.getInstance().setPage(new Page("settingsPage"));
                 break;
             case "timeline":
                 ViewManager.getInstance().setPage(new Page("timelinePage"));

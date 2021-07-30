@@ -10,6 +10,7 @@ import ir.sharif.aminra.controller.personalPage.listsPage.ListsPageController;
 import ir.sharif.aminra.controller.personalPage.listsPage.NewGroupController;
 import ir.sharif.aminra.controller.personalPage.notificationsPage.NotificationsPageController;
 import ir.sharif.aminra.controller.profileView.ProfileViewController;
+import ir.sharif.aminra.controller.settingsPage.PrivacySettingsController;
 import ir.sharif.aminra.controller.timelinePage.TimelineController;
 import ir.sharif.aminra.controller.tweets.TweetManager;
 import ir.sharif.aminra.exceptions.ClientDisconnectException;
@@ -67,6 +68,7 @@ public class Client implements ResponseVisitor {
     private final ProfileViewController profileViewController;
     private final TimelineController timelineController;
     private final ExplorerController explorerController;
+    private final PrivacySettingsController privacySettingsController;
 
     public Client(RequestSender requestSender) {
         this.requestSender = requestSender;
@@ -87,6 +89,7 @@ public class Client implements ResponseVisitor {
         profileViewController = new ProfileViewController();
         timelineController = new TimelineController();
         explorerController = new ExplorerController();
+        privacySettingsController = new PrivacySettingsController();
     }
 
     public void start(Stage stage) {
@@ -244,6 +247,11 @@ public class Client implements ResponseVisitor {
     @Override
     public void updateExplorerPage(List<ViewTweet> viewTweetList) {
         explorerController.refresh(viewTweetList);
+    }
+
+    @Override
+    public void switchToSettingsPage(boolean isPrivate, String lastSeenType, String password) {
+        privacySettingsController.switchToPrivacySettingsPage(isPrivate, lastSeenType, password);
     }
 
 }

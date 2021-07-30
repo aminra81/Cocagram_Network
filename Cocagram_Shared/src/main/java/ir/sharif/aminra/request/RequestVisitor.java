@@ -23,4 +23,7 @@ public interface RequestVisitor {
     Response newTweet(String content, byte[] avatarArray, Integer upPost);
     Response updateTweetPage(Integer tweetId, boolean myTweets);
     Response applyTweetAction(TweetPageEventType tweetPageEventType, Integer tweetId);
+    Response switchToPrivacySettingsPage();
+    Response deactivate();
+    Response editPrivacySettings(boolean isPrivate, String lastSeenType, String password);
 }

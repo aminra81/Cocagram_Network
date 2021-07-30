@@ -3,7 +3,9 @@ package ir.sharif.aminra.request.personalPage.listsPage;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.RequestVisitor;
 import ir.sharif.aminra.response.Response;
+import lombok.ToString;
 
+@ToString
 public class CreateGroupRequest extends Request {
 
     String groupName;

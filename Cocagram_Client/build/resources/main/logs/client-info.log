@@ -1,5 +1,5 @@
-2021-07-30 23:21:46.611 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
-2021-07-30 23:21:46.621 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=53040] is client socket
-2021-07-30 23:21:52.178 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=a, password=a)
-2021-07-30 23:21:57.183 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested Request()
-2021-07-30 23:22:04.545 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated
+2021-07-31 02:28:03.681 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
+2021-07-31 02:28:03.690 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=33712] is client socket
+2021-07-31 02:28:15.412 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=b, password=b)
+2021-07-31 02:28:35.481 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.settingsPage.SettingsPageListener - client requested LogoutRequest()
+equest(switchToProfileType=USERNAME, id=null, username=b)

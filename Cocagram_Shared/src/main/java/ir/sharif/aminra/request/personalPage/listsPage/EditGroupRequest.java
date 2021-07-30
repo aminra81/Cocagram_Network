@@ -4,7 +4,9 @@ import ir.sharif.aminra.models.events.GroupPageEventType;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.RequestVisitor;
 import ir.sharif.aminra.response.Response;
+import lombok.ToString;
 
+@ToString
 public class EditGroupRequest extends Request {
     GroupPageEventType groupPageEventType;
     Integer group;
