@@ -1,7 +1,5 @@
 package ir.sharif.aminra.view.explorerPage;
 
-import ir.sharif.aminra.events.explorerPage.ExplorerPageEvent;
-import ir.sharif.aminra.events.explorerPage.ExplorerPageEventType;
 import ir.sharif.aminra.listeners.explorerPage.ExplorerListener;
 import ir.sharif.aminra.view.FXController;
 import javafx.fxml.FXML;
@@ -27,14 +25,7 @@ public class ExplorerFXController extends FXController implements Initializable 
 
     @FXML
     public void search() {
-        explorerListener.eventOccurred(new ExplorerPageEvent(ExplorerPageEventType.SEARCH,
-                userID, usernameLabel.getText(), this));
-    }
-    
-    @Override
-    public void refresh() {
-        explorerListener.eventOccurred(new ExplorerPageEvent(ExplorerPageEventType.REFRESH,
-                userID, usernameLabel.getText(), this));
+        explorerListener.search(usernameLabel.getText());
     }
 
     public VBox getTweetBox() { return tweetBox; }
@@ -44,8 +35,6 @@ public class ExplorerFXController extends FXController implements Initializable 
     @Override
     public void clear() {
         tweetBox.getChildren().clear();
-        usernameLabel.clear();
-        errorLabel.setText("");
     }
 
     @Override

@@ -16,8 +16,10 @@ public class MainPageListener {
             case "settings":
                 break;
             case "timeline":
+                ViewManager.getInstance().setPage(new Page("timelinePage"));
                 break;
             case "explorer":
+                ViewManager.getInstance().setPage(new Page("explorerPage"));
                 break;
             case "messaging":
             default:

@@ -37,6 +37,8 @@ public class ProfileViewController {
                     return getInfoToSwitchByUserId(Id);
                 case TWEET:
                     return getInfoToSwitchByTweetId(Id);
+                case USERNAME:
+                    return getInfoToSwitchByUsername(username);
             }
             return null;
         } catch (DatabaseDisconnectException e) {
@@ -79,6 +81,28 @@ public class ProfileViewController {
 
         return new SwitchToProfilePageResponse(SwitchToProfileType.TWEET,
                 true, false, "", tweet.getWriter());
+    }
+
+    private Response getInfoToSwitchByUsername(String username) throws DatabaseDisconnectException {
+        User userToBeVisited = Connector.getInstance().getUserByUsername(username);
+        User user = clientHandler.getUser();
+        if(userToBeVisited == null)
+            return new SwitchToProfilePageResponse(SwitchToProfileType.USERNAME, false, false,
+                    Config.getConfig("explorerPage").getProperty("notFoundError"), null);
+
+        if (!userToBeVisited.isActive()) {
+            logger.info(String.format("user %s wants to check the profile of a user which doesn't exist.",
+                    user.getUsername()));
+            return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
+                    false, false, "", userToBeVisited.getId());
+        }
+        if (user.equals(userToBeVisited))
+            return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
+                    true, true, "", userToBeVisited.getId());
+
+        return new SwitchToProfilePageResponse(SwitchToProfileType.USER,
+                true, false, "", userToBeVisited.getId());
+
     }
 
     public Response getUpdate(Integer userToBeVisitedId) {

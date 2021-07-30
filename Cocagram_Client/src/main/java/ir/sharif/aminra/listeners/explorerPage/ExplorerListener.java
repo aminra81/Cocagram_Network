@@ -1,32 +1,20 @@
 package ir.sharif.aminra.listeners.explorerPage;
 
-import ir.sharif.aminra.config.Config;
-import ir.sharif.aminra.controller.explorerPage.ExplorerController;
-import ir.sharif.aminra.controller.profileView.ProfileViewController;
-import ir.sharif.aminra.db.Context;
-import ir.sharif.aminra.events.explorerPage.ExplorerPageEvent;
-import ir.sharif.aminra.models.User;
+import ir.sharif.aminra.controller.Client;
+import ir.sharif.aminra.models.events.SwitchToProfileType;
+import ir.sharif.aminra.request.Request;
+import ir.sharif.aminra.request.profileView.SwitchToProfilePageRequest;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ExplorerListener {
-    public void eventOccurred(ExplorerPageEvent explorerPageEvent) {
-        switch (explorerPageEvent.getExplorerPageEventType()) {
-            case REFRESH:
-                ExplorerController explorerController = new ExplorerController();
-                explorerController.refresh(explorerPageEvent.getExplorerFXController());
-                break;
-            case SEARCH:
-                User user = Context.getInstance().getUserDB().getByID(explorerPageEvent.getUserID());
-                User userToBeVisited = Context.getInstance().getUserDB().getUser(explorerPageEvent.getSearchedUsername());
-                if(userToBeVisited == null)
-                    explorerPageEvent.getExplorerFXController().setErrorLabel(
-                            Config.getConfig("explorerPage").getProperty(String.class, "notFoundError"));
-                else {
-                    ProfileViewController profileViewController = new ProfileViewController();
-                    profileViewController.switchPage(user, userToBeVisited);
-                }
-                break;
-            default:
-                break;
-        }
+
+    static private final Logger logger = LogManager.getLogger(ExplorerListener.class);
+
+    public void search(String username) {
+        Request request = new SwitchToProfilePageRequest(SwitchToProfileType.USERNAME, null, username);
+        logger.info(String.format("client requested %s", request));
+        Client.getClient().addRequest(request);
     }
+
 }

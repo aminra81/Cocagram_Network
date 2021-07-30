@@ -24,6 +24,8 @@ ir/sharif/aminra/controller/SocketManager.java
  ir.sharif.aminra.controller.SocketManager
 ir/sharif/aminra/controller/personalPage/listsPage/ListsPageController.java
  ir.sharif.aminra.controller.personalPage.listsPage.ListsPageController
+ir/sharif/aminra/controller/timelinePage/TimelineController.java
+ ir.sharif.aminra.controller.timelinePage.TimelineController
 ir/sharif/aminra/controller/personalPage/listsPage/GroupPageController.java
  ir.sharif.aminra.controller.personalPage.listsPage.GroupPageController
  ir.sharif.aminra.controller.personalPage.listsPage.GroupPageController$1
@@ -39,6 +41,8 @@ ir/sharif/aminra/controller/network/SocketResponseSender.java
  ir.sharif.aminra.controller.network.SocketResponseSender
 ir/sharif/aminra/controller/tweets/NewTweetController.java
  ir.sharif.aminra.controller.tweets.NewTweetController
+ir/sharif/aminra/controller/explorerPage/ExplorerController.java
+ ir.sharif.aminra.controller.explorerPage.ExplorerController
 ir/sharif/aminra/controller/profileView/ProfileViewController.java
  ir.sharif.aminra.controller.profileView.ProfileViewController
  ir.sharif.aminra.controller.profileView.ProfileViewController$1

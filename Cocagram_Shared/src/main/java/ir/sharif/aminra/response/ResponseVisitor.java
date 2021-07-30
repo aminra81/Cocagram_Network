@@ -30,4 +30,6 @@ public interface ResponseVisitor {
     void back();
     void updateTweetPage(String tweetContent, String tweetDate, String retweetString, byte[] tweetImage, int likeNumbers, List<ViewTweet> viewTweetList, String likeButtonText);
     void applyTweetActionResponse(String verdict, boolean isError);
+    void updateTimelinePage(List<ViewTweet> viewTweetList);
+    void updateExplorerPage(List<ViewTweet> viewTweetList);
 }

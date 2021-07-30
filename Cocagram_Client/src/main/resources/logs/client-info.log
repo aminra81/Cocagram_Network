@@ -1,5 +1,13 @@
-2021-07-30 20:23:15.146 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
-2021-07-30 20:23:15.155 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=50618] is client socket
-2021-07-30 20:23:20.540 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=a, password=a)
-2021-07-30 20:23:30.340 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.tweets.TweetPageListener - client requested Request()
-2021-07-30 20:23:34.032 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated
+2021-07-30 23:22:30.151 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
+2021-07-30 23:22:30.165 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=53136] is client socket
+2021-07-30 23:22:35.307 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=a, password=a)
+2021-07-30 23:22:39.248 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested Request()
+2021-07-30 23:22:43.162 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested Request()
+2021-07-30 23:22:45.252 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested Request()
+2021-07-30 23:22:47.225 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested Request()
+2021-07-30 23:22:58.782 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested Request()
+2021-07-30 23:23:04.576 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested Request()
+2021-07-30 23:23:04.835 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested Request()
+2021-07-30 23:23:05.026 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested Request()
+2021-07-30 23:23:05.218 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested Request()
+2021-07-30 23:23:06.602 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated

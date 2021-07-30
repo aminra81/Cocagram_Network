@@ -2,6 +2,7 @@ package ir.sharif.aminra.controller;
 
 import ir.sharif.aminra.controller.enterPage.SignInController;
 import ir.sharif.aminra.controller.enterPage.SignUpController;
+import ir.sharif.aminra.controller.explorerPage.ExplorerController;
 import ir.sharif.aminra.controller.network.ResponseSender;
 import ir.sharif.aminra.controller.personalPage.MyPageController;
 import ir.sharif.aminra.controller.personalPage.editPage.EditPageController;
@@ -11,6 +12,7 @@ import ir.sharif.aminra.controller.personalPage.listsPage.NewGroupController;
 import ir.sharif.aminra.controller.personalPage.notificationsPage.NotificationsPageController;
 import ir.sharif.aminra.controller.personalPage.notificationsPage.RequestController;
 import ir.sharif.aminra.controller.profileView.ProfileViewController;
+import ir.sharif.aminra.controller.timelinePage.TimelineController;
 import ir.sharif.aminra.controller.tweets.NewTweetController;
 import ir.sharif.aminra.controller.tweets.TweetManager;
 import ir.sharif.aminra.database.Connector;
@@ -49,6 +51,8 @@ public class ClientHandler extends Thread implements RequestVisitor {
     private final NewGroupController newGroupController;
     private final ProfileViewController profileViewController;
     private final NewTweetController newTweetController;
+    private final TimelineController timelineController;
+    private final ExplorerController explorerController;
 
     public ClientHandler(ResponseSender responseSender) throws IOException {
         this.responseSender = responseSender;
@@ -64,6 +68,8 @@ public class ClientHandler extends Thread implements RequestVisitor {
         newGroupController = new NewGroupController(this);
         profileViewController = new ProfileViewController(this);
         newTweetController = new NewTweetController(this);
+        timelineController = new TimelineController(this);
+        explorerController = new ExplorerController(this);
     }
 
     @Override
@@ -103,6 +109,10 @@ public class ClientHandler extends Thread implements RequestVisitor {
                 return notificationsPageController.getUpdate();
             case "ListsFXController":
                 return listsPageController.getUpdate();
+            case "TimelineFXController":
+                return timelineController.getUpdate();
+            case "ExplorerFXController":
+                return explorerController.getUpdate();
             default:
                 return null;
         }

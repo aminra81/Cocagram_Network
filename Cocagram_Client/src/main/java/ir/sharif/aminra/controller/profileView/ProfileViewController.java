@@ -4,6 +4,7 @@ import ir.sharif.aminra.models.events.SwitchToProfileType;
 import ir.sharif.aminra.util.ImageUtils;
 import ir.sharif.aminra.view.Page;
 import ir.sharif.aminra.view.ViewManager;
+import ir.sharif.aminra.view.explorerPage.ExplorerFXController;
 import ir.sharif.aminra.view.profileView.ProfileFXController;
 import ir.sharif.aminra.view.tweets.TweetFXController;
 import javafx.application.Platform;
@@ -28,6 +29,12 @@ public class ProfileViewController {
             case TWEET:
                 switchPageByTweetID(exists, mine, error, userToBeVisited);
                 break;
+            case USERNAME:
+                if(!(ViewManager.getInstance().getCurPage().getFxController() instanceof ExplorerFXController))
+                    return;
+                ExplorerFXController explorerFXController = (ExplorerFXController) ViewManager.getInstance().
+                        getCurPage().getFxController();
+                Platform.runLater(() -> explorerFXController.setErrorLabel(error));
             case MESSAGE:
                 break;
         }

@@ -1,6 +1,7 @@
 package ir.sharif.aminra.controller;
 
 import ir.sharif.aminra.controller.enterPage.EnterController;
+import ir.sharif.aminra.controller.explorerPage.ExplorerController;
 import ir.sharif.aminra.controller.network.RequestSender;
 import ir.sharif.aminra.controller.personalPage.MyPageController;
 import ir.sharif.aminra.controller.personalPage.editPage.EditPageController;
@@ -9,6 +10,7 @@ import ir.sharif.aminra.controller.personalPage.listsPage.ListsPageController;
 import ir.sharif.aminra.controller.personalPage.listsPage.NewGroupController;
 import ir.sharif.aminra.controller.personalPage.notificationsPage.NotificationsPageController;
 import ir.sharif.aminra.controller.profileView.ProfileViewController;
+import ir.sharif.aminra.controller.timelinePage.TimelineController;
 import ir.sharif.aminra.controller.tweets.TweetManager;
 import ir.sharif.aminra.exceptions.ClientDisconnectException;
 import ir.sharif.aminra.models.Group;
@@ -27,11 +29,13 @@ import ir.sharif.aminra.util.Loop;
 import ir.sharif.aminra.view.FXController;
 import ir.sharif.aminra.view.Page;
 import ir.sharif.aminra.view.ViewManager;
+import ir.sharif.aminra.view.explorerPage.ExplorerFXController;
 import ir.sharif.aminra.view.personalPage.MyFXController;
 import ir.sharif.aminra.view.personalPage.listsPage.GroupFXController;
 import ir.sharif.aminra.view.personalPage.listsPage.ListsFXController;
 import ir.sharif.aminra.view.personalPage.notificationsPage.NotificationsFXController;
 import ir.sharif.aminra.view.profileView.ProfileFXController;
+import ir.sharif.aminra.view.timelinePage.TimelineFXController;
 import ir.sharif.aminra.view.tweets.TweetFXController;
 import javafx.application.Platform;
 import javafx.stage.Stage;
@@ -61,6 +65,8 @@ public class Client implements ResponseVisitor {
     private final GroupPageController groupPageController;
     private final NewGroupController newGroupController;
     private final ProfileViewController profileViewController;
+    private final TimelineController timelineController;
+    private final ExplorerController explorerController;
 
     public Client(RequestSender requestSender) {
         this.requestSender = requestSender;
@@ -79,6 +85,8 @@ public class Client implements ResponseVisitor {
         groupPageController = new GroupPageController();
         newGroupController = new NewGroupController();
         profileViewController = new ProfileViewController();
+        timelineController = new TimelineController();
+        explorerController = new ExplorerController();
     }
 
     public void start(Stage stage) {
@@ -125,7 +133,8 @@ public class Client implements ResponseVisitor {
             addRequest(new UpdateTweetPageRequest(((TweetFXController) fxController).getTweetID(),
                     ((TweetFXController) fxController).isMyTweets()));
         else if (fxController instanceof MyFXController || fxController instanceof ListsFXController ||
-                fxController instanceof NotificationsFXController)
+                fxController instanceof NotificationsFXController || fxController instanceof TimelineFXController ||
+        fxController instanceof ExplorerFXController)
             addRequest(new UpdatePageRequest(fxController.getClass().getSimpleName()));
     }
 
@@ -225,6 +234,16 @@ public class Client implements ResponseVisitor {
     @Override
     public void applyTweetActionResponse(String verdict, boolean isError) {
         TweetManager.getInstance().applyTweetActionResponse(verdict, isError);
+    }
+
+    @Override
+    public void updateTimelinePage(List<ViewTweet> viewTweetList) {
+        timelineController.refresh(viewTweetList);
+    }
+
+    @Override
+    public void updateExplorerPage(List<ViewTweet> viewTweetList) {
+        explorerController.refresh(viewTweetList);
     }
 
 }
