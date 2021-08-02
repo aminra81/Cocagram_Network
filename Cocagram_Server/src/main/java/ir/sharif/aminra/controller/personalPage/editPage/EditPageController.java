@@ -37,7 +37,7 @@ public class EditPageController {
     }
 
     public Response edit(String firstname, String lastname, String bio, LocalDate birthdate, String email,
-                         String phoneNumber, byte[] avatarArray) {
+                         String phoneNumber, String avatarString) {
         try {
             User user = clientHandler.getUser();
             String prevPhoneNumber = user.getPhoneNumber();
@@ -72,10 +72,10 @@ public class EditPageController {
                 user.setPhoneNumber(phoneNumber);
 
                 Integer imageID = null;
-                if (avatarArray != null) {
+                if (avatarString != null) {
                     ImageUtils imageUtils = new ImageUtils();
                     try {
-                        BufferedImage bufferedImage = imageUtils.toBufferedImage(avatarArray);
+                        BufferedImage bufferedImage = imageUtils.toBufferedImage(avatarString);
                         ImageLoader imageLoader = new ImageLoader();
                         imageID = imageLoader.saveIntoDB(bufferedImage);
                     } catch (IOException e) {

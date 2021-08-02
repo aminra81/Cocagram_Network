@@ -10,12 +10,12 @@ public class UpdateTweetPageResponse extends Response {
     String tweetContent;
     String tweetDate;
     String retweetString;
-    byte[] tweetImage;
+    String tweetImage;
     int likeNumbers;
     List<ViewTweet> viewTweetList;
     String likeButtonText;
 
-    public UpdateTweetPageResponse(String tweetContent, String tweetDate, String retweetString, byte[] tweetImage,
+    public UpdateTweetPageResponse(String tweetContent, String tweetDate, String retweetString, String tweetImage,
                                    int likeNumbers, List<ViewTweet> viewTweetList, String likeButtonText) {
         this.tweetContent = tweetContent;
         this.tweetDate = tweetDate;

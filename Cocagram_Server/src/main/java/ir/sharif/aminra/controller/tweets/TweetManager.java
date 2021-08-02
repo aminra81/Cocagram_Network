@@ -89,9 +89,9 @@ public class TweetManager {
             BufferedImage bufferedImage = imageLoader.getByID(tweet.getImage());
 
             ImageUtils imageUtils = new ImageUtils();
-            byte[] tweetImage;
+            String tweetImage;
             try {
-                tweetImage = imageUtils.toByteArray(bufferedImage, "png");
+                tweetImage = imageUtils.toString(bufferedImage, "png");
             } catch (IOException e) {
                 logger.warn("can't convert buffered image to byte array");
                 e.printStackTrace();

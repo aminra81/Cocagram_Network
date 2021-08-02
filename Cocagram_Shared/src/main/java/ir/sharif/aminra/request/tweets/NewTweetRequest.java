@@ -8,17 +8,17 @@ import lombok.ToString;
 @ToString
 public class NewTweetRequest extends Request {
     String content;
-    byte[] avatarArray;
+    String avatarString;
     Integer upPost;
 
-    public NewTweetRequest(String content, byte[] avatarArray, Integer upPost) {
+    public NewTweetRequest(String content, String avatarString, Integer upPost) {
         this.content = content;
-        this.avatarArray = avatarArray;
+        this.avatarString = avatarString;
         this.upPost = upPost;
     }
 
     @Override
     public Response visit(RequestVisitor requestVisitor) {
-        return requestVisitor.newTweet(content, avatarArray, upPost);
+        return requestVisitor.newTweet(content, avatarString, upPost);
     }
 }

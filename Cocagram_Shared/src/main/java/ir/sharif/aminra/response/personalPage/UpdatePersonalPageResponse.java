@@ -8,16 +8,16 @@ import java.util.List;
 
 public class UpdatePersonalPageResponse extends Response {
 
-    byte[] avatarArray;
+    String avatarString;
     List<ViewTweet> viewTweetList;
 
-    public UpdatePersonalPageResponse(byte[] avatarArray, List<ViewTweet> viewTweetList) {
-        this.avatarArray = avatarArray;
+    public UpdatePersonalPageResponse(String avatarString, List<ViewTweet> viewTweetList) {
+        this.avatarString = avatarString;
         this.viewTweetList = viewTweetList;
     }
 
     @Override
     public void visit(ResponseVisitor responseVisitor) {
-        responseVisitor.updatePersonalPage(avatarArray, viewTweetList);
+        responseVisitor.updatePersonalPage(avatarString, viewTweetList);
     }
 }

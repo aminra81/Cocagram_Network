@@ -1,5 +1,5 @@
-2021-07-31 02:28:03.681 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
-2021-07-31 02:28:03.690 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=33712] is client socket
-2021-07-31 02:28:15.412 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=b, password=b)
-2021-07-31 02:28:35.481 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.settingsPage.SettingsPageListener - client requested LogoutRequest()
-equest(switchToProfileType=USERNAME, id=null, username=b)
+2021-08-02 19:01:09.881 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
+2021-08-02 19:01:09.946 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=34612] is client socket
+2021-08-02 19:01:18.329 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=a, password=a)
+2021-08-02 19:01:54.850 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.personalPage.MyPageListener - client requested SwitchToEditPageRequest()
+2021-08-02 19:02:00.856 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.personalPage.editPage.EditFXController - loaded image successfully

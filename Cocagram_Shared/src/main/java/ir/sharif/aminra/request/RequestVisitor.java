@@ -11,7 +11,7 @@ public interface RequestVisitor {
     Response register(String username, String firstname, String lastname, String bio, LocalDate birthDate,
                       String email, String phoneNumber, String password, boolean publicData, String lastSeenType);
     Response logout();
-    Response edit(String firstname, String lastname, String bio, LocalDate birthdate, String email, String phoneNumber, byte[] avatarArray);
+    Response edit(String firstname, String lastname, String bio, LocalDate birthdate, String email, String phoneNumber, String avatarArray);
     Response switchToEditPage();
     Response followRequestHandle(RequestAnswerType requestAnswerType, Integer requesterID);
     Response updateGroupPage(Integer groupId);
@@ -20,7 +20,7 @@ public interface RequestVisitor {
     Response profileHandle(ProfilePageEventType profilePageEventType, Integer userToBeVisited);
     Response switchToProfilePage(SwitchToProfileType switchToProfileType, Integer id, String username);
     Response updateProfilePage(Integer userToBeVisited);
-    Response newTweet(String content, byte[] avatarArray, Integer upPost);
+    Response newTweet(String content, String avatarString, Integer upPost);
     Response updateTweetPage(Integer tweetId, boolean myTweets);
     Response applyTweetAction(TweetPageEventType tweetPageEventType, Integer tweetId);
     Response switchToPrivacySettingsPage();

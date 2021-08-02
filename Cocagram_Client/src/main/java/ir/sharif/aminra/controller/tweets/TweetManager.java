@@ -43,7 +43,7 @@ public class TweetManager {
         return tweetPanelFXController.getTweetPanel();
     }
 
-    public void refresh(String tweetContent, String tweetDate, String retweetString, byte[] tweetImage, int likeNumbers,
+    public void refresh(String tweetContent, String tweetDate, String retweetString, String tweetImage, int likeNumbers,
                         List<ViewTweet> viewTweetList, String likeButtonText) {
         if (!(ViewManager.getInstance().getCurPage().getFxController() instanceof TweetFXController))
             return;

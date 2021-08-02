@@ -15,21 +15,21 @@ public class EditRequest extends Request {
     LocalDate birthdate;
     String email;
     String phoneNumber;
-    byte[] avatarArray;
+    String avatarString;
 
     public EditRequest(String firstname, String lastname, String bio, LocalDate birthdate, String email,
-                       String phoneNumber, byte[] avatarArray) {
+                       String phoneNumber, String avatarString) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.bio = bio;
         this.birthdate = birthdate;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.avatarArray = avatarArray;
+        this.avatarString = avatarString;
     }
 
     @Override
     public Response visit(RequestVisitor requestVisitor) {
-        return requestVisitor.edit(firstname, lastname, bio, birthdate, email, phoneNumber, avatarArray);
+        return requestVisitor.edit(firstname, lastname, bio, birthdate, email, phoneNumber, avatarString);
     }
 }

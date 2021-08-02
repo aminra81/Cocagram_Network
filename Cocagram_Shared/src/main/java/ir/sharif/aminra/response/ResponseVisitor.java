@@ -11,7 +11,7 @@ import java.util.List;
 public interface ResponseVisitor {
     void goTo(String pageName, String message);
     void showError(String message);
-    void updatePersonalPage(byte[] bytes, List<ViewTweet> viewTweetList);
+    void updatePersonalPage(String bytes, List<ViewTweet> viewTweetList);
     void enter(boolean success, String message);
     void logout();
     void switchToEditPage(String username, String firstname, String lastname, String bio, LocalDate birthdate,
@@ -24,11 +24,11 @@ public interface ResponseVisitor {
     void applyEditGroupResponse(String error);
     void switchToProfilePage(SwitchToProfileType switchToProfileType, boolean exists, boolean mine, String error,
                              Integer userToBeVisited);
-    void updateProfilePage(String username, byte[] avatarArray, String firstname, String lastname, String lastSeen,
+    void updateProfilePage(String username, String avatarString, String firstname, String lastname, String lastSeen,
                            String bio, String birthdate, String email, String phoneNumber, String blockString,
                            String muteString, String followString);
     void back();
-    void updateTweetPage(String tweetContent, String tweetDate, String retweetString, byte[] tweetImage, int likeNumbers, List<ViewTweet> viewTweetList, String likeButtonText);
+    void updateTweetPage(String tweetContent, String tweetDate, String retweetString, String tweetImage, int likeNumbers, List<ViewTweet> viewTweetList, String likeButtonText);
     void applyTweetActionResponse(String verdict, boolean isError);
     void updateTimelinePage(List<ViewTweet> viewTweetList);
     void updateExplorerPage(List<ViewTweet> viewTweetList);

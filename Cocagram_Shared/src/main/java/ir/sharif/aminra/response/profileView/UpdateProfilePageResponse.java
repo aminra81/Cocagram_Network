@@ -5,7 +5,7 @@ import ir.sharif.aminra.response.ResponseVisitor;
 
 public class UpdateProfilePageResponse extends Response {
     String username;
-    byte[] avatarArray;
+    String avatarString;
     String firstname;
     String lastname;
     String lastSeen;
@@ -17,11 +17,11 @@ public class UpdateProfilePageResponse extends Response {
     String muteString;
     String followString;
 
-    public UpdateProfilePageResponse(String username, byte[] avatarArray, String firstname, String lastname,
+    public UpdateProfilePageResponse(String username, String avatarString, String firstname, String lastname,
                                      String lastSeen, String bio, String birthdate, String email, String phoneNumber,
                                      String blockString, String muteString, String followString) {
         this.username = username;
-        this.avatarArray = avatarArray;
+        this.avatarString = avatarString;
         this.firstname = firstname;
         this.lastname = lastname;
         this.lastSeen = lastSeen;
@@ -37,7 +37,7 @@ public class UpdateProfilePageResponse extends Response {
 
     @Override
     public void visit(ResponseVisitor responseVisitor) {
-        responseVisitor.updateProfilePage(username, avatarArray, firstname, lastname, lastSeen, bio, birthdate, email,
+        responseVisitor.updateProfilePage(username, avatarString, firstname, lastname, lastSeen, bio, birthdate, email,
                 phoneNumber, blockString, muteString, followString);
     }
 }

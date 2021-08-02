@@ -19,8 +19,8 @@ public class EditPageListener {
                               String phoneNumber, BufferedImage avatar) {
         ImageUtils imageUtils = new ImageUtils();
         try {
-            byte[] avatarArray = imageUtils.toByteArray(avatar, "png");
-            Request request = new EditRequest(firstname, lastname, bio, birthdate, email, phoneNumber, avatarArray);
+            String avatarString = imageUtils.toString(avatar, "png");
+            Request request = new EditRequest(firstname, lastname, bio, birthdate, email, phoneNumber, avatarString);
             logger.info(String.format("client requested %s", request));
             Client.getClient().addRequest(request);
         } catch (IOException e) {

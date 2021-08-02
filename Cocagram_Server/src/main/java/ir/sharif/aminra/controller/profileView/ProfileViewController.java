@@ -113,9 +113,9 @@ public class ProfileViewController {
             ImageLoader imageLoader = new ImageLoader();
             BufferedImage bufferedImage = imageLoader.getByID(userToBeVisited.getAvatar());
             ImageUtils imageUtils = new ImageUtils();
-            byte[] avatarArray = null;
+            String avatarString = null;
             try {
-                avatarArray = imageUtils.toByteArray(bufferedImage, "png");
+                avatarString = imageUtils.toString(bufferedImage, "png");
             } catch (IOException e) {
                 logger.warn("can't convert buffered image to byte array");
                 e.printStackTrace();
@@ -161,7 +161,7 @@ public class ProfileViewController {
             else
                 followString = Config.getConfig("profilePage").
                         getProperty(String.class, "followButtonText");
-            return new UpdateProfilePageResponse(username, avatarArray, firstname, lastname, lastSeen, bio, birthdate
+            return new UpdateProfilePageResponse(username, avatarString, firstname, lastname, lastSeen, bio, birthdate
                     , email, phoneNumber, blockString, muteString, followString);
         } catch (DatabaseDisconnectException e) {
             return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));

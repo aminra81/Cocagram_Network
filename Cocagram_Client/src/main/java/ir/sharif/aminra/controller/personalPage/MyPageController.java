@@ -20,7 +20,7 @@ public class MyPageController {
 
     static private final Logger logger = LogManager.getLogger(MyPageController.class);
 
-    public void refresh(byte[] bytes, List<ViewTweet> viewTweetList) {
+    public void refresh(String bytes, List<ViewTweet> viewTweetList) {
         ImageUtils imageUtils = new ImageUtils();
         BufferedImage image = null;
         try {

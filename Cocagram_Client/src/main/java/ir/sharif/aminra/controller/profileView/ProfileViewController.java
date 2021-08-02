@@ -82,13 +82,13 @@ public class ProfileViewController {
         });
     }
 
-    public void refresh(String username, byte[] avatarArray, String firstname, String lastname, String lastSeen,
+    public void refresh(String username, String avatarString, String firstname, String lastname, String lastSeen,
                         String bio, String birthdate, String email, String phoneNumber, String blockString,
                         String muteString, String followString) {
         ImageUtils imageUtils = new ImageUtils();
         BufferedImage image = null;
         try {
-            image = imageUtils.toBufferedImage(avatarArray);
+            image = imageUtils.toBufferedImage(avatarString);
         } catch (IOException e) {
             logger.warn("can't convert byte array to buffered image");
             e.printStackTrace();

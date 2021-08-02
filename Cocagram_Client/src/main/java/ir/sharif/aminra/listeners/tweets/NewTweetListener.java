@@ -17,8 +17,8 @@ public class NewTweetListener {
     public void eventOccurred(String content, BufferedImage tweetImage, Integer upPost) {
         ImageUtils imageUtils = new ImageUtils();
         try {
-            byte[] avatarArray = imageUtils.toByteArray(tweetImage, "png");
-            Request request = new NewTweetRequest(content, avatarArray, upPost);
+            String avatarString = imageUtils.toString(tweetImage, "png");
+            Request request = new NewTweetRequest(content, avatarString, upPost);
             logger.info(String.format("client requested %s", request));
             Client.getClient().addRequest(request);
         } catch (IOException e) {

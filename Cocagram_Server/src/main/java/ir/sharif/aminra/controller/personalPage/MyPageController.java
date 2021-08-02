@@ -39,7 +39,7 @@ public class MyPageController {
 
         ImageUtils imageUtils = new ImageUtils();
         try {
-            return new UpdatePersonalPageResponse(imageUtils.toByteArray(bufferedImage, "png"), getViewTweets(user));
+            return new UpdatePersonalPageResponse(imageUtils.toString(bufferedImage, "png"), getViewTweets(user));
         } catch (IOException e) {
             logger.warn("can't convert buffered image to byte array");
             e.printStackTrace();

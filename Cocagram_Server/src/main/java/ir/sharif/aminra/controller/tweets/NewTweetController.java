@@ -26,14 +26,14 @@ public class NewTweetController {
         this.clientHandler = clientHandler;
     }
 
-    public Response addTweet(String content, byte[] avatarArray, Integer upPost) {
+    public Response addTweet(String content, String avatarString, Integer upPost) {
         try {
             User user = clientHandler.getUser();
             Integer imageID = null;
-            if (avatarArray != null) {
+            if (avatarString != null) {
                 ImageUtils imageUtils = new ImageUtils();
                 try {
-                    BufferedImage bufferedImage = imageUtils.toBufferedImage(avatarArray);
+                    BufferedImage bufferedImage = imageUtils.toBufferedImage(avatarString);
                     ImageLoader imageLoader = new ImageLoader();
                     imageID = imageLoader.saveIntoDB(bufferedImage);
                 } catch (IOException e) {

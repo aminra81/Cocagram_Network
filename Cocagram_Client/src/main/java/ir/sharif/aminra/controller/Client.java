@@ -156,7 +156,7 @@ public class Client implements ResponseVisitor {
     }
 
     @Override
-    public void updatePersonalPage(byte[] bytes, List<ViewTweet> viewTweetList) {
+    public void updatePersonalPage(String bytes, List<ViewTweet> viewTweetList) {
         myPageController.refresh(bytes, viewTweetList);
     }
 
@@ -215,10 +215,10 @@ public class Client implements ResponseVisitor {
     }
 
     @Override
-    public void updateProfilePage(String username, byte[] avatarArray, String firstname, String lastname, String lastSeen,
+    public void updateProfilePage(String username, String avatarString, String firstname, String lastname, String lastSeen,
                                   String bio, String birthdate, String email, String phoneNumber, String blockString,
                                   String muteString, String followString) {
-        profileViewController.refresh(username, avatarArray, firstname, lastname, lastSeen, bio, birthdate, email,
+        profileViewController.refresh(username, avatarString, firstname, lastname, lastSeen, bio, birthdate, email,
                 phoneNumber, blockString, muteString, followString);
     }
 
@@ -228,7 +228,7 @@ public class Client implements ResponseVisitor {
     }
 
     @Override
-    public void updateTweetPage(String tweetContent, String tweetDate, String retweetString, byte[] tweetImage,
+    public void updateTweetPage(String tweetContent, String tweetDate, String retweetString, String tweetImage,
                                 int likeNumbers, List<ViewTweet> viewTweetList, String likeButtonText) {
         TweetManager.getInstance().refresh(tweetContent, tweetDate, retweetString, tweetImage, likeNumbers, viewTweetList,
                 likeButtonText);

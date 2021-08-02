@@ -143,8 +143,8 @@ public class ClientHandler extends Thread implements RequestVisitor {
 
     @Override
     public Response edit(String firstname, String lastname, String bio, LocalDate birthdate, String email,
-                         String phoneNumber, byte[] avatarArray) {
-        return editPageController.edit(firstname, lastname, bio, birthdate, email, phoneNumber, avatarArray);
+                         String phoneNumber, String avatarString) {
+        return editPageController.edit(firstname, lastname, bio, birthdate, email, phoneNumber, avatarString);
     }
 
     @Override
@@ -188,8 +188,8 @@ public class ClientHandler extends Thread implements RequestVisitor {
     }
 
     @Override
-    public Response newTweet(String content, byte[] avatarArray, Integer upPost) {
-        return newTweetController.addTweet(content, avatarArray, upPost);
+    public Response newTweet(String content, String avatarString, Integer upPost) {
+        return newTweetController.addTweet(content, avatarString, upPost);
     }
 
     @Override
