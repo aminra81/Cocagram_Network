@@ -20,6 +20,7 @@ public class MainPageListener {
                 ViewManager.getInstance().setPage(new Page("explorerPage"));
                 break;
             case "messaging":
+                ViewManager.getInstance().setPage(new Page("messagingPage"));
             default:
                 break;
         }

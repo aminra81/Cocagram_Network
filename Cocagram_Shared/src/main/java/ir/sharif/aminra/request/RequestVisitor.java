@@ -26,4 +26,5 @@ public interface RequestVisitor {
     Response switchToPrivacySettingsPage();
     Response deactivate();
     Response editPrivacySettings(boolean isPrivate, String lastSeenType, String password);
+    Response updateMessagingPage(Integer chatId, boolean isChatChanged);
 }

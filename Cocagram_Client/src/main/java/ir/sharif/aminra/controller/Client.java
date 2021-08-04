@@ -20,6 +20,7 @@ import ir.sharif.aminra.models.events.SwitchToProfileType;
 import ir.sharif.aminra.models.viewModels.ViewTweet;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.UpdatePageRequest;
+import ir.sharif.aminra.request.messagingPage.UpdateMessagingPageRequest;
 import ir.sharif.aminra.request.personalPage.editPage.UpdateProfilePageRequest;
 import ir.sharif.aminra.request.personalPage.listsPage.UpdateGroupPageRequest;
 import ir.sharif.aminra.request.tweets.UpdateTweetPageRequest;
@@ -31,6 +32,7 @@ import ir.sharif.aminra.view.FXController;
 import ir.sharif.aminra.view.Page;
 import ir.sharif.aminra.view.ViewManager;
 import ir.sharif.aminra.view.explorerPage.ExplorerFXController;
+import ir.sharif.aminra.view.messagingPage.MessagingFXController;
 import ir.sharif.aminra.view.personalPage.MyFXController;
 import ir.sharif.aminra.view.personalPage.listsPage.GroupFXController;
 import ir.sharif.aminra.view.personalPage.listsPage.ListsFXController;
@@ -135,6 +137,9 @@ public class Client implements ResponseVisitor {
         else if(fxController instanceof TweetFXController)
             addRequest(new UpdateTweetPageRequest(((TweetFXController) fxController).getTweetID(),
                     ((TweetFXController) fxController).isMyTweets()));
+        else if(fxController instanceof MessagingFXController)
+            addRequest(new UpdateMessagingPageRequest(((MessagingFXController) fxController).getSelectedChatID(),
+                    false));
         else if (fxController instanceof MyFXController || fxController instanceof ListsFXController ||
                 fxController instanceof NotificationsFXController || fxController instanceof TimelineFXController ||
         fxController instanceof ExplorerFXController)

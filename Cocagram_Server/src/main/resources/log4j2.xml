@@ -9,9 +9,6 @@
         <Logger Level = "ALL" name = "ir.sharif.aminra" additivity="false">
             <AppenderRef ref="FileAppender"/>
         </Logger>
-        <Logger name="org.hibernate.SQL" level="debug" additivity="false">
-            <AppenderRef ref="FileAppender"/>
-        </Logger>
         <Root level = "OFF">
             <AppenderRef ref="FileAppender"/>
         </Root>
