@@ -3,6 +3,12 @@ ir/sharif/aminra/controller/personalPage/listsPage/NewGroupController.java
 ir/sharif/aminra/controller/profileView/ProfileViewController.java
  ir.sharif.aminra.controller.profileView.ProfileViewController
  ir.sharif.aminra.controller.profileView.ProfileViewController$1
+ir/sharif/aminra/models/ChatState.java
+ ir.sharif.aminra.models.ChatState
+ir/sharif/aminra/models/Chat.java
+ ir.sharif.aminra.models.Chat
+ir/sharif/aminra/models/User.java
+ ir.sharif.aminra.models.User
 ir/sharif/aminra/controller/enterPage/SignInController.java
  ir.sharif.aminra.controller.enterPage.SignInController
 ir/sharif/aminra/controller/SocketManager.java
@@ -11,8 +17,12 @@ ir/sharif/aminra/controller/personalPage/listsPage/ListsPageController.java
  ir.sharif.aminra.controller.personalPage.listsPage.ListsPageController
 ir/sharif/aminra/controller/timelinePage/TimelineController.java
  ir.sharif.aminra.controller.timelinePage.TimelineController
+ir/sharif/aminra/models/SaveAble.java
+ ir.sharif.aminra.models.SaveAble
 ir/sharif/aminra/controller/network/ResponseSender.java
  ir.sharif.aminra.controller.network.ResponseSender
+ir/sharif/aminra/models/media/Tweet.java
+ ir.sharif.aminra.models.media.Tweet
 ir/sharif/aminra/controller/personalPage/MyPageController.java
  ir.sharif.aminra.controller.personalPage.MyPageController
 ir/sharif/aminra/controller/personalPage/notificationsPage/NotificationsPageController.java
@@ -21,6 +31,8 @@ ir/sharif/aminra/controller/ClientHandler.java
  ir.sharif.aminra.controller.ClientHandler
 ir/sharif/aminra/controller/explorerPage/ExplorerController.java
  ir.sharif.aminra.controller.explorerPage.ExplorerController
+ir/sharif/aminra/models/Group.java
+ ir.sharif.aminra.models.Group
 ir/sharif/aminra/controller/personalPage/notificationsPage/RequestController.java
  ir.sharif.aminra.controller.personalPage.notificationsPage.RequestController
  ir.sharif.aminra.controller.personalPage.notificationsPage.RequestController$1
@@ -30,6 +42,8 @@ ir/sharif/aminra/controller/settingsPage/PrivacySettingsController.java
  ir.sharif.aminra.controller.settingsPage.PrivacySettingsController
 ir/sharif/aminra/controller/enterPage/SignUpController.java
  ir.sharif.aminra.controller.enterPage.SignUpController
+ir/sharif/aminra/models/media/Message.java
+ ir.sharif.aminra.models.media.Message
 ir/sharif/aminra/controller/network/TokenGenerator.java
  ir.sharif.aminra.controller.network.TokenGenerator
 ir/sharif/aminra/database/Connector.java
@@ -52,3 +66,5 @@ ir/sharif/aminra/controller/tweets/TweetManager.java
  ir.sharif.aminra.controller.tweets.TweetManager$1
 ir/sharif/aminra/database/ImageLoader.java
  ir.sharif.aminra.database.ImageLoader
+ir/sharif/aminra/models/media/Media.java
+ ir.sharif.aminra.models.media.Media

@@ -4,6 +4,7 @@ import ir.sharif.aminra.controller.ClientHandler;
 import ir.sharif.aminra.database.Connector;
 import ir.sharif.aminra.exceptions.DatabaseDisconnectException;
 import ir.sharif.aminra.models.User;
+import ir.sharif.aminra.models.viewModels.ViewUser;
 import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ShowErrorResponse;
 import ir.sharif.aminra.response.personalPage.notificationsPage.UpdateNotificationsPageResponse;
@@ -25,10 +26,10 @@ public class NotificationsPageController {
             User user = clientHandler.getUser();
             List<String> requestMessages = user.getRequestNotifications();
             List<String> systemMessages = user.getNotifications();
-            List<User> requests = new ArrayList<>();
+            List<ViewUser> requests = new ArrayList<>();
             for (Integer id : user.getRequests()) {
                 User currentUser = Connector.getInstance().fetch(User.class, id);
-                requests.add(currentUser);
+                requests.add(new ViewUser(currentUser.getUsername(), currentUser.getId(), currentUser.isActive()));
             }
             return new UpdateNotificationsPageResponse(requestMessages, systemMessages, requests);
         } catch (DatabaseDisconnectException e) {

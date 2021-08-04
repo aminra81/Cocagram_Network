@@ -7,7 +7,7 @@ import lombok.ToString;
 
 @ToString
 public class UpdateGroupPageRequest extends Request {
-    Integer groupId;
+    private final Integer groupId;
 
     public UpdateGroupPageRequest(Integer groupId) {
         this.groupId = groupId;

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class UpdateExplorerPageResponse extends Response {
 
-    List<ViewTweet> viewTweetList;
+    private final List<ViewTweet> viewTweetList;
 
     public UpdateExplorerPageResponse(List<ViewTweet> viewTweetList) {
         this.viewTweetList = viewTweetList;

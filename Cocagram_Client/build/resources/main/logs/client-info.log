@@ -1,3 +1,2 @@
-2021-08-02 19:10:53.288 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
-2021-08-02 19:10:53.296 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=35018] is client socket
-2021-08-02 19:10:58.872 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=b, password=b)
+2021-08-05 01:28:35.919 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
+2021-08-05 01:28:35.928 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=59830] is client socket

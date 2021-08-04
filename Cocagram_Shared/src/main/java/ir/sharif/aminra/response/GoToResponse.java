@@ -1,8 +1,8 @@
 package ir.sharif.aminra.response;
 
 public class GoToResponse extends Response {
-    String pageName;
-    String message;
+    private final String pageName;
+    private final String message;
     public GoToResponse(String pageName, String message) {
         this.pageName = pageName;
         this.message = message;

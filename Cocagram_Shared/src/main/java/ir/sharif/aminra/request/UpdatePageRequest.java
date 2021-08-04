@@ -5,7 +5,7 @@ import lombok.ToString;
 
 @ToString
 public class UpdatePageRequest extends Request{
-    String pageName;
+    private final String pageName;
 
     public UpdatePageRequest(String pageName) {
         this.pageName = pageName;

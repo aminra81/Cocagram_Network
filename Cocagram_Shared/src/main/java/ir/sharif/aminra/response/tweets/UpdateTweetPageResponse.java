@@ -7,13 +7,13 @@ import ir.sharif.aminra.response.ResponseVisitor;
 import java.util.List;
 
 public class UpdateTweetPageResponse extends Response {
-    String tweetContent;
-    String tweetDate;
-    String retweetString;
-    String tweetImage;
-    int likeNumbers;
-    List<ViewTweet> viewTweetList;
-    String likeButtonText;
+    private final String tweetContent;
+    private final String tweetDate;
+    private final String retweetString;
+    private final String tweetImage;
+    private final int likeNumbers;
+    private final List<ViewTweet> viewTweetList;
+    private final String likeButtonText;
 
     public UpdateTweetPageResponse(String tweetContent, String tweetDate, String retweetString, String tweetImage,
                                    int likeNumbers, List<ViewTweet> viewTweetList, String likeButtonText) {

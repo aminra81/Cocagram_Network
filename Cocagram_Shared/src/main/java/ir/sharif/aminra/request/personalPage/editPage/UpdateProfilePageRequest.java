@@ -7,7 +7,7 @@ import lombok.ToString;
 
 @ToString
 public class UpdateProfilePageRequest extends Request {
-    Integer userToBeVisited;
+    private final Integer userToBeVisited;
 
     public UpdateProfilePageRequest(Integer userToBeVisited) {
         this.userToBeVisited = userToBeVisited;

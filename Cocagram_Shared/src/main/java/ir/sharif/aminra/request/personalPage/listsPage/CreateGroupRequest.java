@@ -8,7 +8,7 @@ import lombok.ToString;
 @ToString
 public class CreateGroupRequest extends Request {
 
-    String groupName;
+    private final String groupName;
 
     public CreateGroupRequest(String groupName) {
         this.groupName = groupName;

@@ -8,8 +8,8 @@ import lombok.ToString;
 
 @ToString
 public class TweetActionRequest extends Request {
-    TweetPageEventType tweetPageEventType;
-    Integer tweetId;
+    private final TweetPageEventType tweetPageEventType;
+    private final Integer tweetId;
 
     public TweetActionRequest(TweetPageEventType tweetPageEventType, Integer tweetId) {
         this.tweetPageEventType = tweetPageEventType;

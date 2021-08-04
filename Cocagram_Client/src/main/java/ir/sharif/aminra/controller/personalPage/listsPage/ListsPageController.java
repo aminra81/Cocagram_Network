@@ -1,7 +1,7 @@
 package ir.sharif.aminra.controller.personalPage.listsPage;
 
-import ir.sharif.aminra.models.Group;
-import ir.sharif.aminra.models.User;
+import ir.sharif.aminra.models.viewModels.ViewGroup;
+import ir.sharif.aminra.models.viewModels.ViewUser;
 import ir.sharif.aminra.view.Page;
 import ir.sharif.aminra.view.ViewManager;
 import ir.sharif.aminra.view.personalPage.listsPage.GroupPanelFXController;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListsPageController {
-    public void refresh(List<User> followers, List<User> followings, List<User> blocklist, List<Group> groups) {
+    public void refresh(List<ViewUser> followers, List<ViewUser> followings, List<ViewUser> blocklist, List<ViewGroup> groups) {
         if (!(ViewManager.getInstance().getCurPage().getFxController() instanceof ListsFXController))
             return;
         ListsFXController listsFXController = (ListsFXController) ViewManager.getInstance().getCurPage().getFxController();
@@ -26,26 +26,26 @@ public class ListsPageController {
             addListToBox(blocklist, listsFXController.getBlockedUsersBox());
 
             //adding groups to group box
-            for (Group group : groups) {
+            for (ViewGroup group : groups) {
                 Page groupPanel = new Page("groupPanel");
                 GroupPanelFXController groupPanelFXController = (GroupPanelFXController) groupPanel.getFxController();
-                groupPanelFXController.setGroup(group.getId());
+                groupPanelFXController.setGroup(group.getGroupId());
                 groupPanelFXController.setGroupNameLabel(group.getGroupName());
                 listsFXController.getGroupsBox().getChildren().add(new AnchorPane(groupPanelFXController.getGroupPane()));
             }
         });
     }
 
-    public void addListToBox(List<User> userList, VBox box) {
-        List<User> activeUsers = new ArrayList<>();
-        for (User currentUser : userList) {
+    public void addListToBox(List<ViewUser> userList, VBox box) {
+        List<ViewUser> activeUsers = new ArrayList<>();
+        for (ViewUser currentUser : userList) {
             if (currentUser.isActive())
                 activeUsers.add(currentUser);
         }
-        for (User userToBeVisited : activeUsers) {
+        for (ViewUser userToBeVisited : activeUsers) {
             Page viewPanel = new Page("viewPanel");
             ViewPanelFXController viewPanelFXController = (ViewPanelFXController) viewPanel.getFxController();
-            viewPanelFXController.setUserToBeVisitedID(userToBeVisited.getId());
+            viewPanelFXController.setUserToBeVisitedID(userToBeVisited.getUserId());
             viewPanelFXController.setUsernameLabel(userToBeVisited.getUsername());
             box.getChildren().add(new AnchorPane(viewPanelFXController.getViewPane()));
         }

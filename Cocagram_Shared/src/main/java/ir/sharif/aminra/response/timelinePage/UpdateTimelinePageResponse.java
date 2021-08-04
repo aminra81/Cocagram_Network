@@ -7,7 +7,7 @@ import ir.sharif.aminra.response.ResponseVisitor;
 import java.util.List;
 
 public class UpdateTimelinePageResponse extends Response {
-    List<ViewTweet> viewTweetList;
+    private final List<ViewTweet> viewTweetList;
 
     public UpdateTimelinePageResponse(List<ViewTweet> viewTweetList) {
         this.viewTweetList = viewTweetList;

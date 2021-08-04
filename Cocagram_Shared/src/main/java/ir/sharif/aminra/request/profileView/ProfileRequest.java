@@ -8,8 +8,8 @@ import lombok.ToString;
 
 @ToString
 public class ProfileRequest extends Request {
-    ProfilePageEventType profilePageEventType;
-    Integer userToBeVisited;
+    private final ProfilePageEventType profilePageEventType;
+    private final Integer userToBeVisited;
 
     public ProfileRequest(ProfilePageEventType profilePageEventType, Integer userToBeVisited) {
         this.profilePageEventType = profilePageEventType;

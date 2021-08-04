@@ -5,6 +5,8 @@ import ir.sharif.aminra.database.Connector;
 import ir.sharif.aminra.exceptions.DatabaseDisconnectException;
 import ir.sharif.aminra.models.Group;
 import ir.sharif.aminra.models.User;
+import ir.sharif.aminra.models.viewModels.ViewGroup;
+import ir.sharif.aminra.models.viewModels.ViewUser;
 import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ShowErrorResponse;
 import ir.sharif.aminra.response.personalPage.listsPage.UpdateListsPageResponse;
@@ -30,17 +32,21 @@ public class ListsPageController {
         }
     }
 
-    private List<User> getUserList(List<Integer> idList) throws DatabaseDisconnectException {
-        List<User> userList = new ArrayList<>();
-        for (Integer id : idList)
-            userList.add(Connector.getInstance().fetch(User.class, id));
+    private List<ViewUser> getUserList(List<Integer> idList) throws DatabaseDisconnectException {
+        List<ViewUser> userList = new ArrayList<>();
+        for (Integer id : idList) {
+            User currentUser = Connector.getInstance().fetch(User.class, id);
+            userList.add(new ViewUser(currentUser.getUsername(), currentUser.getId(), currentUser.isActive()));
+        }
         return userList;
     }
 
-    private List<Group> getGroupList(List<Integer> idList) throws DatabaseDisconnectException {
-        List<Group> groupList = new ArrayList<>();
-        for (Integer id : idList)
-            groupList.add(Connector.getInstance().fetch(Group.class, id));
+    private List<ViewGroup> getGroupList(List<Integer> idList) throws DatabaseDisconnectException {
+        List<ViewGroup> groupList = new ArrayList<>();
+        for (Integer id : idList) {
+            Group currentGroup = Connector.getInstance().fetch(Group.class, id);
+            groupList.add(new ViewGroup(currentGroup.getGroupName(), currentGroup.getId()));
+        }
         return groupList;
     }
 }

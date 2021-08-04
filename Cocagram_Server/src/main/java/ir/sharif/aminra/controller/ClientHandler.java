@@ -217,4 +217,9 @@ public class ClientHandler extends Thread implements RequestVisitor {
         return privacySettingsController.editPrivacySettingsResponse(isPrivate, lastSeenType, password);
     }
 
+    @Override
+    public Response updateMessagingPage(Integer chatId, boolean isChanged) {
+        return null;
+    }
+
 }

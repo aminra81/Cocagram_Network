@@ -9,13 +9,13 @@ import java.time.LocalDate;
 
 @ToString
 public class EditRequest extends Request {
-    String firstname;
-    String lastname;
-    String bio;
-    LocalDate birthdate;
-    String email;
-    String phoneNumber;
-    String avatarString;
+    private final String firstname;
+    private final String lastname;
+    private final String bio;
+    private final LocalDate birthdate;
+    private final String email;
+    private final String phoneNumber;
+    private final String avatarString;
 
     public EditRequest(String firstname, String lastname, String bio, LocalDate birthdate, String email,
                        String phoneNumber, String avatarString) {

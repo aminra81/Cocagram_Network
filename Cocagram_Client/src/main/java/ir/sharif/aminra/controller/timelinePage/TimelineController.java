@@ -20,7 +20,8 @@ public class TimelineController {
             timelineFXController.clear();
             for (ViewTweet viewTweet : viewTweetList)
                 timelineFXController.getTweetBox().getChildren().add(new AnchorPane(TweetManager.getInstance().
-                        makeTweetPanel(viewTweet.getRetweetString(), viewTweet.getTweet(), viewTweet.isMyTweets())));
+                        makeTweetPanel(viewTweet.getRetweetString(), viewTweet.getTweetContent(),
+                                viewTweet.getTweetDateTime(), viewTweet.getTweetId(), viewTweet.isMyTweets())));
         });
     }
 }

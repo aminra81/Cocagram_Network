@@ -4,8 +4,8 @@ import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ResponseVisitor;
 
 public class TweetActionResponse extends Response {
-    String verdict;
-    boolean isError;
+    private final String verdict;
+    private final boolean isError;
 
     public TweetActionResponse(String verdict, boolean isError) {
         this.verdict = verdict;

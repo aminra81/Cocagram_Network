@@ -8,9 +8,9 @@ import lombok.ToString;
 
 @ToString
 public class EditGroupRequest extends Request {
-    GroupPageEventType groupPageEventType;
-    Integer group;
-    String username;
+    private final GroupPageEventType groupPageEventType;
+    private final Integer group;
+    private final String username;
 
     public EditGroupRequest(GroupPageEventType groupPageEventType, Integer group, String username) {
         this.groupPageEventType = groupPageEventType;

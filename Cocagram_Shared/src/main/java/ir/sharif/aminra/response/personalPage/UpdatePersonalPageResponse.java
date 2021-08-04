@@ -8,8 +8,8 @@ import java.util.List;
 
 public class UpdatePersonalPageResponse extends Response {
 
-    String avatarString;
-    List<ViewTweet> viewTweetList;
+    private final String avatarString;
+    private final List<ViewTweet> viewTweetList;
 
     public UpdatePersonalPageResponse(String avatarString, List<ViewTweet> viewTweetList) {
         this.avatarString = avatarString;

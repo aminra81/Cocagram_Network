@@ -1,7 +1,7 @@
 package ir.sharif.aminra.response;
 
 public class ShowErrorResponse extends Response{
-    String message;
+    private final String message;
 
     public ShowErrorResponse(String message) {
         this.message = message;

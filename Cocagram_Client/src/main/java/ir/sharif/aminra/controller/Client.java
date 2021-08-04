@@ -14,10 +14,10 @@ import ir.sharif.aminra.controller.settingsPage.PrivacySettingsController;
 import ir.sharif.aminra.controller.timelinePage.TimelineController;
 import ir.sharif.aminra.controller.tweets.TweetManager;
 import ir.sharif.aminra.exceptions.ClientDisconnectException;
-import ir.sharif.aminra.models.Group;
-import ir.sharif.aminra.models.User;
 import ir.sharif.aminra.models.events.SwitchToProfileType;
+import ir.sharif.aminra.models.viewModels.ViewGroup;
 import ir.sharif.aminra.models.viewModels.ViewTweet;
+import ir.sharif.aminra.models.viewModels.ViewUser;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.UpdatePageRequest;
 import ir.sharif.aminra.request.messagingPage.UpdateMessagingPageRequest;
@@ -189,17 +189,17 @@ public class Client implements ResponseVisitor {
     }
 
     @Override
-    public void updateNotificationsPage(List<String> requestMessages, List<String> systemMessages, List<User> requests) {
+    public void updateNotificationsPage(List<String> requestMessages, List<String> systemMessages, List<ViewUser> requests) {
         notificationsPageController.refresh(requestMessages, systemMessages, requests);
     }
 
     @Override
-    public void updateListsPage(List<User> followers, List<User> followings, List<User> blocklist, List<Group> groups) {
+    public void updateListsPage(List<ViewUser> followers, List<ViewUser> followings, List<ViewUser> blocklist, List<ViewGroup> groups) {
         listsPageController.refresh(followers, followings, blocklist, groups);
     }
 
     @Override
-    public void updateGroupPage(List<User> members) {
+    public void updateGroupPage(List<ViewUser> members) {
         groupPageController.refresh(members);
     }
 

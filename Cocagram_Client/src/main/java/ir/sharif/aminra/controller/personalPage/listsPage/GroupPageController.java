@@ -1,6 +1,6 @@
 package ir.sharif.aminra.controller.personalPage.listsPage;
 
-import ir.sharif.aminra.models.User;
+import ir.sharif.aminra.models.viewModels.ViewUser;
 import ir.sharif.aminra.view.ViewManager;
 import ir.sharif.aminra.view.personalPage.listsPage.GroupFXController;
 import javafx.application.Platform;
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class GroupPageController {
 
-    public void refresh(List<User> members) {
+    public void refresh(List<ViewUser> members) {
         if(!(ViewManager.getInstance().getCurPage().getFxController() instanceof GroupFXController))
             return;
         GroupFXController groupFXController = (GroupFXController) ViewManager.getInstance().getCurPage().getFxController();

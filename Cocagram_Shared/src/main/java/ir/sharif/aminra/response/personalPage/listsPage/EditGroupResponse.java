@@ -4,7 +4,7 @@ import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ResponseVisitor;
 
 public class EditGroupResponse extends Response {
-    String error;
+    private final String error;
 
     public EditGroupResponse(String error) {
         this.error = error;

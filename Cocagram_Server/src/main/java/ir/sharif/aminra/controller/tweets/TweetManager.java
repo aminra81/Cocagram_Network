@@ -44,7 +44,8 @@ public class TweetManager {
                 retweetString = "you retweeted from " + tweetWriter.getUsername();
             else
                 retweetString = tweetWriter.getUsername();
-            viewTweets.add(new ViewTweet(retweetString, tweet, myTweets));
+            viewTweets.add(new ViewTweet(retweetString, tweet.getContent(), tweet.getDateTime(), tweet.getId(),
+                    myTweets));
         }
         return viewTweets;
     }

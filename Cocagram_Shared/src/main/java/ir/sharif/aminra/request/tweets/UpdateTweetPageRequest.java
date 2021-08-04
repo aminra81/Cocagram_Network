@@ -7,8 +7,8 @@ import lombok.ToString;
 
 @ToString
 public class UpdateTweetPageRequest extends Request {
-    Integer tweetId;
-    boolean myTweets;
+    private final Integer tweetId;
+    private final boolean myTweets;
 
     public UpdateTweetPageRequest(Integer tweetId, boolean myTweets) {
         this.tweetId = tweetId;

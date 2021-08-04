@@ -8,8 +8,8 @@ import lombok.ToString;
 @ToString
 public class UpdateMessagingPageRequest extends Request {
 
-    Integer chatId;
-    boolean isChatChanged;
+    private final Integer chatId;
+    private final boolean isChatChanged;
 
     public UpdateMessagingPageRequest(Integer chatId, boolean isChatChanged) {
         this.chatId = chatId;

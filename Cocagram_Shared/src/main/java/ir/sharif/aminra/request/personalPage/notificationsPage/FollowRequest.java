@@ -8,8 +8,8 @@ import lombok.ToString;
 
 @ToString
 public class FollowRequest extends Request {
-    RequestAnswerType requestAnswerType;
-    Integer requesterID;
+    private final RequestAnswerType requestAnswerType;
+    private final Integer requesterID;
 
     public FollowRequest(RequestAnswerType requestAnswerType, Integer requesterID) {
         this.requestAnswerType = requestAnswerType;

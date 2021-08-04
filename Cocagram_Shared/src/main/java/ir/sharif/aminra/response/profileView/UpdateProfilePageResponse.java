@@ -4,18 +4,18 @@ import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ResponseVisitor;
 
 public class UpdateProfilePageResponse extends Response {
-    String username;
-    String avatarString;
-    String firstname;
-    String lastname;
-    String lastSeen;
-    String bio;
-    String birthdate;
-    String email;
-    String phoneNumber;
-    String blockString;
-    String muteString;
-    String followString;
+    private final String username;
+    private final String avatarString;
+    private final String firstname;
+    private final String lastname;
+    private final String lastSeen;
+    private final String bio;
+    private final String birthdate;
+    private final String email;
+    private final String phoneNumber;
+    private final String blockString;
+    private final String muteString;
+    private final String followString;
 
     public UpdateProfilePageResponse(String username, String avatarString, String firstname, String lastname,
                                      String lastSeen, String bio, String birthdate, String email, String phoneNumber,

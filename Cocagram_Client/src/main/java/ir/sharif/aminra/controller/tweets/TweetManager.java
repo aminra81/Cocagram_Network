@@ -1,6 +1,5 @@
 package ir.sharif.aminra.controller.tweets;
 
-import ir.sharif.aminra.models.media.Tweet;
 import ir.sharif.aminra.models.viewModels.ViewTweet;
 import ir.sharif.aminra.util.ImageUtils;
 import ir.sharif.aminra.view.Page;
@@ -16,6 +15,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -30,15 +30,16 @@ public class TweetManager {
         return instance;
     }
 
-    public AnchorPane makeTweetPanel(String retweetString, Tweet tweet, boolean myTweets) {
+    public AnchorPane makeTweetPanel(String retweetString, String tweetContent, LocalDateTime tweetDateTime, Integer tweetId,
+                                     boolean myTweets) {
         Page tweetPanel = new Page("tweetPanel");
         TweetPanelFXController tweetPanelFXController = (TweetPanelFXController) tweetPanel.getFxController();
 
-        tweetPanelFXController.setTweetContent(tweet.getContent());
-        tweetPanelFXController.setTweetDate(tweet.getDateTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        tweetPanelFXController.setTweetContent(tweetContent);
+        tweetPanelFXController.setTweetDate(tweetDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         tweetPanelFXController.setMyTweets(myTweets);
         tweetPanelFXController.setRetweetLabel(retweetString);
-        tweetPanelFXController.setTweetID(tweet.getId());
+        tweetPanelFXController.setTweetID(tweetId);
 
         return tweetPanelFXController.getTweetPanel();
     }
@@ -67,7 +68,8 @@ public class TweetManager {
             tweetFXController.setLikesCounter(likeNumbers);
             for (ViewTweet viewTweet : viewTweetList)
                 tweetFXController.getCommentsBox().getChildren().add(new AnchorPane(TweetManager.getInstance().
-                        makeTweetPanel(viewTweet.getRetweetString(), viewTweet.getTweet(), viewTweet.isMyTweets())));
+                        makeTweetPanel(viewTweet.getRetweetString(), viewTweet.getTweetContent(),
+                                viewTweet.getTweetDateTime(), viewTweet.getTweetId(), viewTweet.isMyTweets())));
             tweetFXController.setLikeButtonText(likeButtonText);
         });
     }

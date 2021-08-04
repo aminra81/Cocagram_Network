@@ -7,9 +7,9 @@ import lombok.ToString;
 
 @ToString
 public class NewTweetRequest extends Request {
-    String content;
-    String avatarString;
-    Integer upPost;
+    private final String content;
+    private final String avatarString;
+    private final Integer upPost;
 
     public NewTweetRequest(String content, String avatarString, Integer upPost) {
         this.content = content;

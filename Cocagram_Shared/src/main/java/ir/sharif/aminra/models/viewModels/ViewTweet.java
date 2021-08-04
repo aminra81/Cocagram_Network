@@ -1,18 +1,25 @@
 package ir.sharif.aminra.models.viewModels;
-import ir.sharif.aminra.models.media.Tweet;
 import lombok.Getter;
+
+import java.time.LocalDateTime;
 
 public class ViewTweet {
     @Getter
-    String retweetString;
+    private final String retweetString;
     @Getter
-    Tweet tweet;
+    private final String tweetContent;
     @Getter
-    boolean myTweets;
+    private final LocalDateTime tweetDateTime;
+    @Getter
+    private final Integer tweetId;
+    @Getter
+    private final boolean myTweets;
 
-    public ViewTweet(String retweetString, Tweet tweet, boolean myTweets) {
+    public ViewTweet(String retweetString, String tweetContent, LocalDateTime tweetDateTime, Integer tweetId, boolean myTweets) {
         this.retweetString = retweetString;
-        this.tweet = tweet;
+        this.tweetContent = tweetContent;
+        this.tweetDateTime = tweetDateTime;
+        this.tweetId = tweetId;
         this.myTweets = myTweets;
     }
 }

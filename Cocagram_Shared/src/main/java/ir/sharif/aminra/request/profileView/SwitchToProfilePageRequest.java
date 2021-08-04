@@ -9,9 +9,9 @@ import lombok.ToString;
 @ToString
 public class SwitchToProfilePageRequest extends Request {
 
-    SwitchToProfileType switchToProfileType;
-    Integer id;
-    String username;
+    private final SwitchToProfileType switchToProfileType;
+    private final Integer id;
+    private final String username;
 
     public SwitchToProfilePageRequest(SwitchToProfileType switchToProfileType, Integer id, String username) {
         this.switchToProfileType = switchToProfileType;

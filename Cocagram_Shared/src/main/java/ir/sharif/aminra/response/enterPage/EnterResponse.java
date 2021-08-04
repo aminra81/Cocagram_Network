@@ -4,8 +4,8 @@ import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ResponseVisitor;
 
 public class EnterResponse extends Response {
-    boolean success;
-    String message;
+    private final boolean success;
+    private final String message;
 
     public EnterResponse(boolean success, String message) {
         this.message = message;

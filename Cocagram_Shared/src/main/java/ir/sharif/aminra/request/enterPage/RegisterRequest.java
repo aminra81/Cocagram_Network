@@ -9,16 +9,16 @@ import java.time.LocalDate;
 
 @ToString
 public class RegisterRequest extends Request {
-    String username;
-    String firstname;
-    String lastname;
-    String bio;
-    LocalDate birthDate;
-    String email;
-    String phoneNumber;
-    String password;
-    boolean publicData;
-    String lastSeenType;
+    private final String username;
+    private final String firstname;
+    private final String lastname;
+    private final String bio;
+    private final LocalDate birthDate;
+    private final String email;
+    private final String phoneNumber;
+    private final String password;
+    private final boolean publicData;
+    private final String lastSeenType;
 
     public RegisterRequest(String username, String firstname, String lastname, String bio, LocalDate birthDate,
                            String email, String phoneNumber, String password, boolean publicData, String lastSeenType) {

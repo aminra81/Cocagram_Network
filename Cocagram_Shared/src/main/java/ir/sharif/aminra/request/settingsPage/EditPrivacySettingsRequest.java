@@ -7,9 +7,9 @@ import lombok.ToString;
 
 @ToString
 public class EditPrivacySettingsRequest extends Request {
-    boolean isPrivate;
-    String lastSeenType;
-    String password;
+    private final boolean isPrivate;
+    private final String lastSeenType;
+    private final String password;
 
     public EditPrivacySettingsRequest(boolean isPrivate, String lastSeenType, String password) {
         this.isPrivate = isPrivate;

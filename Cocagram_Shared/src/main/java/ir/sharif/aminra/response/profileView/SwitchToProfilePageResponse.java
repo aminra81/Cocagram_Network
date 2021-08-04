@@ -5,11 +5,11 @@ import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ResponseVisitor;
 
 public class SwitchToProfilePageResponse extends Response {
-    SwitchToProfileType switchToProfileType;
-    boolean exists;
-    boolean mine;
-    String error;
-    Integer userToBeVisited;
+    private final SwitchToProfileType switchToProfileType;
+    private final boolean exists;
+    private final boolean mine;
+    private final String error;
+    private final Integer userToBeVisited;
 
     public SwitchToProfilePageResponse(SwitchToProfileType switchToProfileType, boolean exists, boolean mine, String error,
                                        Integer userToBeVisited) {

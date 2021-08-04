@@ -4,9 +4,9 @@ import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ResponseVisitor;
 
 public class SwitchToPrivacySettingsPageResponse extends Response {
-    boolean isPrivate;
-    String lastSeenType;
-    String password;
+    private final boolean isPrivate;
+    private final String lastSeenType;
+    private final String password;
 
     public SwitchToPrivacySettingsPageResponse(boolean isPrivate, String lastSeenType, String password) {
         this.isPrivate = isPrivate;
