@@ -39,8 +39,6 @@ public class MyFXController extends FXController implements Initializable {
     @FXML
     public void lists() { myPageListener.stringEventOccurred("lists"); }
 
-    //TODO refreshable
-
     @Override
     public void clear() { tweetBox.getChildren().clear(); }
 

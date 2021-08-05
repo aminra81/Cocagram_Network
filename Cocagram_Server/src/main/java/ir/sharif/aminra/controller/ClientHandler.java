@@ -3,6 +3,11 @@ package ir.sharif.aminra.controller;
 import ir.sharif.aminra.controller.enterPage.SignInController;
 import ir.sharif.aminra.controller.enterPage.SignUpController;
 import ir.sharif.aminra.controller.explorerPage.ExplorerController;
+import ir.sharif.aminra.controller.messagingPage.MessageViewerController;
+import ir.sharif.aminra.controller.messagingPage.MessagingController;
+import ir.sharif.aminra.controller.messagingPage.chatGroupPage.ChatGroupController;
+import ir.sharif.aminra.controller.messagingPage.messageSendingPage.ChatSelectingController;
+import ir.sharif.aminra.controller.messagingPage.messageSendingPage.MessageSendingController;
 import ir.sharif.aminra.controller.network.ResponseSender;
 import ir.sharif.aminra.controller.personalPage.MyPageController;
 import ir.sharif.aminra.controller.personalPage.editPage.EditPageController;
@@ -32,6 +37,7 @@ import lombok.Setter;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.List;
 
 public class ClientHandler extends Thread implements RequestVisitor {
 
@@ -57,6 +63,11 @@ public class ClientHandler extends Thread implements RequestVisitor {
     private final ExplorerController explorerController;
     private final SettingsController settingsController;
     private final PrivacySettingsController privacySettingsController;
+    private final MessagingController messagingController;
+    private final ChatGroupController chatGroupController;
+    private final MessageSendingController messageSendingController;
+    private final ChatSelectingController chatSelectingController;
+    private final MessageViewerController messageViewerController;
 
     public ClientHandler(ResponseSender responseSender) throws IOException {
         this.responseSender = responseSender;
@@ -76,6 +87,11 @@ public class ClientHandler extends Thread implements RequestVisitor {
         explorerController = new ExplorerController(this);
         settingsController = new SettingsController(this);
         privacySettingsController = new PrivacySettingsController(this);
+        messagingController = new MessagingController(this);
+        chatGroupController = new ChatGroupController(this);
+        messageSendingController = new MessageSendingController(this);
+        chatSelectingController = new ChatSelectingController(this);
+        messageViewerController = new MessageViewerController(this);
     }
 
     @Override
@@ -137,8 +153,8 @@ public class ClientHandler extends Thread implements RequestVisitor {
     }
 
     @Override
-    public Response logout() {
-        return settingsController.logout();
+    public Response logout(boolean terminate) {
+        return settingsController.logout(terminate);
     }
 
     @Override
@@ -219,7 +235,52 @@ public class ClientHandler extends Thread implements RequestVisitor {
 
     @Override
     public Response updateMessagingPage(Integer chatId, boolean isChanged) {
-        return null;
+        return messagingController.getUpdate(chatId, isChanged);
+    }
+
+    @Override
+    public Response chatGroupRequestHandle(ChatGroupEventType chatGroupEventType, String groupName, String username) {
+        return chatGroupController.handle(chatGroupEventType, groupName, username);
+    }
+
+    @Override
+    public Response newMessage(String avatarString, String messageContent, Integer receiverId) {
+        return messageSendingController.addMessage(avatarString, messageContent, receiverId);
+    }
+
+    @Override
+    public Response sendMessage(Integer messageId, List<Integer> chats, List<Integer> groups) {
+        return chatSelectingController.sendMessage(messageId, chats, groups);
+    }
+
+    @Override
+    public Response saveTweet(Integer tweetId) {
+        return messageSendingController.saveTweet(tweetId);
+    }
+
+    @Override
+    public Response forwardTweet(Integer tweetId) {
+        return messageSendingController.forwardTweet(tweetId);
+    }
+
+    @Override
+    public Response updateMessageViewerPage(Integer messageId) {
+        return messageViewerController.getUpdate(messageId);
+    }
+
+    @Override
+    public Response deleteMessage(Integer messageId) {
+        return messageViewerController.deleteMessage(messageId);
+    }
+
+    @Override
+    public Response forwardMessage(Integer messageId) {
+        return messageSendingController.forwardMessage(messageId);
+    }
+
+    @Override
+    public Response editMessage(Integer messageId, String messageContent) {
+        return messageViewerController.editMessage(messageId, messageContent);
     }
 
 }

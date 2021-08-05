@@ -16,8 +16,6 @@ public class MessagePanelFXController extends FXController implements Initializa
 
     public void setMessageID(Integer messageID) { this.messageID = messageID; }
 
-    public Integer getMessageID() { return messageID; }
-
     @FXML
     private AnchorPane messagePanel;
 
@@ -34,7 +32,7 @@ public class MessagePanelFXController extends FXController implements Initializa
     private Label messageStateLabel;
 
     @FXML
-    public void view() { messagePanelListener.view();}
+    public void view() { messagePanelListener.view(messageID);}
 
     public void setSenderLabel(String senderText) { senderLabel.setText(senderText); }
 

@@ -2,11 +2,10 @@ package ir.sharif.aminra.response;
 
 
 import ir.sharif.aminra.models.events.SwitchToProfileType;
-import ir.sharif.aminra.models.viewModels.ViewGroup;
-import ir.sharif.aminra.models.viewModels.ViewTweet;
-import ir.sharif.aminra.models.viewModels.ViewUser;
+import ir.sharif.aminra.models.viewModels.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface ResponseVisitor {
@@ -14,7 +13,7 @@ public interface ResponseVisitor {
     void showError(String message);
     void updatePersonalPage(String bytes, List<ViewTweet> viewTweetList);
     void enter(boolean success, String message);
-    void logout();
+    void logout(boolean terminate);
     void switchToEditPage(String username, String firstname, String lastname, String bio, LocalDate birthdate,
                         String email, String phoneNumber, String lastSeenType, boolean accountPrivacy, boolean dataPrivacy);
     void applyEditResponse(String error);
@@ -34,4 +33,9 @@ public interface ResponseVisitor {
     void updateTimelinePage(List<ViewTweet> viewTweetList);
     void updateExplorerPage(List<ViewTweet> viewTweetList);
     void switchToSettingsPage(boolean isPrivate, String lastSeenType, String password);
+    void updateMessagingPage(boolean isChanged, Integer chatId, String chatName, List<ViewChat> chats, List<ViewMessage> messages);
+    void applyEditChatGroupResponse(String error);
+    void applyNewMessageResponse(String error, Integer messageId, List<ViewGroup> viewGroups, List<ViewChat> chats);
+    void updateMessageViewerPage(boolean deactivated, String messageImage, String messageContent, LocalDateTime messageDateTime, String messageSender);
+    void applyEditMessageResponse(String error);
 }

@@ -65,6 +65,7 @@ public class SignUpController {
                 Connector.getInstance().save(chatState);
 
                 user.addChatState(chatState.getId());
+                user.setLastSeen(null);
                 Connector.getInstance().save(user);
                 clientHandler.setUser(user);
 

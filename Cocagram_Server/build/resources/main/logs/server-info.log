@@ -1,2 +1,526 @@
-2021-08-05 01:03:20.815 [main] INFO  ir.sharif.aminra.Main - server program started
-2021-08-05 01:03:22.275 [main] INFO  ir.sharif.aminra.database.Connector - connected to database
+2021-08-06 02:17:20.132 [main] INFO  ir.sharif.aminra.Main - server program started
+2021-08-06 02:17:21.931 [main] INFO  ir.sharif.aminra.database.Connector - connected to database
+2021-08-06 02:17:43.461 [Thread-0] INFO  ir.sharif.aminra.controller.SocketManager - socket Socket[addr=/127.0.0.1,port=40240,localport=1080] is connected
+2021-08-06 02:17:46.230 [Thread-0] INFO  ir.sharif.aminra.controller.SocketManager - socket Socket[addr=/127.0.0.1,port=40248,localport=1080] is connected
+2021-08-06 02:17:53.709 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:17:53.790 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:17:54.140 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:17:54.141 [Thread-2] INFO  ir.sharif.aminra.controller.enterPage.SignUpController - user a signed in.
+2021-08-06 02:18:04.820 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:04.831 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=8, chat=7, lastCheck=2021-08-06T02:18:04.820200)
+2021-08-06 02:18:04.957 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:04.959 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:04.960 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:04.963 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:05.818 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:05.818 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=8, chat=7, lastCheck=2021-08-06T02:18:05.818374)
+2021-08-06 02:18:05.938 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:05.940 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:05.942 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:05.945 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:07.785 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:07.786 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=8, chat=7, lastCheck=2021-08-06T02:18:07.785544)
+2021-08-06 02:18:08.196 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:08.197 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:08.198 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:08.199 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:09.798 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:09.798 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=8, chat=7, lastCheck=2021-08-06T02:18:09.798312)
+2021-08-06 02:18:10.858 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:10.860 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:10.861 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:10.864 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:13.934 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:13.945 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Message(mainMedia=8, isForwardedTweet=false, isDeleted=false)
+2021-08-06 02:18:15.119 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:19.733 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:19.734 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Message(mainMedia=8, isForwardedTweet=false, isDeleted=false)
+2021-08-06 02:18:19.865 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:19.865 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:19.878 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Chat(id=9, chatName=, messages=[10, 15, 16], users=[1, 3], isGroup=false)
+2021-08-06 02:18:20.016 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:20.017 [Thread-2] INFO  ir.sharif.aminra.controller.messagingPage.messageSendingPage.ChatSelectingController - user a sent message 16 to some chats.
+2021-08-06 02:18:21.770 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:21.771 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=8, chat=7, lastCheck=2021-08-06T02:18:21.770499)
+2021-08-06 02:18:22.307 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:22.309 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:22.310 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:22.312 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:23.816 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:23.820 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=8, chat=7, lastCheck=2021-08-06T02:18:23.816558)
+2021-08-06 02:18:24.762 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:24.764 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:24.765 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:24.768 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:24.894 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:24.897 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:24.889575)
+2021-08-06 02:18:25.029 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:25.029 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:25.029 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:25.030 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:25.774 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:25.774 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:25.773912)
+2021-08-06 02:18:25.902 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:25.903 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:25.904 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:25.908 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:27.765 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:27.765 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:27.765069)
+2021-08-06 02:18:27.927 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:27.928 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:27.929 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:27.931 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:29.784 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:29.785 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:29.784483)
+2021-08-06 02:18:30.281 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:30.282 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:30.283 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:30.286 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:31.784 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:31.784 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:31.784278)
+2021-08-06 02:18:33.233 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:33.233 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:33.233 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:33.234 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:33.238 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:33.238 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:18:34.699 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:34.699 [Thread-3] INFO  ir.sharif.aminra.controller.enterPage.SignUpController - user c signed in.
+2021-08-06 02:18:34.757 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:34.757 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:34.757225)
+2021-08-06 02:18:34.877 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:34.877 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:34.878 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:34.880 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:35.761 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:35.761 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:35.761493)
+2021-08-06 02:18:36.552 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:36.553 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:36.554 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:36.556 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:37.765 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:37.765 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:37.765022)
+2021-08-06 02:18:39.370 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:39.370 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:39.371 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:39.372 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:39.742 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:39.742 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:39.742564)
+2021-08-06 02:18:40.264 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:40.265 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:40.267 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:40.269 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:41.764 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:41.764 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:41.764541)
+2021-08-06 02:18:41.885 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:41.885 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:41.887 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:41.890 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:43.744 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:43.745 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:43.744629)
+2021-08-06 02:18:43.877 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:43.878 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:43.878 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:43.879 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:45.766 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:45.855 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:45.766733)
+2021-08-06 02:18:47.138 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:47.140 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:47.141 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:47.143 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:47.764 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:47.764 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:47.764151)
+2021-08-06 02:18:47.889 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:47.889 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:47.890 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:47.893 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:49.767 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:49.767 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:49.767529)
+2021-08-06 02:18:50.642 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:50.643 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:50.644 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:50.646 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:50.688 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:50.689 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:18:50.681598)
+2021-08-06 02:18:50.810 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:50.810 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:50.810 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:18:50.811 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:51.755 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:51.755 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:51.755170)
+2021-08-06 02:18:53.002 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:53.002 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:53.004 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:53.005 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:53.031 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:53.032 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:18:53.031389)
+2021-08-06 02:18:53.148 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:53.148 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:53.149 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:18:53.152 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:53.742 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:53.742 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:53.742148)
+2021-08-06 02:18:53.943 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:53.944 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:53.944 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:53.945 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:54.630 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:54.636 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:18:54.630598)
+2021-08-06 02:18:54.805 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:54.806 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:54.807 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:18:54.810 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:55.762 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:55.763 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:55.762502)
+2021-08-06 02:18:55.896 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:55.897 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:55.898 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:55.899 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:56.619 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:56.619 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:18:56.619471)
+2021-08-06 02:18:56.757 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:56.757 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:56.757 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:18:56.758 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:57.757 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:57.758 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:57.757696)
+2021-08-06 02:18:59.349 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:59.360 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:59.361 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:59.365 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:59.391 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:59.394 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:18:59.391582)
+2021-08-06 02:18:59.541 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:59.541 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:59.542 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:18:59.542 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:59.589 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:59.590 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:18:59.588770)
+2021-08-06 02:18:59.801 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:18:59.802 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:18:59.803 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:18:59.806 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:00.627 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:00.628 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:19:00.627697)
+2021-08-06 02:19:02.475 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:02.475 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:02.476 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:02.476 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:02.494 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:02.495 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:19:02.494583)
+2021-08-06 02:19:02.657 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:02.657 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:02.658 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:02.660 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:02.694 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:02.694 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:02.692385)
+2021-08-06 02:19:02.838 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:02.839 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:02.839 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:02.842 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:02.869 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:02.869 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:02.868133)
+2021-08-06 02:19:03.036 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:03.037 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:03.037 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:03.039 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:03.758 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:03.758 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:03.758456)
+2021-08-06 02:19:03.921 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:03.921 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:03.922 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:03.924 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:04.621 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:04.621 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:04.621102)
+2021-08-06 02:19:05.137 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:05.139 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:05.139 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:05.141 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:05.741 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:05.741 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:05.741390)
+2021-08-06 02:19:08.316 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:08.316 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:08.316 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:08.317 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:08.329 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:08.329 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:08.329314)
+2021-08-06 02:19:09.336 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:09.337 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:09.339 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:09.342 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:09.380 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:09.380 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:09.380264)
+2021-08-06 02:19:10.499 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:10.500 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:10.500 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:10.502 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:10.511 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:10.512 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:10.510059)
+2021-08-06 02:19:10.694 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:10.694 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:10.694 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:10.695 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:10.716 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:10.717 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:10.713570)
+2021-08-06 02:19:10.900 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:10.901 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:10.902 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:10.904 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:12.617 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:12.618 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:12.617765)
+2021-08-06 02:19:12.772 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:12.773 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:12.774 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:12.777 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:14.622 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:14.622 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:14.622383)
+2021-08-06 02:19:16.545 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:16.546 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:16.547 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:16.548 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:16.549 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:16.551 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Message(mainMedia=null, isForwardedTweet=false, isDeleted=false)
+2021-08-06 02:19:16.679 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:16.716 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:16.717 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:16.716843)
+2021-08-06 02:19:16.847 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:16.848 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:16.849 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:16.851 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:18.617 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:18.618 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:18.617538)
+2021-08-06 02:19:18.752 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:18.753 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:18.754 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:18.755 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:19.571 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:19.572 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Message(mainMedia=null, isForwardedTweet=false, isDeleted=false)
+2021-08-06 02:19:20.829 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:20.830 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:20.831 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Chat(id=9, chatName=, messages=[10, 15, 16, 17], users=[1, 3], isGroup=false)
+2021-08-06 02:19:20.941 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:20.942 [Thread-2] INFO  ir.sharif.aminra.controller.messagingPage.messageSendingPage.ChatSelectingController - user a sent message 17 to some chats.
+2021-08-06 02:19:20.971 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:20.972 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:20.971532)
+2021-08-06 02:19:21.098 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:21.100 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:21.101 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:21.102 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:22.623 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:22.623 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:22.623017)
+2021-08-06 02:19:23.010 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:23.011 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:23.012 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:23.013 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:24.623 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:24.624 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:24.623553)
+2021-08-06 02:19:25.863 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:25.864 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:25.865 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:25.867 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:25.867 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:25.868 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Message(mainMedia=null, isForwardedTweet=false, isDeleted=false)
+2021-08-06 02:19:25.986 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:26.623 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:26.624 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:26.623379)
+2021-08-06 02:19:26.748 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:26.749 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:26.749 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:26.751 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:28.622 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:28.623 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:28.622277)
+2021-08-06 02:19:29.039 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:29.040 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:29.041 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:29.042 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:30.530 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:30.531 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Message(mainMedia=null, isForwardedTweet=false, isDeleted=false)
+2021-08-06 02:19:30.761 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:30.762 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:30.763 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Chat(id=9, chatName=, messages=[10, 15, 16, 17, 18], users=[1, 3], isGroup=false)
+2021-08-06 02:19:30.885 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:30.885 [Thread-2] INFO  ir.sharif.aminra.controller.messagingPage.messageSendingPage.ChatSelectingController - user a sent message 18 to some chats.
+2021-08-06 02:19:30.904 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:30.905 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:30.904315)
+2021-08-06 02:19:31.030 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:31.031 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:31.032 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:31.034 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:32.626 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:32.628 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:32.626739)
+2021-08-06 02:19:32.759 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:32.760 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:32.761 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:32.763 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:34.615 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:34.615 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:34.614995)
+2021-08-06 02:19:34.974 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:34.976 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:34.977 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:34.979 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:35.755 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:35.755 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:35.755100)
+2021-08-06 02:19:35.889 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:35.890 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:35.890 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:35.892 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:36.622 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:36.623 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:36.622602)
+2021-08-06 02:19:37.036 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:37.037 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:37.038 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:37.039 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:37.758 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:37.758 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:37.758139)
+2021-08-06 02:19:38.193 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:38.194 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:38.194 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:38.196 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:38.624 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:38.624 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:38.624108)
+2021-08-06 02:19:38.944 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:38.945 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:38.946 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:38.949 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:39.759 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:39.760 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:39.759711)
+2021-08-06 02:19:39.926 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:39.927 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:39.928 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:39.929 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:40.626 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:40.626 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:40.625792)
+2021-08-06 02:19:41.838 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:41.839 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:41.839 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:41.841 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:41.870 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:41.870 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:41.870216)
+2021-08-06 02:19:42.018 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:42.019 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:42.019 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:42.020 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:42.642 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:42.642 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:42.642128)
+2021-08-06 02:19:44.357 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:44.358 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:44.359 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:44.360 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:44.624 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:44.625 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:44.624125)
+2021-08-06 02:19:46.294 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:46.295 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:46.295 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:46.297 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:46.531 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:46.531 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Message(mainMedia=null, isForwardedTweet=false, isDeleted=true)
+2021-08-06 02:19:46.683 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:46.688 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:46.689 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:46.688726)
+2021-08-06 02:19:46.843 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:46.844 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:46.844 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:46.846 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:47.751 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:47.751 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:47.751214)
+2021-08-06 02:19:47.905 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:47.906 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:47.906 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:47.908 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:48.625 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:48.626 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:48.625765)
+2021-08-06 02:19:49.538 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:49.539 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:49.540 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:49.542 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:49.746 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:49.746 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:49.745922)
+2021-08-06 02:19:49.895 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:49.895 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:49.896 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:49.898 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:50.624 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:50.624 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:50.624207)
+2021-08-06 02:19:50.890 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:50.890 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:50.890 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:50.891 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:52.175 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:52.176 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : Message(mainMedia=null, isForwardedTweet=false, isDeleted=true)
+2021-08-06 02:19:53.014 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:53.036 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:53.036 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:53.035815)
+2021-08-06 02:19:53.236 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:53.237 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:53.238 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:53.239 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:53.739 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:53.739 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:53.739669)
+2021-08-06 02:19:55.510 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:55.510 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:55.510 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:55.511 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:55.524 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:55.525 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=10, chat=8, lastCheck=2021-08-06T02:19:55.522085)
+2021-08-06 02:19:55.705 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:55.706 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:55.706 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:55.708 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:55.732 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:55.732 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:19:55.732072)
+2021-08-06 02:19:55.922 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:55.922 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:55.923 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:55.925 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:55.997 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:55.998 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:55.997719)
+2021-08-06 02:19:56.211 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:56.211 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:56.212 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:56.213 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:56.614 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:56.614 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:19:56.614428)
+2021-08-06 02:19:57.136 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:57.137 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:57.137 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:57.139 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:57.773 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:57.773 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:19:57.772751)
+2021-08-06 02:19:59.528 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:59.529 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:59.529 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:19:59.531 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:59.557 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:59.557 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:19:59.555967)
+2021-08-06 02:19:59.992 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:19:59.992 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:19:59.993 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:19:59.995 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:20:00.098 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:20:00.102 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=11, chat=9, lastCheck=2021-08-06T02:20:00.098494)
+2021-08-06 02:20:00.315 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:20:00.315 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:20:00.316 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=null, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:20:00.317 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:20:00.625 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:20:00.626 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:20:00.625814)
+2021-08-06 02:20:01.334 [Thread-2] INFO  ir.sharif.aminra.controller.settingsPage.SettingsController - user a logged out from the app.
+2021-08-06 02:20:01.997 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:20:01.997 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:20:01.998 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:20:02.000 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:20:02.004 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:20:02.007 [Thread-2] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=1, firstname=asad, lastname=asaad, username=a, bio=pv = block, birthDate=null, email=a@gmail.com, phoneNumber=912, password=a, publicData=true, isActive=true, lastSeen=2021-08-06T02:20:01.335332, lastSeenType= Followings, followings=[2, 3], followers=[2], blockList=[], tweets=[1, 2, 3, 4, 5, 6, 7], requestNotifications=[user b accepted your follow request!], likedTweets=[8], requests=[], notifications=[user b unfollowed you!, user b followed you!, user b unfollowed you!], isPrivate=false, groups=[1], mutedUsers=[], avatar=8, reportedSpamTweets=[3], chatStates=[1, 3, 4, 5, 8, 11])
+2021-08-06 02:20:02.308 [Thread-2] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:20:02.429 [Thread-2] WARN  ir.sharif.aminra.controller.network.SocketResponseSender - socket Socket[addr=/127.0.0.1,port=40240,localport=1080] is disconnected
+2021-08-06 02:20:02.617 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:20:02.617 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : ChatState(id=12, chat=9, lastCheck=2021-08-06T02:20:02.617377)
+2021-08-06 02:20:04.279 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:20:04.279 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:20:04.280 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=null, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:20:04.280 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:20:04.304 [Thread-3] INFO  ir.sharif.aminra.controller.settingsPage.SettingsController - user c logged out from the app.
+2021-08-06 02:20:04.304 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction started
+2021-08-06 02:20:04.304 [Thread-3] INFO  ir.sharif.aminra.database.Connector - instance saved : User(id=3, firstname=c, lastname=c, username=c, bio=, birthDate=2021-08-16, email=c@gmail.com, phoneNumber=, password=c, publicData=true, isActive=true, lastSeen=2021-08-06T02:20:04.304203, lastSeenType=Everyone, followings=[], followers=[1], blockList=[], tweets=[], requestNotifications=[], likedTweets=[], requests=[], notifications=[user a followed you!], isPrivate=false, groups=[], mutedUsers=[], avatar=1, reportedSpamTweets=[], chatStates=[10, 12])
+2021-08-06 02:20:04.549 [Thread-3] INFO  ir.sharif.aminra.database.Connector - transaction committed
+2021-08-06 02:20:04.616 [Thread-3] WARN  ir.sharif.aminra.controller.network.SocketResponseSender - socket Socket[addr=/127.0.0.1,port=40248,localport=1080] is disconnected

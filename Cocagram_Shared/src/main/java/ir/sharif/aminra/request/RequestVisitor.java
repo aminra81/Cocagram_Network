@@ -4,13 +4,14 @@ import ir.sharif.aminra.models.events.*;
 import ir.sharif.aminra.response.Response;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public interface RequestVisitor {
     Response updatePage(String pageName);
     Response login(String username, String password);
     Response register(String username, String firstname, String lastname, String bio, LocalDate birthDate,
                       String email, String phoneNumber, String password, boolean publicData, String lastSeenType);
-    Response logout();
+    Response logout(boolean terminate);
     Response edit(String firstname, String lastname, String bio, LocalDate birthdate, String email, String phoneNumber, String avatarArray);
     Response switchToEditPage();
     Response followRequestHandle(RequestAnswerType requestAnswerType, Integer requesterID);
@@ -26,5 +27,14 @@ public interface RequestVisitor {
     Response switchToPrivacySettingsPage();
     Response deactivate();
     Response editPrivacySettings(boolean isPrivate, String lastSeenType, String password);
-    Response updateMessagingPage(Integer chatId, boolean isChatChanged);
+    Response updateMessagingPage(Integer chatId, boolean isChanged);
+    Response chatGroupRequestHandle(ChatGroupEventType chatGroupEventType, String groupName, String username);
+    Response newMessage(String avatarString, String messageContent, Integer receiverId);
+    Response sendMessage(Integer messageId, List<Integer> chats, List<Integer> groups);
+    Response saveTweet(Integer tweetId);
+    Response forwardTweet(Integer tweetId);
+    Response updateMessageViewerPage(Integer messageId);
+    Response deleteMessage(Integer messageId);
+    Response forwardMessage(Integer messageId);
+    Response editMessage(Integer messageId, String messageContent);
 }

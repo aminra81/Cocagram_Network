@@ -22,14 +22,16 @@ public class SettingsController {
         this.clientHandler = clientHandler;
     }
 
-    public Response logout() {
+    public Response logout(boolean terminate) {
         try {
             User user = clientHandler.getUser();
+            if(user == null)
+                return null;
             logger.info(String.format("user %s logged out from the app.", user.getUsername()));
             user.setLastSeen(LocalDateTime.now());
             Connector.getInstance().save(user);
             clientHandler.setUser(null);
-            return new LogoutResponse();
+            return new LogoutResponse(terminate);
         } catch (DatabaseDisconnectException e) {
             return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
         }

@@ -15,9 +15,10 @@ public class SettingsPageListener {
         Request request;
         switch (event) {
             case "deleteAccount":
+                //TODO adding delete account feature.
                 break;
             case "logout":
-                request = new LogoutRequest();
+                request = new LogoutRequest(false);
                 logger.info(String.format("client requested %s", request));
                 Client.getClient().addRequest(request);
                 break;

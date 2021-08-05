@@ -33,7 +33,7 @@ public class PrivacySettingsController {
             Connector.getInstance().save(user);
 
             SettingsController settingsController = new SettingsController(clientHandler);
-            return settingsController.logout();
+            return settingsController.logout(false);
         } catch (DatabaseDisconnectException e) {
             return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
         }
@@ -48,7 +48,7 @@ public class PrivacySettingsController {
             user.setPrivate(isPrivate);
             Connector.getInstance().save(user);
             SettingsController settingsController = new SettingsController(clientHandler);
-            return settingsController.logout();
+            return settingsController.logout(false);
         } catch (DatabaseDisconnectException e) {
             return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
         }

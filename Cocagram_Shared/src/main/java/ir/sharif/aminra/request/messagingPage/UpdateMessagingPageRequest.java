@@ -5,19 +5,20 @@ import ir.sharif.aminra.request.RequestVisitor;
 import ir.sharif.aminra.response.Response;
 import lombok.ToString;
 
+
 @ToString
 public class UpdateMessagingPageRequest extends Request {
 
     private final Integer chatId;
-    private final boolean isChatChanged;
+    private final boolean isChanged;
 
-    public UpdateMessagingPageRequest(Integer chatId, boolean isChatChanged) {
+    public UpdateMessagingPageRequest(Integer chatId, boolean isChanged) {
         this.chatId = chatId;
-        this.isChatChanged = isChatChanged;
+        this.isChanged = isChanged;
     }
 
     @Override
     public Response visit(RequestVisitor requestVisitor) {
-        return requestVisitor.updateMessagingPage(chatId, isChatChanged);
+        return requestVisitor.updateMessagingPage(chatId, isChanged);
     }
 }

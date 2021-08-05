@@ -5,6 +5,7 @@ import ir.sharif.aminra.util.ImageUtils;
 import ir.sharif.aminra.view.Page;
 import ir.sharif.aminra.view.ViewManager;
 import ir.sharif.aminra.view.explorerPage.ExplorerFXController;
+import ir.sharif.aminra.view.messagingPage.MessageViewerFXController;
 import ir.sharif.aminra.view.profileView.ProfileFXController;
 import ir.sharif.aminra.view.tweets.TweetFXController;
 import javafx.application.Platform;
@@ -29,14 +30,15 @@ public class ProfileViewController {
             case TWEET:
                 switchPageByTweetID(exists, mine, error, userToBeVisited);
                 break;
+            case MESSAGE:
+                switchPageByMessageID(exists, mine, error, userToBeVisited);
+                break;
             case USERNAME:
                 if(!(ViewManager.getInstance().getCurPage().getFxController() instanceof ExplorerFXController))
                     return;
                 ExplorerFXController explorerFXController = (ExplorerFXController) ViewManager.getInstance().
                         getCurPage().getFxController();
                 Platform.runLater(() -> explorerFXController.setErrorLabel(error));
-            case MESSAGE:
-                break;
         }
     }
 
@@ -72,6 +74,30 @@ public class ProfileViewController {
                 return;
             TweetFXController tweetFXController = (TweetFXController) ViewManager.getInstance().getCurPage().getFxController();
             Platform.runLater(() -> tweetFXController.setVerdictLabelText(error, true));
+            return;
+        }
+        Platform.runLater(() -> {
+            Page profilePage = new Page("profilePage");
+            ProfileFXController profileFXController = (ProfileFXController) profilePage.getFxController();
+            profileFXController.setUserToVeVisited(userToBeVisited);
+            ViewManager.getInstance().setPage(profilePage);
+        });
+    }
+
+    private void switchPageByMessageID(boolean exists, boolean mine, String error, Integer userToBeVisited) {
+        if (!exists) {
+            Platform.runLater(() -> {
+                Page deactivatedUserPage = new Page("deactivatedUserPage");
+                ViewManager.getInstance().setPage(deactivatedUserPage);
+            });
+            return;
+        }
+        if (mine) {
+            if(!(ViewManager.getInstance().getCurPage().getFxController() instanceof MessageViewerFXController))
+                return;
+            MessageViewerFXController messageViewerFXController = (MessageViewerFXController)
+                    ViewManager.getInstance().getCurPage().getFxController();
+            Platform.runLater(() -> messageViewerFXController.setErrorLabel(error));
             return;
         }
         Platform.runLater(() -> {

@@ -92,7 +92,6 @@ public class Connector {
             try {
                 Session session = sessionFactory.openSession();
                 E result = session.get(entity, id);
-                logger.info("instance fetched");
                 session.close();
                 return result;
             } catch (Throwable throwable) {
@@ -113,7 +112,6 @@ public class Connector {
             try {
                 Session session = sessionFactory.openSession();
                 List<E> result = session.createQuery(hql, entity).getResultList();
-                logger.info("instances fetched");
                 session.close();
                 return result;
             } catch (Throwable throwable) {

@@ -4,6 +4,8 @@ import ir.sharif.aminra.controller.Client;
 import ir.sharif.aminra.models.events.SwitchToProfileType;
 import ir.sharif.aminra.models.events.TweetPageEventType;
 import ir.sharif.aminra.request.Request;
+import ir.sharif.aminra.request.messagingPage.messageSendingPage.ForwardTweetRequest;
+import ir.sharif.aminra.request.messagingPage.messageSendingPage.SaveTweetRequest;
 import ir.sharif.aminra.request.profileView.SwitchToProfilePageRequest;
 import ir.sharif.aminra.request.tweets.TweetActionRequest;
 import ir.sharif.aminra.util.Config;
@@ -51,9 +53,14 @@ public class TweetPageListener {
     }
 
     public void save(Integer tweetID) {
-
+        Request request = new SaveTweetRequest(tweetID);
+        logger.info(String.format("client requested %s", request));
+        Client.getClient().addRequest(request);
     }
 
     public void forward(Integer tweetID) {
+        Request request = new ForwardTweetRequest(tweetID);
+        logger.info(String.format("client requested %s", request));
+        Client.getClient().addRequest(request);
     }
 }

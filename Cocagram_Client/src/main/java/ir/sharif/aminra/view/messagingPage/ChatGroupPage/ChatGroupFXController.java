@@ -41,7 +41,7 @@ public class ChatGroupFXController extends FXController implements Initializable
 
     @FXML
     public void removeGroup() {
-        chatGroupPageListener.removeGroup(newGroupNameField.getText());
+        chatGroupPageListener.removeGroup(removeGroupNameField.getText());
     }
 
     public void setErrorLabel(String error) { errorLabel.setText(error); }

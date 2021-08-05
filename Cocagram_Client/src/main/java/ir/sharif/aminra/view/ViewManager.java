@@ -1,5 +1,7 @@
 package ir.sharif.aminra.view;
 
+import ir.sharif.aminra.controller.Client;
+import ir.sharif.aminra.request.LogoutRequest;
 import ir.sharif.aminra.util.Config;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
@@ -27,7 +29,7 @@ public class ViewManager {
         this.stage = stage;
         stage.setOnCloseRequest(windowEvent -> {
             logger.info("client program terminated");
-            System.exit(0);
+            Client.getClient().addRequest(new LogoutRequest(true));
         });
 
         curPage = new Page("enterPage");

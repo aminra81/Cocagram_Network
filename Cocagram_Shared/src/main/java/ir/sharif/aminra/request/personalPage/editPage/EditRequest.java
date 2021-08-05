@@ -3,11 +3,9 @@ package ir.sharif.aminra.request.personalPage.editPage;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.RequestVisitor;
 import ir.sharif.aminra.response.Response;
-import lombok.ToString;
 
 import java.time.LocalDate;
 
-@ToString
 public class EditRequest extends Request {
     private final String firstname;
     private final String lastname;
@@ -31,5 +29,17 @@ public class EditRequest extends Request {
     @Override
     public Response visit(RequestVisitor requestVisitor) {
         return requestVisitor.edit(firstname, lastname, bio, birthdate, email, phoneNumber, avatarString);
+    }
+
+    @Override
+    public String toString() {
+        return "EditRequest{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", bio='" + bio + '\'' +
+                ", birthdate=" + birthdate +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }

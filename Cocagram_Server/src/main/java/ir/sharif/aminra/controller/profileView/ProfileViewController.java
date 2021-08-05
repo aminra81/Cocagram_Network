@@ -7,6 +7,7 @@ import ir.sharif.aminra.exceptions.DatabaseDisconnectException;
 import ir.sharif.aminra.models.User;
 import ir.sharif.aminra.models.events.ProfilePageEventType;
 import ir.sharif.aminra.models.events.SwitchToProfileType;
+import ir.sharif.aminra.models.media.Message;
 import ir.sharif.aminra.models.media.Tweet;
 import ir.sharif.aminra.response.Response;
 import ir.sharif.aminra.response.ShowErrorResponse;
@@ -37,6 +38,8 @@ public class ProfileViewController {
                     return getInfoToSwitchByUserId(Id);
                 case TWEET:
                     return getInfoToSwitchByTweetId(Id);
+                case MESSAGE:
+                    return getInfoToSwitchByMessageId(Id);
                 case USERNAME:
                     return getInfoToSwitchByUsername(username);
             }
@@ -81,6 +84,25 @@ public class ProfileViewController {
 
         return new SwitchToProfilePageResponse(SwitchToProfileType.TWEET,
                 true, false, "", tweet.getWriter());
+    }
+
+    private Response getInfoToSwitchByMessageId(Integer messageId) throws DatabaseDisconnectException {
+        Message message = Connector.getInstance().fetch(Message.class, messageId);
+        User userToBeVisited = Connector.getInstance().fetch(User.class, message.getWriter());
+        User user = clientHandler.getUser();
+        if (!userToBeVisited.isActive()) {
+            logger.info(String.format("user %s wants to check the profile of a user which doesn't exist.",
+                    user.getUsername()));
+            return new SwitchToProfilePageResponse(SwitchToProfileType.MESSAGE,
+                    false, false, "", message.getWriter());
+        }
+        if (user.equals(userToBeVisited))
+            return new SwitchToProfilePageResponse(SwitchToProfileType.MESSAGE,
+                    true, true, Config.getConfig("messageViewerPage").getProperty(String.class,
+                    "viewSelfProfileError"), message.getWriter());
+
+        return new SwitchToProfilePageResponse(SwitchToProfileType.MESSAGE,
+                true, false, "", message.getWriter());
     }
 
     private Response getInfoToSwitchByUsername(String username) throws DatabaseDisconnectException {

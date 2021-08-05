@@ -2,6 +2,11 @@ package ir.sharif.aminra.controller;
 
 import ir.sharif.aminra.controller.enterPage.EnterController;
 import ir.sharif.aminra.controller.explorerPage.ExplorerController;
+import ir.sharif.aminra.controller.messagingPage.EditMessageController;
+import ir.sharif.aminra.controller.messagingPage.MessageViewerController;
+import ir.sharif.aminra.controller.messagingPage.MessagingController;
+import ir.sharif.aminra.controller.messagingPage.chatGroupPage.ChatGroupController;
+import ir.sharif.aminra.controller.messagingPage.messageSendingPage.MessageSendingController;
 import ir.sharif.aminra.controller.network.RequestSender;
 import ir.sharif.aminra.controller.personalPage.MyPageController;
 import ir.sharif.aminra.controller.personalPage.editPage.EditPageController;
@@ -15,11 +20,10 @@ import ir.sharif.aminra.controller.timelinePage.TimelineController;
 import ir.sharif.aminra.controller.tweets.TweetManager;
 import ir.sharif.aminra.exceptions.ClientDisconnectException;
 import ir.sharif.aminra.models.events.SwitchToProfileType;
-import ir.sharif.aminra.models.viewModels.ViewGroup;
-import ir.sharif.aminra.models.viewModels.ViewTweet;
-import ir.sharif.aminra.models.viewModels.ViewUser;
+import ir.sharif.aminra.models.viewModels.*;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.UpdatePageRequest;
+import ir.sharif.aminra.request.messagingPage.UpdateMessageViewerPageRequest;
 import ir.sharif.aminra.request.messagingPage.UpdateMessagingPageRequest;
 import ir.sharif.aminra.request.personalPage.editPage.UpdateProfilePageRequest;
 import ir.sharif.aminra.request.personalPage.listsPage.UpdateGroupPageRequest;
@@ -32,7 +36,9 @@ import ir.sharif.aminra.view.FXController;
 import ir.sharif.aminra.view.Page;
 import ir.sharif.aminra.view.ViewManager;
 import ir.sharif.aminra.view.explorerPage.ExplorerFXController;
+import ir.sharif.aminra.view.messagingPage.MessageViewerFXController;
 import ir.sharif.aminra.view.messagingPage.MessagingFXController;
+import ir.sharif.aminra.view.messagingPage.messageSendingPage.ChatSelectingFXController;
 import ir.sharif.aminra.view.personalPage.MyFXController;
 import ir.sharif.aminra.view.personalPage.listsPage.GroupFXController;
 import ir.sharif.aminra.view.personalPage.listsPage.ListsFXController;
@@ -47,6 +53,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -71,6 +78,11 @@ public class Client implements ResponseVisitor {
     private final TimelineController timelineController;
     private final ExplorerController explorerController;
     private final PrivacySettingsController privacySettingsController;
+    private final MessagingController messagingController;
+    private final ChatGroupController chatGroupController;
+    private final MessageSendingController messageSendingController;
+    private final MessageViewerController messageViewerController;
+    private final EditMessageController editMessageController;
 
     public Client(RequestSender requestSender) {
         this.requestSender = requestSender;
@@ -92,6 +104,11 @@ public class Client implements ResponseVisitor {
         timelineController = new TimelineController();
         explorerController = new ExplorerController();
         privacySettingsController = new PrivacySettingsController();
+        messagingController = new MessagingController();
+        chatGroupController = new ChatGroupController();
+        messageSendingController = new MessageSendingController();
+        messageViewerController = new MessageViewerController();
+        editMessageController = new EditMessageController();
     }
 
     public void start(Stage stage) {
@@ -138,11 +155,12 @@ public class Client implements ResponseVisitor {
             addRequest(new UpdateTweetPageRequest(((TweetFXController) fxController).getTweetID(),
                     ((TweetFXController) fxController).isMyTweets()));
         else if(fxController instanceof MessagingFXController)
-            addRequest(new UpdateMessagingPageRequest(((MessagingFXController) fxController).getSelectedChatID(),
-                    false));
+            addRequest(new UpdateMessagingPageRequest(((MessagingFXController) fxController).getSelectedChatID(), false));
+        else if(fxController instanceof MessageViewerFXController)
+            addRequest(new UpdateMessageViewerPageRequest(((MessageViewerFXController) fxController).getMessageID()));
         else if (fxController instanceof MyFXController || fxController instanceof ListsFXController ||
                 fxController instanceof NotificationsFXController || fxController instanceof TimelineFXController ||
-        fxController instanceof ExplorerFXController)
+        fxController instanceof ExplorerFXController || fxController instanceof ChatSelectingFXController)
             addRequest(new UpdatePageRequest(fxController.getClass().getSimpleName()));
     }
 
@@ -171,8 +189,11 @@ public class Client implements ResponseVisitor {
     }
 
     @Override
-    public void logout() {
-        goTo("enterPage", "");
+    public void logout(boolean terminate) {
+        if(terminate)
+            System.exit(0);
+        else
+            goTo("enterPage", "");
     }
 
     @Override
@@ -257,6 +278,32 @@ public class Client implements ResponseVisitor {
     @Override
     public void switchToSettingsPage(boolean isPrivate, String lastSeenType, String password) {
         privacySettingsController.switchToPrivacySettingsPage(isPrivate, lastSeenType, password);
+    }
+
+    @Override
+    public void updateMessagingPage(boolean isChanged, Integer chatId, String chatName, List<ViewChat> chats, List<ViewMessage> messages) {
+        messagingController.refresh(isChanged, chatId, chatName, chats, messages);
+    }
+
+    @Override
+    public void applyEditChatGroupResponse(String error) {
+        chatGroupController.applyError(error);
+    }
+
+    @Override
+    public void applyNewMessageResponse(String error, Integer messageId, List<ViewGroup> groups, List<ViewChat> chats) {
+        messageSendingController.applyNewMessageResponse(error, messageId, groups, chats);
+    }
+
+    @Override
+    public void updateMessageViewerPage(boolean deactivated, String messageImage, String messageContent,
+                                        LocalDateTime messageDateTime, String messageSender) {
+        messageViewerController.refresh(deactivated, messageImage, messageContent, messageDateTime, messageSender);
+    }
+
+    @Override
+    public void applyEditMessageResponse(String error) {
+        editMessageController.applyEditMessageResponse(error);
     }
 
 }

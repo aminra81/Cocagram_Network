@@ -370,13 +370,6 @@ public class User implements SaveAble {
         return chatStates;
     }
 
-    /*public void updateChatLastCheck(Integer chatID) {
-        for (Integer chatState : chatStates)
-            if (chatState.getChat().equals(chatID))
-                chatState.setLastCheck(LocalDateTime.now());
-    }*/
-    //TODO make updateChatLastCheck correct in logic.
-
     public void removeFromChatStates(Integer chatState) {
         chatStates.remove(chatState);
     }
