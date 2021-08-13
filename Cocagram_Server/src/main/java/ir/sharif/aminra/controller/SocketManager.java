@@ -1,5 +1,6 @@
 package ir.sharif.aminra.controller;
 
+import ir.sharif.aminra.controller.bot.BotHandler;
 import ir.sharif.aminra.controller.network.ResponseSender;
 import ir.sharif.aminra.controller.network.SocketResponseSender;
 import ir.sharif.aminra.database.Connector;
@@ -14,13 +15,15 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
-public class SocketManager extends Thread {
+public class SocketManager {
 
     static private final Logger logger = LogManager.getLogger(SocketManager.class);
 
     private final ServerSocket serverSocket;
     private final List<ClientHandler> clientHandlers;
+    private final BotHandler botHandler;
 
     public SocketManager() throws IOException, DatabaseDisconnectException {
         Config config = Config.getConfig("server");
@@ -30,10 +33,15 @@ public class SocketManager extends Thread {
         //to build connection to database
         Connector.getInstance();
         clientHandlers = Collections.synchronizedList(new ArrayList<>());
+        botHandler = new BotHandler();
     }
 
-    @Override
-    public void run() {
+    public void start() {
+        new Thread(this::getOrders).start();
+        accept();
+    }
+
+    private void accept() {
         while (true) {
             try {
                 Socket socket = serverSocket.accept();
@@ -43,6 +51,41 @@ public class SocketManager extends Thread {
                 clientHandlers.add(clientHandler);
                 clientHandler.start();
             } catch (IOException ignore) {
+            }
+        }
+    }
+
+    private void getOrders() {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("type add bot to add bot");
+            System.out.println("type remove bots to remove bots");
+            switch (scanner.nextLine().strip()) {
+                case "add bot" :
+                    try {
+                        System.out.println("enter jar url");
+                        String jarUrl = scanner.nextLine().strip();
+                        botHandler.loadBot(jarUrl);
+                        System.out.println("successfully added");
+                        logger.info("new bot added");
+                    } catch (Exception e) {
+                        System.out.println("can't add the bot");
+                        logger.warn("can't add the requested bot");
+                    }
+                    break;
+                case "remove bots":
+                    try {
+                        botHandler.removeBots();
+                        System.out.println("successfully removed bots");
+                        logger.info("bots removed");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("can't remove bots");
+                        logger.warn("can't remove bots");
+                    }
+                    break;
+                default :
+                    System.out.println("unknown command");
             }
         }
     }

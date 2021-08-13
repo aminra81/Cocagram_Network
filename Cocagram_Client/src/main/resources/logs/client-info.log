@@ -1,11 +1,9 @@
-2021-08-06 02:50:51.955 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
-2021-08-06 02:50:51.964 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=41552] is client socket
-2021-08-06 02:51:10.466 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=b, password=b)
-2021-08-06 02:51:32.193 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.ChatPanelToMessagingPageListener - client requested UpdateMessagingPageRequest(chatId=1, isChanged=true)
-2021-08-06 02:52:50.415 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated
-er - client requested EditMessageRequest(messageId=11, messageContent=salam)
-2021-08-06 02:51:58.141 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.ChatPanelToMessagingPageListener - client requested UpdateMessagingPageRequest(chatId=7, isChanged=true)
-2021-08-06 02:52:00.329 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.ChatPanelToMessagingPageListener - client requested UpdateMessagingPageRequest(chatId=7, isChanged=true)
-2021-08-06 02:52:39.139 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.EditMessagePageListener - client requested EditMessageRequest(messageId=4, messageContent=khoooobi?)
-2021-08-06 02:52:43.749 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.MessageViewerPageListener - client requested DeleteMessageRequest(messageId=4)
-2021-08-06 02:52:48.931 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated
+2021-08-13 20:44:16.452 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
+2021-08-13 20:44:16.567 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=50424] is client socket
+2021-08-13 20:44:46.238 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=a, password=a)
+2021-08-13 20:45:07.384 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.explorerPage.ExplorerListener - client requested SwitchToProfilePageRequest(switchToProfileType=USERNAME, id=null, username=calculator_bot)
+2021-08-13 20:45:13.724 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.profileView.ProfilePageListener - client requested ProfileRequest(profilePageEventType=FOLLOW, userToBeVisited=3)
+2021-08-13 20:45:23.720 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.NewMessageListener - client requested NewMessageRequest{messageContent='salam', receiverId=3}
+2021-08-13 20:45:32.401 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.NewMessageListener - client requested NewMessageRequest{messageContent='2*3+3', receiverId=3}
+2021-08-13 20:45:41.140 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.ChatPanelToMessagingPageListener - client requested UpdateMessagingPageRequest(chatId=8, isChanged=true)
+2021-08-13 20:45:46.307 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated

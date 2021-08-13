@@ -73,7 +73,7 @@ public class MessagingController {
         return chats;
     }
 
-    private void updateChatLastCheck(User user, Integer chatId) throws DatabaseDisconnectException {
+    public void updateChatLastCheck(User user, Integer chatId) throws DatabaseDisconnectException {
         for (Integer chatStateId : user.getChatStates()) {
             ChatState chatState = Connector.getInstance().fetch(ChatState.class, chatStateId);
             if (chatState.getChat().equals(chatId)) {

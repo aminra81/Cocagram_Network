@@ -54,7 +54,7 @@ public class TweetManager {
         List<Tweet> validatedTweets = new ArrayList<>();
         for (Tweet tweet : tweets) {
             User writer = Connector.getInstance().fetch(User.class, tweet.getWriter());
-            if (!writer.isActive())
+            if (writer == null || !writer.isActive())
                 continue;
             if (writer.equals(user)) {
                 if (!firstLayer)

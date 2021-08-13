@@ -122,26 +122,33 @@ public class Connector {
     }
 
     public User getUserByUsername(String username) throws DatabaseDisconnectException {
-        List<User> users = fetchAll(User.class);
-        for (User user : users)
-            if (user.getUsername().equals(username))
-                return user;
-        return null;
+        synchronized (lock) {
+            List<User> users = fetchAll(User.class);
+            for (User user : users) {
+                if (user.getUsername().equals(username))
+                    return user;
+            }
+            return null;
+        }
     }
 
     public User getUserByEmail(String email) throws DatabaseDisconnectException {
-        List<User> users = fetchAll(User.class);
-        for (User user : users)
-            if(user.getEmail().equals(email))
-                return user;
-        return null;
+        synchronized (lock) {
+            List<User> users = fetchAll(User.class);
+            for (User user : users)
+                if (user.getEmail().equals(email))
+                    return user;
+            return null;
+        }
     }
 
     public User getUserByPhoneNumber(String phoneNumber) throws DatabaseDisconnectException {
-        List<User> users = fetchAll(User.class);
-        for (User user : users)
-            if(user.getPhoneNumber().equals(phoneNumber))
-                return user;
-        return null;
+        synchronized (lock) {
+            List<User> users = fetchAll(User.class);
+            for (User user : users)
+                if (user.getPhoneNumber() != null && user.getPhoneNumber().equals(phoneNumber))
+                    return user;
+            return null;
+        }
     }
 }

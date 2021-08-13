@@ -1,6 +1,7 @@
 package ir.sharif.aminra.listeners.settingsPage;
 
 import ir.sharif.aminra.controller.Client;
+import ir.sharif.aminra.request.DeleteAccountRequest;
 import ir.sharif.aminra.request.LogoutRequest;
 import ir.sharif.aminra.request.Request;
 import ir.sharif.aminra.request.settingsPage.SwitchToPrivacySettingsPageRequest;
@@ -15,7 +16,9 @@ public class SettingsPageListener {
         Request request;
         switch (event) {
             case "deleteAccount":
-                //TODO adding delete account feature.
+                request = new DeleteAccountRequest();
+                logger.info(String.format("client requested %s", request));
+                Client.getClient().addRequest(request);
                 break;
             case "logout":
                 request = new LogoutRequest(false);

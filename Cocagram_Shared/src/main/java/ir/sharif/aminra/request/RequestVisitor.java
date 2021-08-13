@@ -37,4 +37,5 @@ public interface RequestVisitor {
     Response deleteMessage(Integer messageId);
     Response forwardMessage(Integer messageId);
     Response editMessage(Integer messageId, String messageContent);
+    Response deleteAccount();
 }

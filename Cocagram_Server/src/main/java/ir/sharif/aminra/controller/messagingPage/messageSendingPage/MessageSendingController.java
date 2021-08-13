@@ -70,7 +70,6 @@ public class MessageSendingController {
     public Response addMessage(String avatarString, String messageContent, Integer receiverId) {
         try {
             User writer = clientHandler.getUser();
-
             Integer imageID = null;
             if (avatarString != null) {
                 ImageUtils imageUtils = new ImageUtils();

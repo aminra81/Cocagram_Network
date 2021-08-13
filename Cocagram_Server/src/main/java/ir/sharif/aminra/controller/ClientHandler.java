@@ -105,10 +105,10 @@ public class ClientHandler extends Thread implements RequestVisitor {
         while (running) {
             try {
                 try {
+                    Request request = responseSender.getRequest();
                     //updating user
                     if(user != null)
                         user  = Connector.getInstance().fetch(User.class, user.getId());
-                    Request request = responseSender.getRequest();
                     Response response = request.visit(this);
                     responseSender.sendResponse(response);
                 } catch (DatabaseDisconnectException e) {
@@ -153,9 +153,7 @@ public class ClientHandler extends Thread implements RequestVisitor {
     }
 
     @Override
-    public Response logout(boolean terminate) {
-        return settingsController.logout(terminate);
-    }
+    public Response logout(boolean terminate) { return settingsController.logout(terminate);}
 
     @Override
     public Response edit(String firstname, String lastname, String bio, LocalDate birthdate, String email,
@@ -281,6 +279,11 @@ public class ClientHandler extends Thread implements RequestVisitor {
     @Override
     public Response editMessage(Integer messageId, String messageContent) {
         return messageViewerController.editMessage(messageId, messageContent);
+    }
+
+    @Override
+    public Response deleteAccount() {
+        return settingsController.deleteAccount();
     }
 
 }
