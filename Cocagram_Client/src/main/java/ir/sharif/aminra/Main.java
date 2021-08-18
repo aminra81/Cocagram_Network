@@ -3,6 +3,7 @@ package ir.sharif.aminra;
 import ir.sharif.aminra.controller.Client;
 import ir.sharif.aminra.controller.network.SocketRequestSender;
 import ir.sharif.aminra.util.Config;
+import ir.sharif.aminra.view.ViewManager;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
@@ -29,7 +30,7 @@ public class Main extends Application {
             client.start(stage);
         } catch (Exception e) {
             logger.error("can't connect to server");
-            e.printStackTrace();
+            ViewManager.getInstance().showError("you're offline");
         }
     }
 

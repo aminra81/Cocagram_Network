@@ -1,7 +1,7 @@
 ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingValidator.java
  ir.sharif.aminra.controller.messagingPage.messageSendingPage.MessageSendingValidator
-ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingController.java
- ir.sharif.aminra.controller.messagingPage.messageSendingPage.MessageSendingController
+ir/sharif/aminra/controller/bot/BotHandler.java
+ ir.sharif.aminra.controller.bot.BotHandler
 ir/sharif/aminra/controller/network/SocketResponseSender.java
  ir.sharif.aminra.controller.network.SocketResponseSender
 ir/sharif/aminra/models/media/Message.java
@@ -18,8 +18,8 @@ ir/sharif/aminra/database/ImageLoader.java
  ir.sharif.aminra.database.ImageLoader
 ir/sharif/aminra/models/media/Media.java
  ir.sharif.aminra.models.media.Media
-ir/sharif/aminra/controller/ClientHandler.java
- ir.sharif.aminra.controller.ClientHandler
+ir/sharif/aminra/controller/bot/Bot.java
+ ir.sharif.aminra.controller.bot.Bot
 ir/sharif/aminra/models/SaveAble.java
  ir.sharif.aminra.models.SaveAble
 ir/sharif/aminra/controller/network/TokenGenerator.java
@@ -58,10 +58,10 @@ ir/sharif/aminra/controller/enterPage/SignUpController.java
  ir.sharif.aminra.controller.enterPage.SignUpController
 ir/sharif/aminra/controller/enterPage/SignInController.java
  ir.sharif.aminra.controller.enterPage.SignInController
-ir/sharif/aminra/controller/settingsPage/SettingsController.java
- ir.sharif.aminra.controller.settingsPage.SettingsController
-ir/sharif/aminra/controller/explorerPage/ExplorerController.java
- ir.sharif.aminra.controller.explorerPage.ExplorerController
+ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingController.java
+ ir.sharif.aminra.controller.messagingPage.messageSendingPage.MessageSendingController
+ir/sharif/aminra/controller/SocketManager.java
+ ir.sharif.aminra.controller.SocketManager
 ir/sharif/aminra/controller/personalPage/listsPage/ListsPageController.java
  ir.sharif.aminra.controller.personalPage.listsPage.ListsPageController
 ir/sharif/aminra/controller/timelinePage/TimelineController.java
@@ -77,13 +77,13 @@ ir/sharif/aminra/controller/personalPage/notificationsPage/NotificationsPageCont
  ir.sharif.aminra.controller.personalPage.notificationsPage.NotificationsPageController
 ir/sharif/aminra/controller/tweets/NewTweetController.java
  ir.sharif.aminra.controller.tweets.NewTweetController
-ir/sharif/aminra/controller/messagingPage/MessagingController.java
- ir.sharif.aminra.controller.messagingPage.MessagingController
+ir/sharif/aminra/controller/ClientHandler.java
+ ir.sharif.aminra.controller.ClientHandler
 ir/sharif/aminra/controller/messagingPage/MessageViewerController.java
  ir.sharif.aminra.controller.messagingPage.MessageViewerController
-ir/sharif/aminra/controller/bot/Bot.java
- ir.sharif.aminra.controller.bot.Bot
-ir/sharif/aminra/controller/bot/BotHandler.java
- ir.sharif.aminra.controller.bot.BotHandler
-ir/sharif/aminra/controller/SocketManager.java
- ir.sharif.aminra.controller.SocketManager
+ir/sharif/aminra/controller/explorerPage/ExplorerController.java
+ ir.sharif.aminra.controller.explorerPage.ExplorerController
+ir/sharif/aminra/controller/settingsPage/SettingsController.java
+ ir.sharif.aminra.controller.settingsPage.SettingsController
+ir/sharif/aminra/controller/messagingPage/MessagingController.java
+ ir.sharif.aminra.controller.messagingPage.MessagingController

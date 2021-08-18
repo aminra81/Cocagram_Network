@@ -5,7 +5,7 @@ import ir.sharif.aminra.view.FXController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,7 +29,7 @@ public class MessageSendingFXController extends FXController implements Initiali
     }
 
     @FXML
-    private TextField messageContent;
+    private TextArea messageContent;
 
     @FXML
     private Label errorLabel;

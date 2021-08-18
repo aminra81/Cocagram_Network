@@ -82,7 +82,6 @@ public class MessageSendingController {
                     e.printStackTrace();
                 }
             }
-
             if (receiverId != null) {
                 User receiver = Connector.getInstance().fetch(User.class, receiverId);
                 String error = messageSendingValidator.SendMessageError(writer, receiver);

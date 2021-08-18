@@ -15,6 +15,7 @@ import ir.sharif.aminra.response.ShowErrorResponse;
 import ir.sharif.aminra.util.Config;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,6 +60,7 @@ public class SettingsController {
             return new ShowErrorResponse(Config.getConfig("server").getProperty("databaseDisconnectError"));
         }
     }
+
     private void deleteGroups(Integer userID) throws DatabaseDisconnectException {
         User user = Connector.getInstance().fetch(User.class, userID);
         for (Integer groupId : user.getGroups()) {
@@ -88,7 +90,7 @@ public class SettingsController {
     private void deleteMessages(Integer userID) throws DatabaseDisconnectException {
         List<Message> allMessages = Connector.getInstance().fetchAll(Message.class);
         for (Message message : allMessages)
-            if(message.getWriter().equals(userID))
+            if (message.getWriter().equals(userID))
                 Connector.getInstance().delete(message);
     }
 
@@ -104,7 +106,7 @@ public class SettingsController {
                         toBeRemovedMessages.add(messageID);
                 for (Integer messageID : toBeRemovedMessages)
                     currentChat.removeMessage(messageID);
-                if(currentChat.getUsers().contains(userID))
+                if (currentChat.getUsers().contains(userID))
                     currentChat.removeUser(userID);
                 Connector.getInstance().save(currentChat);
             }
@@ -203,11 +205,14 @@ public class SettingsController {
         List<ChatState> chatStatesToBeRemoved = new ArrayList<>();
         for (Integer chatStateId : user.getChatStates()) {
             ChatState chatState = Connector.getInstance().fetch(ChatState.class, chatStateId);
-            if (Connector.getInstance().fetch(Chat.class, chatState.getChat()) == null)
+            if (chatState == null || Connector.getInstance().fetch(Chat.class, chatState.getChat()) == null)
                 chatStatesToBeRemoved.add(chatState);
         }
         for (ChatState chatState : chatStatesToBeRemoved)
-            user.removeFromChatStates(chatState.getId());
+            if (chatState != null) {
+                user.removeFromChatStates(chatState.getId());
+                Connector.getInstance().delete(chatState);
+            }
         Connector.getInstance().save(user);
     }
 

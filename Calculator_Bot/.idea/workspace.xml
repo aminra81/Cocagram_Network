@@ -5,78 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7896fbc2-ecf2-4588-a26b-d2ce26006219" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BotResponseSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/calculator/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cocagram_Client/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cocagram_Server/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/bot/Bot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/bot/BotHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/configurations/bot.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cocagram_Shared/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cocagram_Shared/src/main/java/ir/sharif/aminra/request/DeleteAccountRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/src/main/java/BotResponseSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/src/main/java/Vote/Vote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/src/main/java/Vote/VoteManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vote_Bot/src/main/java/Vote/VoteOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/build/classes/java/main/ir/sharif/aminra/listeners/settingsPage/SettingsPageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/build/classes/java/main/ir/sharif/aminra/listeners/settingsPage/SettingsPageListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/build/classes/java/main/ir/sharif/aminra/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/build/classes/java/main/ir/sharif/aminra/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/build/classes/java/main/ir/sharif/aminra/view/messagingPage/messageSendingPage/MessageSendingFXController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/build/classes/java/main/ir/sharif/aminra/view/messagingPage/messageSendingPage/MessageSendingFXController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/build/resources/main/logs/client-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/build/resources/main/logs/client-info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/src/main/java/ir/sharif/aminra/listeners/settingsPage/SettingsPageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/src/main/java/ir/sharif/aminra/listeners/settingsPage/SettingsPageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/src/main/java/ir/sharif/aminra/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/src/main/java/ir/sharif/aminra/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/src/main/java/ir/sharif/aminra/view/messagingPage/messageSendingPage/MessageSendingFXController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/src/main/java/ir/sharif/aminra/view/messagingPage/messageSendingPage/MessageSendingFXController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/src/main/resources/ir/sharif/aminra/messagingPage/messageSendingPage/messageSendingPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/src/main/resources/ir/sharif/aminra/messagingPage/messageSendingPage/messageSendingPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/src/main/resources/logs/client-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/src/main/resources/logs/client-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/SocketManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/SocketManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/messagingPage/MessagingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/messagingPage/MessagingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/bot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/bot/Bot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/settingsPage/SettingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/settingsPage/SettingsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/tweets/TweetManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/tweets/TweetManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/database/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/database/Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/resources/main/configurations/main.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/resources/main/configurations/main.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/resources/main/database/serverDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/resources/main/database/serverDB.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/resources/main/logs/server-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/resources/main/logs/server-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/SocketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/SocketManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/messagingPage/MessagingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/messagingPage/MessagingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/settingsPage/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/settingsPage/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/tweets/TweetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/tweets/TweetManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/database/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/database/Connector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/configurations/main.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/configurations/main.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/database/serverDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/database/serverDB.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/logs/server-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/logs/server-info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Shared/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Shared/build/classes/java/main/ir/sharif/aminra/request/RequestVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Shared/build/classes/java/main/ir/sharif/aminra/request/RequestVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Shared/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Shared/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Shared/src/main/java/ir/sharif/aminra/request/RequestVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Shared/src/main/java/ir/sharif/aminra/request/RequestVisitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
