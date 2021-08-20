@@ -61,6 +61,7 @@ public class Main {
                     messagingController.updateChatLastCheck(user, chat.getId());
                     //answering messages
                     for (Message message : unreadMessages) {
+                        System.out.println(message);
                         String newMessage = voteManager.getResponse(chat.getId(), message.getContent(), message.getWriter());
                         if(newMessage == null)
                             newMessage = "error occurred";

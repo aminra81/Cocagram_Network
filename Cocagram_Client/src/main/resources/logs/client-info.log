@@ -1,41 +1,8 @@
-2021-08-18 23:42:57.461 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
-2021-08-18 23:42:57.527 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=37062] is client socket
-2021-08-18 23:43:15.973 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=b, password=b)
-2021-08-18 23:45:48.985 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.ChatPanelToMessagingPageListener - client requested UpdateMessagingPageRequest(chatId=10, isChanged=true)
-2021-08-18 23:46:34.689 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.NewMessageListener - client requested NewMessageRequest{messageContent='@vote_bot
-new vote
-desci?
-vote_1
-', receiverId=null}
-2021-08-18 23:46:37.721 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.ChatSelectingPageListener - client requested SendMessageRequest(messageId=124, chats=[10], groups=[])
-2021-08-18 23:47:09.206 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.NewMessageListener - client requested NewMessageRequest{messageContent='@vote_bot
-new vote
-desci?
-vote_1
-vote_2', receiverId=null}
-2021-08-18 23:47:11.748 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.ChatSelectingPageListener - client requested SendMessageRequest(messageId=125, chats=[10], groups=[])
-2021-08-18 23:47:41.756 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.NewMessageListener - client requested NewMessageRequest{messageContent='@vote_bot
-vote
-3
-1', receiverId=null}
-2021-08-18 23:47:44.923 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.ChatSelectingPageListener - client requested SendMessageRequest(messageId=127, chats=[10], groups=[])
-2021-08-18 23:47:56.026 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.NewMessageListener - client requested NewMessageRequest{messageContent='@vote_bot
-vote
-22021-08-18 23:49:09.103 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.NewMessageListener - client requested NewMessageRequest{messageContent='@vote_bot
-vote
-2
-2', receiverId=null}
-2021-08-18 23:49:14.059 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.ChatSelectingPageListener - client requested SendMessageRequest(messageId=135, chats=[10], groups=[])
-2021-08-18 23:49:41.274 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.NewMessageListener - client requested NewMessageRequest{messageContent='@vote_bot
-vote
-2
-1', receiverId=null}
-2021-08-18 23:49:44.249 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.ChatSelectingPageListener - client requested SendMessageRequest(messageId=137, chats=[10], groups=[])
-2021-08-18 23:50:02.371 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated
-.messageSendigPage.ChatSelectingPageListener - client requested SendMessageRequest(messageId=132, chats=[10], groups=[])
-2021-08-18 23:48:41.665 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.NewMessageListener - client requested NewMessageRequest{messageContent='@vote_bot
-vote
-2
-1', receiverId=null}
-2021-08-18 23:48:44.175 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.messagingPage.messageSendigPage.ChatSelectingPageListener - client requested SendMessageRequest(messageId=133, chats=[10], groups=[])
-2021-08-18 23:50:09.514 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated
+2021-08-20 20:53:48.606 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - client program started
+2021-08-20 20:53:48.616 [JavaFX Application Thread] INFO  ir.sharif.aminra.Main - socket Socket[addr=/127.0.0.1,port=1080,localport=44586] is client socket
+2021-08-20 20:54:01.052 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=XO_bot, password=XO_bot)
+2021-08-20 20:54:03.103 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.settingsPage.SettingsPageListener - client requested DeleteAccountRequest()
+2021-08-20 20:54:10.487 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=vote_bot, password=vote_bot)
+2021-08-20 20:54:20.945 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=calculator_bot, password=calculator_bot)
+2021-08-20 20:54:26.855 [JavaFX Application Thread] INFO  ir.sharif.aminra.listeners.enterPage.SignInFormListener - client requested LoginRequest(username=calculator_bot, password=calculator_bot)
+2021-08-20 20:54:27.838 [JavaFX Application Thread] INFO  ir.sharif.aminra.view.ViewManager - client program terminated

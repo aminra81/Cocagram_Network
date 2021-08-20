@@ -5,48 +5,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7896fbc2-ecf2-4588-a26b-d2ce26006219" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/src/main/java/BotResponseSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/src/main/java/Vote/Vote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/src/main/java/Vote/VoteManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Vote_Bot/src/main/java/Vote/VoteOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/6.8/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/7.1/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/7.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/7.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/configuration-cache/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/build/classes/java/main/BotResponseSender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/build/classes/java/main/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/build/libs/XO_Bot-all-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/build/tmp/fatJar/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/src/main/java/BotResponseSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/src/main/java/XO/GameManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XO_Bot/src/main/java/XO/GameResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/build/classes/java/main/ir/sharif/aminra/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/build/classes/java/main/ir/sharif/aminra/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/build/classes/java/main/ir/sharif/aminra/view/messagingPage/messageSendingPage/MessageSendingFXController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/build/classes/java/main/ir/sharif/aminra/view/messagingPage/messageSendingPage/MessageSendingFXController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/build/resources/main/logs/client-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/build/resources/main/logs/client-info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/src/main/java/ir/sharif/aminra/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/src/main/java/ir/sharif/aminra/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/src/main/java/ir/sharif/aminra/view/messagingPage/messageSendingPage/MessageSendingFXController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/src/main/java/ir/sharif/aminra/view/messagingPage/messageSendingPage/MessageSendingFXController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Client/src/main/resources/ir/sharif/aminra/messagingPage/messageSendingPage/messageSendingPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/src/main/resources/ir/sharif/aminra/messagingPage/messageSendingPage/messageSendingPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Client/src/main/resources/logs/client-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Client/src/main/resources/logs/client-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/bot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/bot/Bot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/settingsPage/SettingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/classes/java/main/ir/sharif/aminra/controller/settingsPage/SettingsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/resources/main/database/serverDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/resources/main/database/serverDB.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/resources/main/logs/server-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/resources/main/logs/server-info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/messagingPage/messageSendingPage/MessageSendingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/settingsPage/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/java/ir/sharif/aminra/controller/settingsPage/SettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/database/serverDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/database/serverDB.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/logs/server-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Cocagram_Server/src/main/resources/logs/server-info.log" afterDir="false" />
     </list>
@@ -108,7 +136,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -206,5 +234,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

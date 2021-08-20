@@ -1,10 +1,10 @@
 BotResponseSender.java
  BotResponseSender
-Main.java
- Main
+Vote/Vote.java
+ Vote.Vote
 Vote/VoteOption.java
  Vote.VoteOption
 Vote/VoteManager.java
  Vote.VoteManager
-Vote/Vote.java
- Vote.Vote
+Main.java
+ Main
